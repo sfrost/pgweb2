@@ -27,8 +27,8 @@ contribute, be sure to sign up to the `pgsql-www <http://www.postgresql.org/comm
 mailinglist for any discussions, and post any suggested patches there. If you
 want to make any major changes, be sure to have discussed those on the list first.
 
-Licence
+License
 -------
 The code for the website is licensed under
-`The PostgreSQL Licence <http://www.opensource.org/licenses/postgresql>`_, which is
-closely related to the BSD licence.
+`The PostgreSQL License <http://www.opensource.org/licenses/postgresql>`_, which is
+closely related to the BSD license.

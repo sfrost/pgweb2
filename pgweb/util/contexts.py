@@ -20,7 +20,7 @@ sitenav = {
 		{'title': 'Latest news',        'link':'/about/newsarchive/'},
 		{'title': 'Upcoming events',    'link':'/about/events/'},
 		{'title': 'Press',              'link':'/about/press/'},
-		{'title': 'Licence',            'link':'/about/licence/'},
+		{'title': 'License',            'link':'/about/license/'},
 	],
 	'download': [
 		{'title': 'Downloads',          'link':'/download/', 'submenu': [

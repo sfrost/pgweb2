@@ -5,7 +5,7 @@ from django.forms import ValidationError
 import re
 
 from pgweb.util.admin import PgwebAdmin
-from models import StackBuilderApp, Category, Product, LicenceType
+from models import StackBuilderApp, Category, Product, LicenseType
 
 class ProductAdmin(PgwebAdmin):
 	list_display = ('name', 'org', 'approved', 'lastconfirmed',)
@@ -53,6 +53,6 @@ class StackBuilderAppAdmin(admin.ModelAdmin):
 	form = StackBuilderAppAdminForm
 
 admin.site.register(Category)
-admin.site.register(LicenceType)
+admin.site.register(LicenseType)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(StackBuilderApp, StackBuilderAppAdmin)

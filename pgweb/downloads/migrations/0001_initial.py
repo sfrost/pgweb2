@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='LicenceType',
+            name='LicenseType',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('typename', models.CharField(max_length=100)),
@@ -75,7 +75,7 @@ class Migration(migrations.Migration):
                 ('price', models.CharField(max_length=200, blank=True)),
                 ('lastconfirmed', models.DateTimeField(auto_now_add=True)),
                 ('category', models.ForeignKey(to='downloads.Category')),
-                ('licencetype', models.ForeignKey(verbose_name=b'Licence type', to='downloads.LicenceType')),
+                ('licensetype', models.ForeignKey(verbose_name=b'License type', to='downloads.LicenseType')),
                 ('org', models.ForeignKey(db_column=b'publisher_id', verbose_name=b'Organisation', to='core.Organisation')),
             ],
             options={
