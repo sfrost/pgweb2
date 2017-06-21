@@ -27,7 +27,6 @@ urlpatterns = patterns('',
 	(r'^about/event/(\d+)(-.*)?/$', 'pgweb.events.views.item'),
 	(r'^about/featurematrix/$', 'pgweb.featurematrix.views.root'),
 	(r'^about/featurematrix/detail/(\d+)/$', 'pgweb.featurematrix.views.detail'),
-	(r'^about/quotesarchive/$', 'pgweb.quotes.views.allquotes'),
 
 	(r'^ftp/(.*/)?$', 'pgweb.downloads.views.ftpbrowser'),
 	(r'^download/mirrors-ftp/+(.*)$', 'pgweb.downloads.views.mirrorselect'),
@@ -155,4 +154,3 @@ urlpatterns = patterns('',
 	# Fallback for static pages, must be at the bottom
 	(r'^(.*)/$', 'pgweb.core.views.fallback'),
 )
-
