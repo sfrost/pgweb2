@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='contributor',
             name='email',
-            field=models.EmailField(null=True, blank=True),
+            field=models.EmailField(null=False, blank=True),
         ),
     ]
