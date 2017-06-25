@@ -102,7 +102,7 @@ def fallback(request, url):
 			t = loader.get_template('pages/%s/en.html' % url)
 		except TemplateDoesNotExist:
 			raise Http404('Page not found.')
-
+		
 	# Guestimate the nav section by looking at the URL and taking the first
 	# piece of it.
 	try:
@@ -167,8 +167,12 @@ def sitemap_internal(request):
 # single one, making sure it turns into a single http response. We do this
 # dynamically, since the output will be cached.
 _dynamic_cssmap = {
-	'base': ['media/css/font-awesome.min.css',
-			 'media/css/main.css',],
+	'base': ['media/css/global.css',
+			 'media/css/layout.css',
+			 'media/css/text.css',
+			 'media/css/navigation.css',
+			 'media/css/table.css',
+			 'media/css/iefixes.css'],
 	'docs': ['media/css/global.css',
 			 'media/css/table.css',
 			 'media/css/text.css',
@@ -316,7 +320,7 @@ def admin_mergeorg(request):
 				p.save()
 			# Now that everything is moved, we can delete the organisation
 			f.delete()
-
+			
 			return HttpResponseRedirect("/admin/core/organisation/")
 		# Else fall through to re-render form with errors
 	else:
