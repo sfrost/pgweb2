@@ -604,7 +604,6 @@ table.default thead {
 
 #banner {
 		position: relative;
-		background-color: rgba(102, 102, 102, 0.70);
 		background-image: url("/media/img/misc/overlay.png"), url("/media/img/misc/highlight.png");
 		background-position: top left, center center;
 		background-size: auto, 100% 250%;
