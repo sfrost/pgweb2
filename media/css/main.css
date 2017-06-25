@@ -581,7 +581,7 @@ table.default thead {
 
 #banner-wrapper {
 		position: relative;
-		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("/media/img/misc/overlay.png"), url("/media/img/misc/overlay.png"), url("/media/img/misc/banner.jpg");
 		background-position: top left, top left, center center;
 		background-repeat: repeat, repeat, no-repeat;
 		background-size: auto, auto, cover;
@@ -605,7 +605,7 @@ table.default thead {
 #banner {
 		position: relative;
 		background-color: rgba(102, 102, 102, 0.70);
-		background-image: url("images/overlay.png"), url("images/highlight.png");
+		background-image: url("/media/img/misc/overlay.png"), url("/media/img/misc/highlight.png");
 		background-position: top left, center center;
 		background-size: auto, 100% 250%;
 		background-repeat: repeat, no-repeat;
@@ -910,7 +910,7 @@ table.default thead {
 				left: 0;
 				z-index: 1000;
 				background-color: rgba(255, 255, 255, 0.95);
-				background-image: url("images/overlay.png");
+				background-image: url("/media/img/misc/overlay.png");
 				width: 100%;
 				height: 3.25em;
 				line-height: 3.25em;
@@ -1493,7 +1493,7 @@ table.default thead {
 				width: 100%;
 				z-index: 10001;
 				background-color: rgba(21, 38, 23, 0.8);
-				background-image: url("images/overlay.png");
+				background-image: url("/media/img/misc/overlay.png");
    	}
 
   	#titleBar .title {
@@ -1565,10 +1565,10 @@ table.default thead {
 				width: 275px;
 				z-index: 10002;
 				background-color: #353c37;
-				background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-				background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-				background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-				background-image: url("images/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+				background-image: url("/media/img/misc/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+				background-image: url("/media/img/misc/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+				background-image: url("/media/img/misc/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+				background-image: url("/media/img/misc/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 				background-repeat: repeat, no-repeat;
 				background-size: auto, 100% 100%;
 				font-family: 'Open Sans Condensed', sans-serif;
