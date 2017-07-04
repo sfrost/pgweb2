@@ -871,6 +871,10 @@ table.default thead {
 
 		}
 
+    .navbar-brand img {
+        height: 2em;
+    }
+
   	/* #BANNER DESKTOP */
 
 	  #banner {
