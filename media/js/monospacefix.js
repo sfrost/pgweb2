@@ -25,3 +25,6 @@ if (newMonoSize != 1)
 					+ '{font-size: 1em;}</style>\n');
 }
 
+$('.navbar-lower').affix({
+  offset: {top: 50}
+});
