@@ -1988,8 +1988,9 @@ button.btn.btn-default {
     font-size: 14px;
 }
 
-.form-control {
+.form-inline .form-control {
   height: 30px;
+  margin: 9px 0;
 }
 
 .navbar-fixed-top {
