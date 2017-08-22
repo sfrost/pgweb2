@@ -62,8 +62,8 @@
            <li><a href="{{link_root}}/developer" title="Developers">Developers</a></li>
            <li><a href="{{link_root}}/support" title="Support">Support</a></li>
            <li><a href="{{link_root}}/account" title="Your account">Your account</a></li>
-           <li><a href="/about/donate">Donate</a></li>
-           <li><a href="/about/contact">Contact</a></li>
+           <li><a href="{{link_root}}/about/donate">Donate</a></li>
+           <li><a href="{{link_root}}/about/contact">Contact</a></li>
          </ul>
        </div><!-- /.navbar-collapse -->
      </div><!-- /.container-fluid -->
@@ -73,9 +73,9 @@
       {%block layoutblock%}{%endblock%}
       <br class="pgClearBoth" />
     </div> <!-- pgContent -->
-  	<div class="container">
-           <a class="navFooter" href="{{link_root}}/about/privacypolicy">Privacy Policy</a> |
-           <a class="navFooter" href="{{link_root}}/about/">About PostgreSQL</a><br/>
+  	<div class="container" id="copyright">
+           <a href="{{link_root}}/about/privacypolicy">Privacy Policy</a> |
+           <a href="{{link_root}}/about/">About PostgreSQL</a><br/>
   	       <p>Copyright &copy; 1996-{% now "Y" %} The PostgreSQL Global Development Group</p>
   	</div> <!-- Footer -->
   </div> <!-- Container -->
