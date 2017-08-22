@@ -1979,3 +1979,11 @@ button.planetPostgresql:active,
 		border-width: 2px;
 		line-height: 1em;
 }
+
+button.btn.btn-default {
+    width: auto;
+    margin: auto;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
