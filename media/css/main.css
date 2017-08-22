@@ -1962,8 +1962,8 @@ button.planetPostgresql:active,
 		display: inline-block;
 		background: #e7eae8;
 		padding: 0.75em 2em 0.75em 2em;
-		border-radius: 8px;
 		color: #8b9790;
+    width: 100%;
 }
 
 #copyright a {
