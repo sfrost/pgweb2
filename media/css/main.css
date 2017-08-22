@@ -1983,7 +1983,17 @@ button.planetPostgresql:active,
 button.btn.btn-default {
     width: auto;
     margin: auto;
-    height: 34px;
+    height: 30px;
     padding: 6px 12px;
     font-size: 14px;
+}
+
+.form-control {
+  height: 30px;
+}
+
+.navbar-fixed-top {
+    background: #fff;
+    padding: 0 !important;
+    margin: 0;
 }
