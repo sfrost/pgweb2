@@ -261,8 +261,8 @@ header > p {
 }
 
 .navbar-brand {
-  float: none;
-  padding: 0;
+  float: none !important;
+  padding: 0 !important;
 }
 
 /* #FEATURED SECTIONS */
