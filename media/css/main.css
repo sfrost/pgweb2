@@ -599,8 +599,8 @@ table.default thead {
 }
 
 .jumbotron h1 {
-    font-size: 3em;
-    color: #fff;
+    font-size: 3em !important;
+    color: #fff !important;
 }
 
 .jumbotron .lead {
