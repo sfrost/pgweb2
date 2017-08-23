@@ -598,62 +598,13 @@ table.default thead {
 		z-index: 1;
 }
 
-#main-wrapper {
-		background: #fff;
-		border-top: 5px solid #336791;
-		border-bottom: solid 5px #666;
+h1.display {
+    font-size: 3em;
+    color: #fff;
 }
 
-#main-wrapper-about {
-		background: #fff;
-		border-bottom: solid 5px #666;
-}
-
-
-/* #BANNER */
-
-#banner {
-		position: relative;
-		background-image: url("/media/img/misc/overlay.png"), url("/media/img/misc/highlight.png");
-		background-position: top left, center center;
-		background-size: auto, 100% 250%;
-		background-repeat: repeat, no-repeat;
-		text-align: center;
-		margin: 0;
-}
-
-#banner h2 {
-		color: #fff;
-}
-
-#banner p {
-		display: block;
-		font-family: 'Open Sans Condensed', sans-serif;
-		font-weight: 700;
-		text-transform: uppercase;
-		color: #fff;
-}
-
-#banner .button {
-		-moz-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-		-webkit-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-		-ms-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-		transition: border-color .2s ease-in-out, color .2s ease-in-out;
-		color: #b4b7b5;
-		background: transparent !important;
-		border: solid 4px #fff;
-		border-color: #b4b7b5;
-		border-radius: 16px;
-}
-
-#banner .button:hover {
-		color: #e4e7e5;
-		border-color: rgba(255, 255, 255, 0.75);
-}
-
-#banner .button:active {
-		color: #fff;
-		border-color: #fff;
+.jumbotron .lead {
+    color: #fff;
 }
 
 
