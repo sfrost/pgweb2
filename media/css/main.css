@@ -596,7 +596,6 @@ table.default thead {
 		background-repeat: repeat, repeat, no-repeat;
 		background-size: auto, auto, cover;
 		z-index: 1;
-    opacity: 0.5;
 }
 
 .jumbotron h1 {
