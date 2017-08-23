@@ -5,60 +5,54 @@
 {%endblock%}
 {%block layoutblock%}
         <!-- Banner -->
-        <div id="banner-wrapper" class="jumbotron">
-          <section id="banner">
-            <h2>Welcome to the home of PostgreSQL</h2>
-            <p>- the world's most advanced open source relational database -</p>
-            <a href="{{link_root}}/about" class="button" title="About">New to PostgreSQL?</a>
-          </section>
+        <div class="jumbotron jumbotron-fluid" id="banner-wrapper">
+          <div class="container">
+            <h1 class="display-3">Welcome to the home of PostgreSQL</h1>
+            <p class="lead">- the world's most advanced open source relational database -</p>
+            <p class="lead"><a href="{{link_root}}/about" class="button" title="About">New to PostgreSQL?</a></p>
+          </div>
         </div>
-        <div id="pgFrontContainer">
-          <div id="pgFrontMain">
-            <div id="pgFrontFeature">
-              <div id="pgFrontFeatureContent">
+        <div class="container">
+          <p><b>18<sup>th</sup> May 2017</b></p>
 
-                <p><b>18<sup>th</sup> May 2017</b></p>
+          <h1 id="txtFrontFeatureHeading">
+            I'M A TEST COMMIT!
+          </h1>
+          <p>
+             The PostgreSQL Global Development Group is pleased to announce the availability of
+             PostgreSQL 10 Beta 1.
+          </p>
 
-                <h1 id="txtFrontFeatureHeading">
-                  I'M A TEST COMMIT!
-                </h1>
-                <p>
-                   The PostgreSQL Global Development Group is pleased to announce the availability of
-                   PostgreSQL 10 Beta 1.
-                </p>
+          <p>
+            This is the first beta release of the upcoming version 10 of PostgreSQL. Please download and test the
+              beta code with your applications and report any issues you may find.
+          </p>
 
-                <p>
-                  This is the first beta release of the upcoming version 10 of PostgreSQL. Please download and test the
-                    beta code with your applications and report any issues you may find.
-                </p>
+          <div id="txtFrontFeatureLink">
+            <br/>
+            <img src="/media/img/layout/blt_blu_arrow.png" width="6" height="6" alt="" /><a href="/about/news/1749/" title="Release Announcement">Release Announcement</a><br />
+            <img src="/media/img/layout/blt_blu_arrow.png" width="6" height="6" alt="" /><a href="/docs/10/static/release-10.html" title="Release Notes">Release Notes</a><br />
+            <img src="/media/img/layout/blt_blu_arrow.png" width="6" height="6" alt="" /><a href="/download/" title="Download">Download</a><br />
+          </div>
 
-                <div id="txtFrontFeatureLink">
-                  <br/>
-                  <img src="/media/img/layout/blt_blu_arrow.png" width="6" height="6" alt="" /><a href="/about/news/1749/" title="Release Announcement">Release Announcement</a><br />
-                  <img src="/media/img/layout/blt_blu_arrow.png" width="6" height="6" alt="" /><a href="/docs/10/static/release-10.html" title="Release Notes">Release Notes</a><br />
-                  <img src="/media/img/layout/blt_blu_arrow.png" width="6" height="6" alt="" /><a href="/download/" title="Download">Download</a><br />
-                </div>
-
-              </div>
-            </div> <!-- pgFrontFeature -->
-            <div id="pgFrontUSSContainer">
-              <div id="pgFrontUser">
-                <div id="pgFrontUserInner">
-                  <div id="pgFrontUserWrap">
-                    <h2><img src="/media/img/hdr/hdr_featureduser.png" width="104" height="10" alt="Featured User" /></h2>
-                    <div id="pgFrontUserContent">
-                      <div id="txtFrontUserText">{{quote.quote}}</div>
-                      <div id="txtFrontUserName"><b>{{quote.who}}, <a href="{{quote.link}}">{{quote.org}}</a></b></div>
-                      <div id="txtFrontUserLink">
-                          <img src="/media/img/layout/blt_blu_arrow.png" width="6" height="5" alt="" /><a href="/about/casestudies">Case Studies</a><span class="txtDivider">|</span>
-                      </div>
-                    </div>
-                  </div> <!-- pgFrontUserWrap -->
+        </div>
+      </div> <!-- pgFrontFeature -->
+      <div id="pgFrontUSSContainer">
+        <div id="pgFrontUser">
+          <div id="pgFrontUserInner">
+            <div id="pgFrontUserWrap">
+              <h2><img src="/media/img/hdr/hdr_featureduser.png" width="104" height="10" alt="Featured User" /></h2>
+              <div id="pgFrontUserContent">
+                <div id="txtFrontUserText">{{quote.quote}}</div>
+                <div id="txtFrontUserName"><b>{{quote.who}}, <a href="{{quote.link}}">{{quote.org}}</a></b></div>
+                <div id="txtFrontUserLink">
+                    <img src="/media/img/layout/blt_blu_arrow.png" width="6" height="5" alt="" /><a href="/about/casestudies">Case Studies</a><span class="txtDivider">|</span>
                 </div>
               </div>
-            </div> <!-- pgFrontUSSContainer -->
-          </div> <!-- pgFrontMain -->
-        </div> <!-- pgFrontContainer -->
+            </div> <!-- pgFrontUserWrap -->
+          </div>
+        </div>
+
         <div id="pgFrontRightContainer">
           <div id="pgFrontLatestReleases">
             <h2><img src="/media/img/hdr/hdr_latestreleases.png" width="120" height="10" alt="Latest Releases" /></h2>
