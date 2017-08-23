@@ -255,6 +255,16 @@ header > p {
 	  color: #666;
 }
 
+.navbar-brand img {
+    height: 2em;
+    margin-top: 7px;
+}
+
+.navbar-brand {
+  float: none;
+  padding: 0;
+}
+
 /* #FEATURED SECTIONS */
 
 .margin-1-bottom {
