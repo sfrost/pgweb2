@@ -126,29 +126,6 @@
              </div>
            </div>
          </div> <!-- pgFrontNews -->
-         <div id="pgFrontPlanet">
-           <a href="https://planet.postgresql.org">
-           <img src="/media/img/hdr/hdr_planetpg.png" width="140" height="10" alt="Planet PostgreSQL" />
-           </a>
-           <div id="pgFrontPlanetWrap">
-            {%for post in planet%}
-            <p>
-              <span class="txtDate">{{post.date}}</span><br />
-              <a href="{{post.url}}">{{post.title}}</a>
-            </p>
-            {%endfor%}
-            <div>
-             <img class="pgArrowImage" src="/media/img/layout/blt_blu_arrow.png" width="6" height="5" alt="" />
-             <ul class="pgRSSBottomList">
-              <li>
-               <a href="https://planet.postgresql.org" title="More Blog Posts">More</a>
-              </li>
-              <li class="last-child">
-               <a href="https://planet.postgresql.org/rss20.xml" title="PlanetPostgreSQL RSS Feed"><img class="pgRSSImage" src="/media/img/misc/ico_rss.png" width="28" height="13" alt="PlanetPostgreSQL RSS Feed" /></a>
-              </li>
-             </ul>
-            </div>
-           </div> <!-- pgFrontPlanetWrap -->
          </div> <!-- pgFrontPlanet -->
          <div id="pgFrontEvents" class="txtNewsEvent">
            <a href="/about/events/">
@@ -198,5 +175,103 @@
             </div>
            </div> <!-- pgNewsEventsWrap -->
          </div> <!-- pgFrontEvent -->
+         <div class="row 200%">
+           <div class="12u">
+
+             <!-- Blog -->
+             <section class="box blog">
+               <div>
+                 <div class="row">
+                   <div class="12u">
+                     <h2 class="major no-margin"><span>Latest Blog Posts</span></h2>
+                     <div class="planetPostgresqlGlobe"><i class="fa fa-globe"></i></div>
+                   </div>
+                 </div>
+                 <!-- First Row Planet PostgreSQL -->
+                 <div class="row">
+                   <!-- First Column First Row Planet PostgreSQL -->
+                   <div class="3u 12u(mobile)">
+                     <div class="content content-centered">
+                       <ul class="divided-right">
+                         <li>
+                           <article class="box post-centered">
+                             <h3><a href="#">Connecting to SQL Server from Linux using FDWs</a></h3>
+                             <ul class="meta">
+                               <li class="icon fa-comments"><a href="#">Leo Hsu, Regina Obe</a></li>
+                               <li class="icon fa-clock-o">2015-09-27</li>
+                             </ul>
+                           </article>
+                         </li>
+                       </ul>
+                     </div>
+                   </div>
+                   <!-- END First Column First Row Planet PostgreSQL -->
+                   <!-- Second Column First Row Planet PostgreSQL-->
+                   <div class="3u 12u(mobile)">
+                     <div class="content content-centered">
+                       <ul class="divided-right">
+                         <li>
+                           <article class="box post-centered">
+                             <h3><a href="#">South Bay, East Bay PUGs scheduled</a></h3>
+                             <ul class="meta">
+                               <li class="icon fa-comments"><a href="#">Josh Berkus</a></li>
+                               <li class="icon fa-clock-o">2015-09-26</li>
+                             </ul>
+                           </article>
+                         </li>
+                       </ul>
+                     </div>
+                   </div>
+                   <!-- END Second Column First Row Planet PostgreSQL -->
+                   <!-- Third Column First Row Planet PostgreSQL -->
+                   <div class="3u 12u(mobile)">
+                     <div class="content content-centered">
+                       <ul class="divided-right">
+                         <li>
+                           <article class="box post-centered">
+                             <h3><a href="#">PG Phriday: Database Infrastructure</a></h3>
+                             <ul class="meta">
+                               <li class="icon fa-comments"><a href="#">Shaun M. Thomas</a></li>
+                               <li class="icon fa-clock-o">2015-09-25</li>
+                             </ul>
+                           </article>
+                         </li>
+                       </ul>
+                     </div>
+                   </div>
+                   <!-- END Third Column First Row Planet PostgreSQL -->
+                   <!-- Last Column First Row Planet PostgreSQL -->
+                   <div class="3u 12u(mobile)">
+                     <div class="content content-centered">
+                       <ul>
+                         <li>
+                           <article class="box post-centered">
+                             <h3><a href="#">Modern SQL: Inaugural Post</a></h3>
+                             <ul class="meta">
+                               <li class="icon fa-comments"><a href="#">Markus Winand</a></li>
+                               <li class="icon fa-clock-o">2015-09-25</li>
+                             </ul>
+                           </article>
+                         </li>
+                       </ul>
+                     </div>
+                   </div>
+                   <!-- END Last Column First Row Planet PostgreSQL -->
+                 </div>
+                 <!-- END First Row Planet PostgreSQL -->
+                 <div class="row">
+                   <div class="12u">
+                     <div class="button planetPostgresql-container"<a href="#" class="button planetPostgresql">Browse Archives</a></div>
+                   </div>
+                 </div>
+               </div>
+             </section>
+             <!-- END Blog -->
+           </div>
+           <!-- END 12u -->
+         </div>
+         <!-- END Row 200% -->
+        </div>
+        </div>
         </div> <!-- pgFrontBottomContainer -->
 {%endblock%}
