@@ -604,6 +604,14 @@ table.default thead {
 		display: none;
 }
 
+/* #PLANETPOSTGRESQL */
+
+.planetPostgresqlGlobe {
+	text-align: center;
+	font-size: 5em;
+	color: #336791;
+}
+
 
 /* #WRAPPERS */
 
