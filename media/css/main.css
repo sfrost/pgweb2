@@ -265,6 +265,12 @@ header > p {
   padding: 0 !important;
 }
 
+@media (min-width: 768px) {
+  .navbar-nav>li>a {
+      padding: 15px 20px;
+  }
+}
+
 /* #FEATURED SECTIONS */
 
 .margin-1-bottom {
@@ -1709,6 +1715,7 @@ button.btn.btn-default {
 .form-inline .form-control {
   height: 30px;
   margin: 9px 0;
+  float: right;
 }
 
 .navbar-fixed-top {
