@@ -137,6 +137,27 @@ h1, h2, h3, h4, h5, h6 {
 	  font-weight: 700;
 	  text-transform: uppercase;
 	  color: #666;
+    margin: 0 0 0.5em 0;
+}
+
+h2 {
+		font-size: 1.65em;
+}
+
+h2.major {
+		font-size: 1.65em;
+		text-align: center;
+		margin: 0 0 3em 0;
+    position: relative;
+    border-top: solid 5px #e7eae8;
+}
+
+h2.major span {
+		top: -0.775em;
+		padding: 0 1.5em 1.5em 1.5em;
+    background: #fff;
+    position: relative;
+    display: inline-block;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -144,26 +165,39 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	  color: inherit;
 }
 
-h2.major {
-	  position: relative;
-	  border-top: solid 5px #e7eae8;
+/* #NO-MARGIN */
+
+h2.major.no-margin {
+	  margin: 0;
+	  text-align: center;
 }
 
-h2.major span {
-  	background: #fff;
-  	position: relative;
-	  display: inline-block;
+h3.major.no-margin {
+  	margin: 0;
+	  text-align: center;
+}
+
+.box.features.no-margin {
+  	margin: 0;
 }
 
 h3.major {
 	  position: relative;
 	  border-top: solid 5px #e7eae8;
+    text-align: left;
+    margin: 0 0 1em 0;
 }
 
 h3.major span {
   	background: #fff;
   	position: relative;
   	display: inline-block;
+    top: -0.775em;
+    padding: 0 1.5em 0 0;
+}
+
+.h3, h3 {
+    font-size: 1.3em;
 }
 
 a {
@@ -667,236 +701,178 @@ table.default thead {
 }
 
 
-/* #DESKTOP */
+/* #LIST DESKTOP */
 
-@media screen and (min-width: 737px) {
-
-		/* #BASIC DESKTOP */
-
-		h1, h2, h3, h4, h5, h6 {
-				margin: 0 0 0.5em 0;
-		}
-
-		h2 {
-				font-size: 1.65em;
-		}
-
-		h2.major {
-				font-size: 1.65em;
-				text-align: center;
-				margin: 0 0 3em 0;
-		}
-
-		h2.major span {
-				top: -0.775em;
-				padding: 0 1.5em 1.5em 1.5em;
-		}
-
-		h3.major {
-				text-align: left;
-				margin: 0 0 1em 0;
-		}
-
-		h3.major span {
-				top: -0.775em;
-				padding: 0 1.5em 0 0;
-		}
-
-		h3, h4 {
-				font-size: 1.25em;
-		}
-
-
-		/* #LIST DESKTOP */
-
-		ul.actions {
-				text-align: center;
-				margin: 2em 0 0 0;
-		}
-
-
-		/* #BOX DESKTOP */
-
-		.box.highlight .special {
-				margin: 0 0 4em 0;
-		}
-
-		.box.highlight h2 {
-				font-size: 3em;
-				margin: 0 0 0.75em 0;
-		}
-
-		.box.highlight header > p {
-				font-size: 1.65em;
-				margin: 0 0 1.5em 0;
-		}
-
-		.box.feature {
-				text-align: center;
-		}
-
-		.box.feature > div {
-				height: 220px;
-		}
-
-		.box.feature.date {
-				display: block;
-				width: 68px;
-				height: 68px;
-				text-align: center;
-				background: #e7eae8;
-				text-transform: uppercase;
-		}
-
-		.box.feature.event{
-				padding: 2em 1.5em;
-		}
-
-		.box.post header {
-				margin: 0 0 2.5em 0;
-		}
-
-		.box.post h3 {
-				font-size: 3em;
-				margin: 0 0 0.5em 0;
-		}
-
-		.box.post header > p {
-				font-size: 1.65em;
-				margin: 0 0 0.5em 0;
-		}
-
-		.box.post ul.meta {
-				margin: 0 0 0.5em 0;
-		}
-
-		.box.post-summary h3 {
-				line-height: 1em;
-				margin: 0 0 0.75em 0;
-		}
-
-		.box.post-summary .meta {
-				margin: 0;
-				line-height: 1em;
-		}
-
-		.box.post-centered a li:hover, .box.post-centered li.active {
-				color: #000;
-		}
-
-		.box.post-centered li:hover a {
-				color: #000;
-		}
-
-		.box.post-centered a:hover {
-				color: #000;
-		}
-
-		.box.page-content header {
-				margin: 0 0 2.5em 0;
-		}
-
-		.box.page-content h2 {
-				font-size: 3em;
-				margin: 0 0 0.5em 0;
-		}
-
-		.box.page-content header > p {
-				margin: 0 0 0.5em 0;
-				font-size: 1.65em;
-		}
-
-		.box.page-content ul.meta {
-				margin: 0 0 0.5em 0;
-		}
-
-
-		/* #SIDEBAR DESKTOP */
-
-		.sidebar {
-				padding-top: 0.5em;
-		}
-
-		.homepage .sidebar {
-				padding-top: 0;
-		}
-
-		.sidebar h2.major {
-				text-align: left;
-				margin: 0 0 1em 0;
-		}
-
-		.sidebar h2.major span {
-				padding: 0;
-		}
-
-
-  	/* #CONTENT DESKTOP */
-
-		.content-left {
-				padding-right: 2em;
-		}
-
-		.content-right {
-				padding-left: 2em;
-		}
-
-		.content-centered {
-				padding: 0 0 0 0;
-		}
-
-
-		/* #WRAPPERS DESKTOP */
-
-		#banner-wrapper {
-				padding: 12.5em;
-		}
-
-		#main-wrapper {
-				border-top-width: 35px;
-				border-bottom-width: 10px;
-		}
-
-
-		/* #HEADER DESKTOP */
-
-    .navbar-brand img {
-        height: 2em;
-        margin-top: 7px;
-    }
-
-    .navbar-brand {
-      float: none;
-      padding: 0;
-    }
-
-  	/* #FOOTER DESKTOP */
-
-	  #footer {
-				text-align: center;
-				padding: 8em 0 8em 0;
-	  }
-
-	  #footer h2.major {
-				margin: 0 0 1em 0;
-	  }
-
+ul.actions {
+		text-align: center;
+		margin: 2em 0 0 0;
 }
 
-/* #NO-MARGIN */
 
-h2.major.no-margin {
-	  margin: 0;
-	  text-align: center;
+/* #BOX DESKTOP */
+
+.box.highlight .special {
+		margin: 0 0 4em 0;
 }
 
-h3.major.no-margin {
-  	margin: 0;
-	  text-align: center;
+.box.highlight h2 {
+		font-size: 3em;
+		margin: 0 0 0.75em 0;
 }
 
-.box.features.no-margin {
-  	margin: 0;
+.box.highlight header > p {
+		font-size: 1.65em;
+		margin: 0 0 1.5em 0;
+}
+
+.box.feature {
+		text-align: center;
+}
+
+.box.feature > div {
+		height: 220px;
+}
+
+.box.feature.date {
+		display: block;
+		width: 68px;
+		height: 68px;
+		text-align: center;
+		background: #e7eae8;
+		text-transform: uppercase;
+}
+
+.box.feature.event{
+		padding: 2em 1.5em;
+}
+
+.box.post header {
+		margin: 0 0 2.5em 0;
+}
+
+.box.post h3 {
+		font-size: 3em;
+		margin: 0 0 0.5em 0;
+}
+
+.box.post header > p {
+		font-size: 1.65em;
+		margin: 0 0 0.5em 0;
+}
+
+.box.post ul.meta {
+		margin: 0 0 0.5em 0;
+}
+
+.box.post-summary h3 {
+		line-height: 1em;
+		margin: 0 0 0.75em 0;
+}
+
+.box.post-summary .meta {
+		margin: 0;
+		line-height: 1em;
+}
+
+.box.post-centered a li:hover, .box.post-centered li.active {
+		color: #000;
+}
+
+.box.post-centered li:hover a {
+		color: #000;
+}
+
+.box.post-centered a:hover {
+		color: #000;
+}
+
+.box.page-content header {
+		margin: 0 0 2.5em 0;
+}
+
+.box.page-content h2 {
+		font-size: 3em;
+		margin: 0 0 0.5em 0;
+}
+
+.box.page-content header > p {
+		margin: 0 0 0.5em 0;
+		font-size: 1.65em;
+}
+
+.box.page-content ul.meta {
+		margin: 0 0 0.5em 0;
+}
+
+
+/* #SIDEBAR DESKTOP */
+
+.sidebar {
+		padding-top: 0.5em;
+}
+
+.homepage .sidebar {
+		padding-top: 0;
+}
+
+.sidebar h2.major {
+		text-align: left;
+		margin: 0 0 1em 0;
+}
+
+.sidebar h2.major span {
+		padding: 0;
+}
+
+
+/* #CONTENT DESKTOP */
+
+.content-left {
+		padding-right: 2em;
+}
+
+.content-right {
+		padding-left: 2em;
+}
+
+.content-centered {
+		padding: 0 0 0 0;
+}
+
+
+/* #WRAPPERS DESKTOP */
+
+#banner-wrapper {
+		padding: 12.5em;
+}
+
+#main-wrapper {
+		border-top-width: 35px;
+		border-bottom-width: 10px;
+}
+
+
+/* #HEADER DESKTOP */
+
+.navbar-brand img {
+    height: 2em;
+    margin-top: 7px;
+}
+
+.navbar-brand {
+  float: none;
+  padding: 0;
+}
+
+/* #FOOTER DESKTOP */
+
+#footer {
+		text-align: center;
+		padding: 8em 0 8em 0;
+}
+
+#footer h2.major {
+		margin: 0 0 1em 0;
 }
 
 /* #CONTRIBUTOR GREYBOXES */
