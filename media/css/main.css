@@ -278,6 +278,7 @@ header > p {
 
 .navbar-nav>li>a {
     padding: 15px 20px;
+    font-weight: 600;
 }
 
 .navbar-fixed-top {
