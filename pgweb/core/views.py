@@ -167,8 +167,8 @@ def sitemap_internal(request):
 # single one, making sure it turns into a single http response. We do this
 # dynamically, since the output will be cached.
 _dynamic_cssmap = {
-	'base': ['media/css/font-awesome.min.css',
-			 'media/css/main.css',],
+	'base': ['media/css/main.css',
+			 'media/css/normalize.css',],
 	'docs': ['media/css/global.css',
 			 'media/css/table.css',
 			 'media/css/text.css',
