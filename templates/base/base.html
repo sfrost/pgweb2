@@ -63,17 +63,13 @@
          </ul>
        </div><!-- /.navbar-collapse -->
      </div><!-- /.container-fluid -->
-   </nav>
-
-    <div id="pgContent">
-      {%block layoutblock%}{%endblock%}
-      <br class="pgClearBoth" />
-    </div> <!-- pgContent -->
-  	<div class="container" id="copyright">
-     <a href="{{link_root}}/about/privacypolicy">Privacy Policy</a> |
-     <a href="{{link_root}}/about/">About PostgreSQL</a> |
-     <a href="{{link_root}}/about/contact">Contact</a><br/>
-     <p>Copyright &copy; 1996-{% now "Y" %} The PostgreSQL Global Development Group</p>
+    </nav>
+    {%block layoutblock%}{%endblock%}
+  	 <div class="container" id="copyright">
+       <a href="{{link_root}}/about/privacypolicy">Privacy Policy</a> |
+       <a href="{{link_root}}/about/">About PostgreSQL</a> |
+       <a href="{{link_root}}/about/contact">Contact</a><br/>
+       <p>Copyright &copy; 1996-{% now "Y" %} The PostgreSQL Global Development Group</p>
   	</div> <!-- Footer -->
   </div> <!-- Container -->
  </body>
