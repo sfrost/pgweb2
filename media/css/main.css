@@ -607,6 +607,8 @@ table.default thead {
 .jumbotron h1 {
     font-size: 3em !important;
     color: #fff !important;
+    display: table-cell;
+    vertical-align: bottom;
 }
 
 .jumbotron .lead {
