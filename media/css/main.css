@@ -1271,25 +1271,6 @@ h3.major.no-margin {
   	margin: 0;
 }
 
-
-/* #JCAROUSEL */
-
-.jcarousel li {
-	  margin-left: 10px;
-}
-
-.jcarousel blockquote {
-	  border-left: none;
-}
-
-.jcarousel blockquote p:before {
-	  content: "\f10d";
-	  font-family: 'Fontawesome';
-	  float: left;
-	  margin-right: 10px;
-}
-
-
 /* #CONTRIBUTOR GREYBOXES */
 
 /**
