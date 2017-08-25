@@ -181,6 +181,10 @@ h3.major.no-margin {
   	margin: 0;
 }
 
+.h3, h3 {
+    font-size: 1.3em !important;
+}
+
 h3.major {
 	  position: relative;
 	  border-top: solid 5px #e7eae8;
@@ -194,10 +198,6 @@ h3.major span {
   	display: inline-block;
     top: -0.775em;
     padding: 0 1.5em 0 0;
-}
-
-.h3, h3 {
-    font-size: 1.3em;
 }
 
 a {
