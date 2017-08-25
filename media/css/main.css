@@ -1088,3 +1088,9 @@ label:before {
 		border-width: 2px;
 		line-height: 1em;
 }
+
+.btn-center {
+  text-align: center;
+  display: block;
+  margin: 4em auto;
+}
