@@ -1100,3 +1100,9 @@ label:before {
   display: block !important;
   margin: 4em auto !important;
 }
+
+.jumbotron .btn.btn-outline-secondary {
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+}
