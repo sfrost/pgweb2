@@ -29,7 +29,7 @@
 {%block extrahead%}{%endblock%}
  </head>
  <body>
- <div id="container">
+ <div id="main-wrapper">
  <!-- Header -->
    <nav id="header" class="navbar navbar-fixed-top navbar-light bg-faded">
      <div id="header-container" class="container navbar-container">
@@ -64,9 +64,8 @@
        </div><!-- /.navbar-collapse -->
      </div><!-- /.container-fluid -->
     </nav>
-    <div id="main-wrapper">
-      {%block layoutblock%}{%endblock%}
-    </div>
+
+    {%block layoutblock%}{%endblock%}
 
     <!-- Footer -->
     <footer id="footer">
