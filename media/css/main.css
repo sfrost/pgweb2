@@ -1710,6 +1710,7 @@ button.btn.btn-default {
     height: 30px;
     padding: 6px 12px;
     font-size: 14px;
+    float: right;
 }
 
 .form-inline .form-control {
