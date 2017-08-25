@@ -644,6 +644,7 @@ table.default thead {
 	text-align: center;
 	font-size: 5em;
 	color: #336791;
+  margin-bottom: 25px;
 }
 
 /* #WRAPPERS */
