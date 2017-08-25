@@ -66,39 +66,39 @@
     </nav>
 
     {%block layoutblock%}{%endblock%}
-
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="major"><span>Connect with the PostgreSQL Community</span></h2>
-            <ul class="contact">
-              <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
-              <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-              <li><a class="icon fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-              <li><a class="icon fa-github" href="#"><span class="label">GitHub</span></a></li>
-              <li><a class="icon fa-google-plus" href="#"><span class="label">Google+</span></a></li>
-            </ul>
-          </div>
+    
+  </div> <!-- Container -->
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="major"><span>Connect with the PostgreSQL Community</span></h2>
+          <ul class="contact">
+            <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+            <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+            <li><a class="icon fa-instagram" href="#"><span class="label">Instagram</span></a></li>
+            <li><a class="icon fa-github" href="#"><span class="label">GitHub</span></a></li>
+            <li><a class="icon fa-google-plus" href="#"><span class="label">Google+</span></a></li>
+          </ul>
         </div>
       </div>
-
-    <!-- Copyright -->
-    <div id="copyright">
-      <ul class="menu">
-        <li>&copy; Copyright © 1996-2015 The PostgreSQL Global Development Group</li>
-      </ul>
     </div>
 
-    </footer>
+  <!-- Copyright -->
+  <div id="copyright">
+    <ul class="menu">
+      <li>&copy; Copyright © 1996-2015 The PostgreSQL Global Development Group</li>
+    </ul>
+  </div>
 
-  	 <div class="container" id="copyright">
-       <a href="{{link_root}}/about/privacypolicy">Privacy Policy</a> |
-       <a href="{{link_root}}/about/">About PostgreSQL</a> |
-       <a href="{{link_root}}/about/contact">Contact</a><br/>
-       <p>Copyright &copy; 1996-{% now "Y" %} The PostgreSQL Global Development Group</p>
-  	</div> <!-- Footer -->
-  </div> <!-- Container -->
- </body>
+  </footer>
+
+	 <div class="container" id="copyright">
+     <a href="{{link_root}}/about/privacypolicy">Privacy Policy</a> |
+     <a href="{{link_root}}/about/">About PostgreSQL</a> |
+     <a href="{{link_root}}/about/contact">Contact</a><br/>
+     <p>Copyright &copy; 1996-{% now "Y" %} The PostgreSQL Global Development Group</p>
+	</div> <!-- Footer -->
+</body>
 </html>
