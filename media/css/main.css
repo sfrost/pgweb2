@@ -19,7 +19,7 @@
 *
 */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 /* #RESET */
 
@@ -771,18 +771,6 @@ table.default thead {
 		.box.post-summary .meta {
 				margin: 0;
 				line-height: 1em;
-		}
-
-		.box.post-centered h3 {
-				line-height: 1em;
-				margin: 0 0 0.75em 0;
-				text-align: center;
-		}
-
-		.box.post-centered .meta {
-				margin: 0;
-				line-height: 1em;
-				text-align: center;
 		}
 
 		.box.post-centered a li:hover, .box.post-centered li.active {
