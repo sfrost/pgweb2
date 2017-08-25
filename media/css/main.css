@@ -610,6 +610,7 @@ table.default thead {
 #main-wrapper {
     border-top: 5px solid #336791;
     border-bottom: solid 5px #666;
+    margin-top: 3em;
 }
 
 #banner-wrapper {
