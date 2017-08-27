@@ -27,59 +27,59 @@
   					</div>
   		    </div>
   			</div>
-  		</div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="news col-lg-6">
-            <p><b>18<sup>th</sup> May 2017</b></p>
 
-            <h1>
-               2017-08-10 Security Update and PostgreSQL 10 Beta 3 Released!
-            </h1>
-            <p>
-               The PostgreSQL Global Development Group is pleased to announce the availability of
-               PostgreSQL 10 Beta 1.
-            </p>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="news col-lg-6">
+              <p><b>18<sup>th</sup> May 2017</b></p>
 
-            <p>
-              This is the first beta release of the upcoming version 10 of PostgreSQL. Please download and test the
-                beta code with your applications and report any issues you may find.
-            </p>
-            <ul>
-              <li><a href="/about/news/1749/" title="Release Announcement">Release Announcement</a></li>
-              <li><a href="/docs/10/static/release-10.html" title="Release Notes">Release Notes</a></li>
-              <li><a href="/download/" title="Download">Download</a></li>
-            </ul>
-          </div>
-          <div class="newslist col-lg-6">
-            <a href="/about/newsarchive">
-              <h1>Latest News</h1>
-            </a>
-            <div class="container">
-              {% for n in news %}
+              <h1>
+                 2017-08-10 Security Update and PostgreSQL 10 Beta 3 Released!
+              </h1>
               <p>
-                <span class="txtDate">{{n.displaydate}}</span> <br/>
-                <a href="/about/news/{{n.id}}/">{{n.title}}</a>
+                 The PostgreSQL Global Development Group is pleased to announce the availability of
+                 PostgreSQL 10 Beta 1.
               </p>
-              {% endfor %}
-              <div>
-                <img class="pgArrowImage" src="/media/img/layout/blt_blu_arrow.png" width="6" height="5" alt="" />
-                <ul class="pgRSSBottomList">
-                  <li>
-                    <a href="/about/newsarchive" title="More News">More</a>
-                  </li>
-                  <li>
-                    <a href="/account/news/new/">Submit News</a>
-                  </li>
-                  <li class="last-child">
-                    <a href="/news.rss" title="News RSS Feed"><img class="pgRSSImage" src="/media/img/misc/ico_rss.png" width="28" height="13" alt="News RSS Feed" /></a>
-                  </li>
-                </ul>
+
+              <p>
+                This is the first beta release of the upcoming version 10 of PostgreSQL. Please download and test the
+                  beta code with your applications and report any issues you may find.
+              </p>
+              <ul>
+                <li><a href="/about/news/1749/" title="Release Announcement">Release Announcement</a></li>
+                <li><a href="/docs/10/static/release-10.html" title="Release Notes">Release Notes</a></li>
+                <li><a href="/download/" title="Download">Download</a></li>
+              </ul>
+            </div>
+            <div class="newslist col-lg-6">
+              <a href="/about/newsarchive">
+                <h1>Latest News</h1>
+              </a>
+              <div class="container">
+                {% for n in news %}
+                <p>
+                  <span class="txtDate">{{n.displaydate}}</span> <br/>
+                  <a href="/about/news/{{n.id}}/">{{n.title}}</a>
+                </p>
+                {% endfor %}
+                <div>
+                  <img class="pgArrowImage" src="/media/img/layout/blt_blu_arrow.png" width="6" height="5" alt="" />
+                  <ul class="pgRSSBottomList">
+                    <li>
+                      <a href="/about/newsarchive" title="More News">More</a>
+                    </li>
+                    <li>
+                      <a href="/account/news/new/">Submit News</a>
+                    </li>
+                    <li class="last-child">
+                      <a href="/news.rss" title="News RSS Feed"><img class="pgRSSImage" src="/media/img/misc/ico_rss.png" width="28" height="13" alt="News RSS Feed" /></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
 
         <div id="pgFrontUSSContainer">
