@@ -1084,20 +1084,17 @@ ul.menu {
 /* News */
 
 .news {
-  padding: 3em;
+  padding: 2em;
 }
 
 .news h1 {
-  color: #fff;
-  text-align: center;
-  padding: 5em;
-  line-height: 2em;
+
 }
 
 .newslist {
   text-align: center;
   background-color: #fff;
-  padding: 3em;
+  padding: 2em;
 }
 
 .newslist ul {
