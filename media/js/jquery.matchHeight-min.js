@@ -20,3 +20,9 @@ if (!isMobile()) {
     $('.box').matchHeight();
   });
 }
+
+if (!isMobile()) {
+  $(function() {
+    $('.box.post-centered').matchHeight();
+  });
+}
