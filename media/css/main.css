@@ -418,6 +418,10 @@ ul.contact {
   	cursor: default;
 }
 
+a.icon {
+    text-decoration: none;
+}
+
 ul.contact li {
 	  -moz-transition: top .15s ease-in-out;
 	  -webkit-transition: top .15s ease-in-out;
