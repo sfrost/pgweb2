@@ -779,6 +779,10 @@ ul.actions {
 		line-height: 1em;
 }
 
+article.box.post-centered h3 {
+  text-transform: capitalize;
+}
+
 .box.post-centered a li:hover, .box.post-centered li.active {
 		color: #000;
 }
@@ -1047,29 +1051,13 @@ label:before {
     position: absolute;
 }
 
-/* #COPYRIGHT */
+/* Copyright */
 
-#copyright {
-		display: inline-block;
-		background: #e7eae8;
-		padding: 0.75em 2em 0.75em 2em;
-		color: #8b9790;
-    width: 100%;
+ul.menu {
+    padding: 4em 0 0 0;
 }
 
-#copyright a {
-		color: inherit;
-}
-
-#copyright .menu {
-		margin: 0;
-}
-
-#copyright .menu li {
-		border-color: #264d6d;
-		border-width: 2px;
-		line-height: 1em;
-}
+/* Buttons */
 
 .btn-center {
   text-align: center !important;
