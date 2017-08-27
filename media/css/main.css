@@ -1080,3 +1080,26 @@ ul.menu {
   color: #000;
   font-weight: 600;
 }
+
+/* News */
+
+.news {
+  padding: 3em;
+}
+
+.news h1 {
+  color: #fff;
+  text-align: center;
+  padding: 5em;
+  line-height: 2em;
+}
+
+.newslist {
+  text-align: center;
+  background-color: #fff;
+  padding: 3em;
+}
+
+.newslist ul {
+  text-align: left;
+}
