@@ -1075,52 +1075,45 @@ ul.menu {
   margin: 4em auto !important;
 }
 
-.basicBox {
-  width: 130px;
-  height: 65px;
-  margin: 15px auto;
-  color: #4274D3;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.15rem;
-  line-height: 65px;
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
+/* Isi */
+.button--isi {
+	padding: 1.2em 2em;
+	color: #fff;
+	background: #7986cb;
+	overflow: hidden;
+}
+.button--isi::before {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	margin: -15px 0 0 1px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #3f51b5;
+	-webkit-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+	-webkit-transform: scale3d(1, 2, 1);
+	transform: scale3d(1, 2, 1);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.9,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.9,1);
+}
+.button--isi .button__icon {
+	vertical-align: middle;
+}
+.button--isi > span {
+	vertical-align: middle;
+	padding-left: 0.75em;
+}
+.button--isi:hover::before {
+	-webkit-transform: scale3d(9, 9, 1);
+	transform: scale3d(9, 9, 1);
 }
 
-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-svg rect {
-  fill: none;
-  stroke: #4274D3;
-  stroke-width: 1;
-}
-
-.basicBox:hover svg rect {
-  stroke: #4274D3;
-}
-
-/* Basic Box */
-svg rect {
-  stroke-dasharray: 400, 0;
-  -webkit-transition: all 0.8s ease-in-out;
-  -moz-transition: all 0.8s ease-in-out;
-  -ms-transition: all 0.8s ease-in-out;
-  -o-transition: all 0.8s ease-in-out;
-}
-.basicBox:hover svg rect {
-  stroke-width: 3;
-  stroke-dasharray: 35, 245;
-  stroke-dashoffset: 38;
-  -webkit-transition: all 0.8s ease-in-out;
-  -moz-transition: all 0.8s ease-in-out;
-  -ms-transition: all 0.8s ease-in-out;
-  -o-transition: all 0.8s ease-in-out;
-}
 /* News */
 
 .news {
