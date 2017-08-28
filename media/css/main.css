@@ -1075,112 +1075,97 @@ ul.menu {
   margin: 4em auto !important;
 }
 
-.banner-btn a {
-  position: fixed;
-  cursor: pointer;
-  top: 50vh;
+* {
+  box-sizing: border box;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-btn {
+  background: #1d1d1d;
   color: white;
-  transform: translate3d(-50%, -50%, 0);
-  padding: 0.7em calc(0.7em * 1.2);
+  border: none;
+  font-size: 10px;
+  font-size: 1rem;
+  background-color: #1d1d1d;
+  color: white;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 14px 21px;
+  padding: 1.4rem 2.1rem;
+  border: 2px solid #1d1d1d;
+  transition: color 0.1s cubic-bezier(0.16, 0.08, 0.355, 1), background 0.1s cubic-bezier(0.16, 0.08, 0.355, 1);
   display: inline-block;
-  border: 3px solid transparent;
+  cursor: pointer;
+  width: 100%;
+  min-width: 200px;
+  min-width: 20rem;
+  outline: none;
+  vertical-align: middle;
+  text-align: center;
   position: relative;
-  font-size: 1.5em;
-  letter-spacing: 0.07em;
-}
-.banner-btn a .text {
-  font-family: proxima-nova;
-  transform: translate3d(0, 0.7em, 0);
-  display: block;
-  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  overflow: hidden;
 }
 
-.banner-btn a:after {
-  position: absolute;
-  content: '';
-  bottom: -3px;
-  left: calc(0.7em * 1.2);
-  right: calc(0.7em * 1.2);
-  height: 3px;
-  background: #f26522;
-  z-index: -1;
-  transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
-  transform-origin: left;
+@media (min-width: 400px) {
+  .banner-btn {
+    width: auto;
+  }
 }
-.banner-btn .line {
-  position: absolute;
-  background: #f26522;
-}
-.banner-btn .line.-right, .banner-btn .line.-left {
-  width: 3px;
-  bottom: -3px;
-  top: -3px;
-  transform: scale3d(1, 0, 1);
-}
-.banner-btn .line.-top, .banner-btn .line.-bottom {
-  height: 3px;
-  left: -3px;
-  right: -3px;
-  transform: scale3d(0, 1, 1);
-}
-.banner-btn .line.-right {
-  right: -3px;
-  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
-  transform-origin: top;
-}
-.banner-btn .line.-top {
-  top: -3px;
-  transition: transform 0.08s linear 0.43s;
-  transform-origin: left;
-}
-.banner-btn .line.-left {
-  left: -3px;
-  transition: transform 0.08s linear 0.51s;
-  transform-origin: bottom;
-}
-.banner-btn .line.-bottom {
-  bottom: -3px;
-  transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
-  transform-origin: right;
+@media (min-width: 800px) {
+  .banner-btn {
+    font-size: 1.1rem;
+    padding: 1.6rem 2.8rem;
+  }
 }
 
-.banner-btn a:hover .text,
-.banner-btn a:active .text {
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+.banner-btn:hover {
+  background: lighten(#1d1d1d, 5%);
+  border-color: lighten(#1d1d1d, 5%);
+  color: #fff;
 }
-.banner-btn a:hover:after,
-.banner-btn a:active:after {
-  transform: scale3d(0, 1, 1);
-  right: -3px;
-  left: -3px;
-  transform-origin: right;
-  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+
+.btn-border {
+  background-color: transparent;
+  color: #1d1d1d;
 }
-.banner-btn a:hover .line,
-.banner-btn a:active .line {
-  transform: scale3d(1, 1, 1);
-}
-.banner-btn a:hover .line.-right,
-.banner-btn a:active .line.-right {
-  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
-  transform-origin: bottom;
-}
-.banner-btn a:hover .line.-top,
-.banner-btn a:active .line.-top {
-  transition: transform 0.08s linear 0.4s;
-  transform-origin: right;
-}
-.banner-btn a:hover .line.-left,
-.banner-btn a:active .line.-left {
-  transition: transform 0.08s linear 0.48s;
-  transform-origin: top;
-}
-.banner-btn a:hover .line.-bottom,
-.banner-btn a:active .line.-bottom {
-  transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
-  transform-origin: left;
+
+.btn-arrow {
+  position: relative;
+    transition: background-color 300ms ease-out;
+  span {
+    display: inline-block;
+    position: relative;
+    transition: all 300ms ease-out;
+    will-change: transform;
+  }
+  &:hover span {
+    transform: translate3d(-1rem, 0, 0);
+  }
+  svg {
+    position: absolute;
+    width: 1.1em;
+    right: 0px;
+    right: 0rem;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 300ms ease-out;
+    will-change: right, opacity;
+    * {
+      stroke-width: 5;
+      stroke-color: transparent;
+    }
+  }
+  &:hover svg {
+    opacity: 1;
+    right: -2rem;
+  }
 }
 
 /* News */
