@@ -688,6 +688,10 @@ table.default thead {
     color: #fff;
 }
 
+.jumbotron {
+  margin-bottom: 0;
+}
+
 
 /* #FOOTER */
 
