@@ -1077,20 +1077,11 @@ ul.menu {
 
 /* News */
 
-.news {
-  padding: 2em;
-}
-
-.news h1 {
-
-}
-
-.newslist {
-  text-align: center;
+.news-wrapper {
   background-color: #fff;
-  padding: 2em;
-}
-
-.newslist ul {
-  text-align: left;
+  background-image: -webkit-linear-gradient(#fff, #f7f7f7);
+  background-image: linear-gradient(#fff, #f7f7f7);
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+  box-shadow: 0 -85px 50px rgba(0,0,0,0.025);
 }
