@@ -1057,7 +1057,7 @@ label:before {
     top: 0;
     width: 20px;
     height: 20px;
-    background: #f8f8f8;
+    background: #f8f8f8;d
     position: absolute;
 }
 
@@ -1077,11 +1077,18 @@ ul.menu {
 
 /* News */
 
-.news-wrapper {
-  background-color: #fff;
-  background-image: -webkit-linear-gradient(#fff, #f7f7f7);
-  background-image: linear-gradient(#fff, #f7f7f7);
-  border-top: 1px solid #d3d3d3;
-  border-bottom: 1px solid #d3d3d3;
-  box-shadow: 0 -85px 50px rgba(0,0,0,0.025);
+.news {
+  padding: 2em;
+}
+
+.news ul {
+  text-align: left;
+}
+
+.colorbox-1 {
+  background-color: #FFFFFF;
+}
+
+.colorbox-2 {
+  background-color: #E6E6FA;
 }
