@@ -23,6 +23,6 @@ if (!isMobile()) {
 
 if (!isMobile()) {
   $(function() {
-    $('.box.post-centered').matchHeight();
+    $('.news').matchHeight();
   });
 }

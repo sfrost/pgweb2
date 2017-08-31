@@ -689,7 +689,7 @@ table.default thead {
 }
 
 .jumbotron {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 
