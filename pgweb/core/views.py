@@ -24,7 +24,7 @@ from pgweb.util.misc import get_client_ip, varnish_purge
 from pgweb.util.sitestruct import get_all_pages_struct
 
 # models needed for the pieces on the frontpage
-from pgweb.news.models import NewsArticle
+from pgweb.news.models import NewsArticle, NewsTag
 from pgweb.events.models import Event
 from pgweb.quotes.models import Quote
 from models import Version, ImportedRSSItem
@@ -40,15 +40,19 @@ from django.template.context import RequestContext
 # Front page view
 @cache(minutes=10)
 def home(request):
-	news = NewsArticle.objects.filter(approved=True)[:7]
-	events = Event.objects.select_related('country').filter(approved=True, training=False, enddate__gte=date.today()).order_by('enddate', 'startdate')[:5]
+	news = NewsArticle.objects.filter(approved=True)[:10]
+	# get the first seven events and divide each up into a list of community and other events
+	event_queryset = Event.objects.select_related('country').filter(approved=True, training=False, enddate__gte=date.today()).order_by('enddate', 'startdate')
+	# display up to the first 4 community events.  Then choose the next 7 - |communty_events|
+	community_events = [event for event in event_queryset.filter(badged=True).all()[:4]]
+	other_events = [event for event in event_queryset.filter(badged=False).all()[:(7-len(community_events))]]
 	try:
 		quote = Quote.objects.filter(approved=True).order_by('?')[0]
 	except:
 		# if there is no quote available, just ignore error
 		quote = None
 	versions = Version.objects.filter(supported=True)
-	planet = ImportedRSSItem.objects.filter(feed__internalname="planet").order_by("-posttime")[:7]
+	planet = ImportedRSSItem.objects.filter(feed__internalname="planet").order_by("-posttime")[:10]
 
 	traininginfo = Event.objects.filter(approved=True, training=True).extra(where=("startdate <= (CURRENT_DATE + '6 Months'::interval) AND enddate >= CURRENT_DATE",)).aggregate(Count('id'), Count('country', distinct=True))
 	# can't figure out how to make django do this
@@ -59,7 +63,9 @@ def home(request):
 	return render_to_response('index.html', {
 		'title': 'The world\'s most advanced open source database',
 		'news': news,
-		'events': events,
+		'newstags': NewsTag.objects.all(),
+		'community_events': community_events,
+		'other_events': other_events,
 		'traininginfo': traininginfo,
 		'trainingcompanies': trainingcompanies,
 		'quote': quote,
@@ -280,15 +286,6 @@ def api_varnish_purge(request):
 		expr = request.POST['p%s' % i]
 		curs.execute("SELECT varnish_purge_expr(%s)", (expr, ))
 	return HttpResponse("Purged %s entries\n" % n)
-
-@nocache
-@csrf_exempt
-def api_repo_updated(request):
-	if not get_client_ip(request) in settings.SITE_UPDATE_HOSTS:
-		return HttpServerError("Invalid client address")
-	# Ignore methods and contents, just drop the trigger
-	open(settings.SITE_UPDATE_TRIGGER_FILE, 'a').close()
-	return HttpResponse("OK")
 
 # Merge two organisations
 @login_required

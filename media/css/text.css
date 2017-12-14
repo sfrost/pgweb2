@@ -43,6 +43,12 @@ h4 {
   padding-right: 4px;
 }
 
+.txtHomeHeader {
+  color: #0094C7;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .txtNewsEvent {
   font-size: 0.9em;
   color: #0094C7;

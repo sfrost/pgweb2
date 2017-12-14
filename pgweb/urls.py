@@ -19,7 +19,7 @@ urlpatterns = patterns('',
 	(r'^$', 'pgweb.core.views.home'),
 	(r'^dyncss/(?P<css>base|docs).css$', 'pgweb.core.views.dynamic_css'),
 
-	(r'^about/newsarchive/$', 'pgweb.news.views.archive'),
+	(r'^about/newsarchive/([^/]+/)?$', 'pgweb.news.views.archive'),
 	(r'^about/news/(\d+)(-.*)?/$', 'pgweb.news.views.item'),
 	(r'^about/events/$', 'pgweb.events.views.main'),
 	(r'^about/eventarchive/$', 'pgweb.events.views.archive'),
@@ -49,6 +49,7 @@ urlpatterns = patterns('',
 	(r'^community/lists/$', RedirectView.as_view(url='/list/', permanent=True)),
 	(r'^community/lists/subscribe/$', 'pgweb.lists.views.subscribe'),
 	(r'^community/lists/listinfo/$', 'pgweb.lists.views.listinfo'),
+	(r'^community/lists/activate/$', 'pgweb.lists.views.activate'),
 	(r'^community/survey/vote/(\d+)/$', 'pgweb.survey.views.vote'),
 	(r'^community/survey[/\.](\d+)(-.*)?/$', 'pgweb.survey.views.results'),
 	(r'^community/user-groups/$', 'pgweb.pugs.views.index'),
@@ -70,7 +71,7 @@ urlpatterns = patterns('',
 	# RSS feeds
 	###
 	(r'^versions.rss$', VersionFeed()),
-	(r'^news.rss$', NewsFeed()),
+	(r'^news(/(?P<tagurl>[^/]+))?.rss$', NewsFeed()),
 	(r'^events.rss$', EventFeed()),
 
 	###
@@ -125,9 +126,6 @@ urlpatterns = patterns('',
 
 	# API endpoints
 	(r'^api/varnish/purge/$', 'pgweb.core.views.api_varnish_purge'),
-
-	# Pingback from git repo to update site
-	(r'^api/repo_updated/$', 'pgweb.core.views.api_repo_updated'),
 
 	# Override some URLs in admin, to provide our own pages
 	(r'^admin/pending/$', 'pgweb.core.views.admin_pending'),

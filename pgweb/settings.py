@@ -118,22 +118,6 @@ INSTALLED_APPS = [
     'pgweb.pugs',
 ]
 
-#
-# Disable the new authentication handling for now. The reason for this is
-# that we need the sha1 authentication so we can do old-style community
-# auth, which is still used by the commitfest app. Once that app is
-# migrated away, this can be reverted to the new django default which
-# is more secure.
-#
-PASSWORD_HASHERS = (
-    'django.contrib.auth.hashers.SHA1PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
-    'django.contrib.auth.hashers.BCryptPasswordHasher',
-    'django.contrib.auth.hashers.MD5PasswordHasher',
-    'django.contrib.auth.hashers.CryptPasswordHasher',
-)
-
 # Default format for date/time (as it changes between machines)
 DATETIME_FORMAT="Y-m-d H:i:s"
 
@@ -161,6 +145,7 @@ YUM_JSON="/usr/local/pgweb/external/yum.json"
 STATIC_CHECKOUT="/usr/local/pgweb-static"              # Location of a checked out pgweb-static project
 NOTIFICATION_EMAIL="someone@example.com"               # Address to send notifications *to*
 NOTIFICATION_FROM="someone@example.com"                # Address to send notifications *from*
+NOREPLY_FROM="someone@example.com"                     # Address to send unverified messages from
 LISTSERVER_EMAIL="someone@example.com"                 # Address to majordomo
 BUGREPORT_EMAIL="someone@example.com"                  # Address to pgsql-bugs list
 DOCSREPORT_EMAIL="someone@example.com"                 # Address to pgsql-docs list
@@ -169,11 +154,10 @@ FRONTEND_SERVERS=()                                    # A tuple containing the 
 FTP_MASTERS=()										   # A tuple containing the *IP addresses* of all machines
                                                        # trusted to upload ftp structure data
 VARNISH_PURGERS=()                                     # Extra servers that can do varnish purges through our queue
+LIST_ACTIVATORS=()								       # Servers that can activate lists
 ARCHIVES_SEARCH_SERVER="archives.postgresql.org"       # Where to post REST request for archives search
 FRONTEND_SMTP_RELAY="magus.postgresql.org"             # Where to relay user generated email
-SITE_UPDATE_TRIGGER_FILE='/tmp/pgweb.update_trigger'   # Where to drop update trigger file
-SITE_UPDATE_HOSTS=('127.0.0.1', )                      # Hosts that can trigger a site update
+OAUTH={}                                               # OAuth providers and keys
 
 # Load local settings overrides
 from settings_local import *
-

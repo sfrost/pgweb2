@@ -2,6 +2,7 @@
 {%load pgfilters%}
 {%block title%}{{operation|default:"Edit"}} {{formitemtype}}{%endblock%}
 {%block contents%}
+{%block pre_form_header%}{%endblock%}
 <h1>{{operation|default:"Edit"}} {{formitemtype}}</h1>
 <form method="post" action=".">{%if not nocsrf%}{% csrf_token %}{%endif%}
 {%if form_intro%}
@@ -23,7 +24,7 @@
  </tr>
  {%endif%}
  <tr {%if field.errors%}class="errorinfo"{%endif%}>
-  <th>{{field.label_tag}}{%if field.help_text%}{%if field.field.widget|class_name == "Textarea"%}<br/>
+  <th class="formfieldnamecontainer">{{field.label_tag}}{%if field.help_text%}{%if field.field.widget|class_name == "Textarea"%}<br/>
    <span class="formfieldhelp">{{field.help_text|safe}}</span>{%endif%}{%endif%}
   </th>
   <td>{{field}}</td>
@@ -38,26 +39,39 @@
 </table>
 <input type="submit" value="{{savebutton|default:"Save"}}" />
 </form>
+{%block post_form%}{%endblock%}
 {%endblock%}
 
 {% block extrahead %}
 {{ block.super }}
-{%if toggle_fields or jquery %}
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+{%if toggle_fields or described_checkboxes or jquery %}
+<script type="text/javascript" src="/media/js/jquery.min.js"></script>
 {%endif%}
 {%if markdownfields%}
 <link rel="stylesheet" type="text/css" href="/media/css/showdown_preview.css" />
 <script type="text/javascript" src="/media/showdown/showdown.js"></script>
 <script type="text/javascript" src="/media/js/showdown_preview.js"></script>
-<script language="javascript">
+<script type="text/javascript">
    window.onload = function() {
       {%for mdf in markdownfields %}
          attach_showdown_preview('id_{{mdf}}', 0);
       {%endfor%}
+      {%for cbf, descs in described_checkboxes.items%}
+{%comment%}more than a little ugly, but django uses a sequence and not the id for the labels{%endcomment%}
+       var descs={
+{%for k,v in descs %}
+         '{{k}}': '{{v|escapejs}}',
+{%endfor%}
+       };
+       $('ul#id_{{cbf}} li').each(function (i,e) {
+          var id = $(e).find('input[type=checkbox]')[0].value;
+          e.title=descs[id];
+       });
+      {%endfor%}
    }
 </script>
 {%if toggle_fields %}
-<script language="javascript">
+<script type="text/javascript">
 {%for f in toggle_fields%}
 function toggle_{{f.name}}() {
    v = $('#id_{{f.name}}').prop('checked');
@@ -67,9 +81,9 @@ function toggle_{{f.name}}() {
 {%else%}
    if (!v) {
 {%endif%}
-      $('#id_{{c}}').attr('disabled', true);
+      $('#id_{{c}}').attr('disabled', true).parents('tr').hide();
    } else {
-      $('#id_{{c}}').removeAttr('disabled');
+      $('#id_{{c}}').removeAttr('disabled').parents('tr').show();
    }
 {%endfor%}
 }
@@ -85,7 +99,6 @@ $(document).ready(function() {
 {%endif%}{# markdownfields #}
 
 {%if recaptcha%}
-<script src="https://www.google.com/recaptcha/api.js?hl=en" async defer></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en" async defer></script>
 {%endif%}
 {%endblock%}
-

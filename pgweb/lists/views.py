@@ -1,5 +1,5 @@
-from django.shortcuts import render_to_response
-from django.http import HttpResponse
+from django.shortcuts import render_to_response, get_object_or_404
+from django.http import HttpResponse, HttpResponseForbidden
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 
@@ -18,20 +18,9 @@ def subscribe(request):
 		if form.is_valid():
 			if form.cleaned_data['action'] == 'subscribe':
 				mailsubject = "subscribe"
-				# Default is get mail and not digest, in which case we send a regular
-				# subscribe request. In other cases, we send subscribe-set which also
-				# sets those flags.
-				if form.cleaned_data['receive'] and not form.cleaned_data['digest']:
-					mailtxt = "subscribe %s\n" % form.cleaned_data['lists']
-				else:
-					tags = []
-					if not form.cleaned_data['receive']:
-						tags.append('nomail')
-					if form.cleaned_data['digest']:
-						tags.append('digest')
-
-					mailtxt = "subscribe-set %s %s\n" % (form.cleaned_data['lists'],
-														",".join(tags))
+				# We currently only support get mail, no digest.
+				# So send a regular subscribe request.
+				mailtxt = "subscribe %s\n" % form.cleaned_data['lists']
 			else:
 				mailtxt = "unsubscribe %s\n" % form.cleaned_data['lists']
 				mailsubject = "unsubscribe"
@@ -49,15 +38,15 @@ def subscribe(request):
 
 	return render_to_response('lists/subscribe_form.html', {
 		'form': form,
-		'operation': 'Subscribe',
+		'operation': 'Legacy subscription',
 		'jquery': True,
 		'form_intro': """
-<b>Note 1:</b> Please ensure you read the <a 
+<b>Note 1:</b> Please ensure you read the <a
 href="https://wiki.postgresql.org/wiki/Archives_Policy">Archive Policy</a>
 before posting to the lists.</p>
 
-<p><b>Note 2:</b> Please do not subscribe to mailing lists using e-mail 
-accounts protected by mail-back anti-spam systems. These are extremely annoying 
+<p><b>Note 2:</b> Please do not subscribe to mailing lists using e-mail
+accounts protected by mail-back anti-spam systems. These are extremely annoying
 to the list maintainers and other members, and you may be automatically unsubscribed."""
 	}, NavContext(request, "community"))
 
@@ -78,3 +67,17 @@ def listinfo(request):
 			} for l in MailingList.objects.all()]
 	json.dump({'groups': groupdata, 'lists': listdata}, resp)
 	return resp
+
+# Temporary API endpoint
+def activate(request):
+	if not request.META['REMOTE_ADDR'] in settings.LIST_ACTIVATORS:
+		return HttpResponseForbidden()
+	listname = request.GET['listname']
+	active = (request.GET['active'] == '1')
+
+	l = get_object_or_404(MailingList, listname=listname)
+	if l.active == active:
+		return HttpResponse("Not changed")
+	l.active = active
+	l.save()
+	return HttpResponse("Changed")

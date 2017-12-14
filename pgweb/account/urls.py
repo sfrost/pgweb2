@@ -1,5 +1,5 @@
-from django.conf.urls import patterns
-
+from django.conf.urls import patterns, url
+from django.conf import settings
 
 urlpatterns = patterns('',
 	(r'^$', 'pgweb.account.views.home'),
@@ -8,6 +8,7 @@ urlpatterns = patterns('',
 	(r'^auth/(\d+)/$', 'pgweb.account.views.communityauth'),
 	(r'^auth/(\d+)/logout/$', 'pgweb.account.views.communityauth_logout'),
 	(r'^auth/(\d+)/search/$', 'pgweb.account.views.communityauth_search'),
+	(r'^auth/(\d+)/getkeys/(\d+/)?$', 'pgweb.account.views.communityauth_getkeys'),
 
 	# Profile
 	(r'^profile/$', 'pgweb.account.views.profile'),
@@ -45,4 +46,8 @@ urlpatterns = patterns('',
 	(r'^reset/complete/$', 'pgweb.account.views.reset_complete'),
 	(r'^signup/$', 'pgweb.account.views.signup'),
 	(r'^signup/complete/$', 'pgweb.account.views.signup_complete'),
+	(r'^signup/oauth/$', 'pgweb.account.views.signup_oauth'),
 )
+
+for provider in settings.OAUTH.keys():
+	urlpatterns.append(url(r'^login/({0})/$'.format(provider), 'pgweb.account.oauthclient.login_oauth'))

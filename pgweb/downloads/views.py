@@ -16,6 +16,7 @@ from pgweb.util.contexts import NavContext
 from pgweb.util.helpers import simple_form, PgXmlHelper, HttpServerError
 from pgweb.util.misc import get_client_ip, varnish_purge, version_sort
 
+from pgweb.core.models import Version
 from models import Category, Product, StackBuilderApp
 from forms import ProductForm
 
@@ -25,7 +26,7 @@ from forms import ProductForm
 def ftpbrowser(request, subpath):
 	if subpath:
 		# An actual path has been selected. Fancy!
-		
+
 		if subpath.find('..') > -1:
 			# Just claim it doesn't exist if the user tries to do this
 			# type of bad thing
@@ -88,7 +89,7 @@ def ftpbrowser(request, subpath):
 
 	# Fetch files
 	files = [{'name': k, 'mtime': v['d'], 'size': v['s']} for k,v in node.items() if v['t'] == 'f']
-	
+
 	breadcrumbs = []
 	if subpath:
 		breadroot = ""
@@ -198,6 +199,7 @@ def yum_js(request):
 		jsonstr = f.read()
 	return render_to_response('downloads/js/yum.js', {
 		'json': jsonstr,
+		'supported_versions': ','.join([str(v.numtree) for v in Version.objects.filter(supported=True)]),
 		}, content_type='application/json')
 
 #######
@@ -258,4 +260,3 @@ def applications_v2_xml(request):
 	x.endElement('applications')
 	x.endDocument()
 	return resp
-
