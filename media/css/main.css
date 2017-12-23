@@ -19,129 +19,31 @@
 *
 */
 
+/** CUSTOM FONTS */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
-/* #RESET */
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font-family: 'Open Sans', sans-serif;
-    vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol, ul {
-    list-style: none;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-}
-
-table, th, td {
-    border-collapse: collapse;
-    border-spacing: 3em;
-    border: 1px solid black;
-}
-
-body {
-    -webkit-text-size-adjust: none;
-}
-
-/* #BOX MODEL */
-
-*, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-
-/* #ALTERNATING COLOR BOXES */
-
-/**
-* Both of the below are used on mailinglists.html under the "Subscribe" section.
-*/
-
-.color {
-    background-color: #fff;
-    padding: 2em 0 3em 0;
-}
-
-.coloralt {
-    background-color: #e7eae8;
-    padding: 3em 3em 4em 4em;
-    border-radius: 1em;
-}
-
-.coloralt h3 {
-    font-size: 1.1em;
-}
-
-.coloralt .row {
-    margin: 0;
-}
-
-.emailInput {
-    padding-right: 1em;
-}
-
-
-/* #BASIC */
-
+/** GLOBAL CONFIGURATION */
 body {
     background: #f2f5f3;
-	  font-family: 'Open Sans', sans-serif;
-	  font-weight: 400;
-	  color: #666;
-	  font-size: 11.5pt;
-	  line-height: 2em;
-}
-
-body.is-loading * {
-	  -moz-transition: none !important;
-	  -webkit-transition: none !important;
-	  -ms-transition: none !important;
-	  transition: none !important;
-	  -moz-animation: none !important;
-	  -webkit-animation: none !important;
-	  -ms-animation: none !important;
-	  animation: none !important;
-}
-
-input, textarea, select {
-	  font-family: 'Open Sans', sans-serif;
-	  font-weight: 400;
-	  color: #666;
-	  font-size: 11.5pt;
-	  line-height: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #666;
+    font-size: 11.5pt;
+    line-height: 2em;
+    padding-top: 70px; /** this is to account for the fixed navbar blocking content */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  	font-family: 'Roboto Condensed', sans-serif !important;
-	  font-weight: 700;
-	  text-transform: uppercase;
-	  color: #666;
-    margin: 0 0 0.5em 0;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #666;
+    /*margin: 0 0 0.5em 0;*/
 }
 
 h2 {
-		font-size: 1.65em;
+    font-size: 1.65em;
 }
 
 h2.major {
@@ -220,10 +122,6 @@ i, em {
 	  font-style: italic;
 }
 
-br.clear {
-	  clear: both;
-}
-
 sub {
 	  position: relative;
 	  top: 0.5em;
@@ -246,6 +144,31 @@ p, ul, ol, dl, table {
 	  margin-bottom: 3em;
 }
 
+/** Global styles */
+
+.pg-bg-blue {
+    background-color: #336791;
+}
+
+.pg-bg-light-blue {
+    background-color: #008bb9;
+}
+
+.pg-bg-purple {
+    background-color: #e6E6fa;
+}
+
+.pg-border-color-blue {
+    border-color: #336791;
+}
+
+.pg-text-blue {
+    color: #336791;
+}
+
+.pg-text-light-blue {
+    color: #008bb9;
+}
 
 /* #BLOCKQUOTE */
 
@@ -280,58 +203,6 @@ section, article {
 
 section > :last-child, section:last-child, article > :last-child, article:last-child {
   	margin-bottom: 0;
-}
-
-header > p {
-	  display: block;
-	  font-family: 'Roboto Condensed', sans-serif !important;
-	  font-weight: 700;
-	  text-transform: uppercase;
-	  color: #666;
-}
-
-/* Navbar */
-
-.navbar {
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-}
-
-.navbar-brand img {
-    height: 2em;
-    margin-top: 7px;
-}
-
-.navbar-brand {
-  float: none !important;
-  padding: 0 !important;
-}
-
-.form-inline .form-control {
-  height: 30px;
-  margin: 9px 0;
-  float: right;
-}
-
-.navbar-brand>img {
-    display: block;
-    padding-right: 1em;
-}
-
-.navbar-nav>li>a {
-    padding: 15px 20px;
-    font-weight: 600;
-}
-
-.navbar-fixed-top {
-    background: #fff;
-    padding: 0 !important;
-    margin: 0;
-}
-
-@media (min-width: 768px) {
-  .navbar-nav>li>a {
-      padding: 15px 20px;
-  }
 }
 
 /* #FEATURED SECTIONS */
@@ -650,6 +521,22 @@ table.default thead {
 		display: none;
 }
 
+/** BASE STYLES */
+
+/** SHOUTOUT BOX */
+.pg-shout-box {
+    background-color: #336791;
+}
+
+.pg-shout-box a {
+    color: white;
+    text-decoration: underline;
+}
+
+.pg-shout-box a:hover {
+    text-decoration: underline;
+}
+
 /* #PLANETPOSTGRESQL */
 
 .planetPostgresqlGlobe {
@@ -661,37 +548,19 @@ table.default thead {
 
 /* #WRAPPERS */
 
-#main-wrapper {
+/*#main-wrapper {
     border-top: 5px solid #336791;
     border-bottom: solid 5px #666;
     margin-top: 3em;
-}
+}*/
 
-#banner-wrapper {
-		position: relative;
+.pg-jumbotron {
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/media/img/misc/banner.jpg");
-    height: 600px;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-		z-index: 1;
-    text-align: center;
+    z-index: 1;
 }
-
-.jumbotron h1 {
-    font-size: 3em !important;
-    color: #fff !important;
-}
-
-.jumbotron .lead {
-    color: #fff;
-}
-
-.jumbotron {
-  margin-bottom: 0 !important;
-}
-
 
 /* #FOOTER */
 
@@ -866,26 +735,17 @@ article.box.post-centered h3 {
 
 /* #WRAPPERS DESKTOP */
 
-#banner-wrapper {
+/*#banner-wrapper {
 		padding: 12.5em;
-}
+}*/
 
-#main-wrapper {
+/*#main-wrapper {
 		border-top-width: 35px;
 		border-bottom-width: 10px;
-}
-
-
-/* #HEADER DESKTOP */
+}*/
 
 .navbar-brand img {
     height: 2em;
-    margin-top: 7px;
-}
-
-.navbar-brand {
-  float: none;
-  padding: 0;
 }
 
 /* #FOOTER DESKTOP */
@@ -1079,20 +939,31 @@ ul.menu {
   margin: 4em auto !important;
 }
 
-/* News */
-
-.news {
-  padding: 2em;
+/** ALL RESPONSIVE QUERIES HERE */
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    /** NAVBAR */
+    .nav-item > a {
+        font-size: 0.875rem;
+    }
+}
+@media (max-width: 575px) {
+    /** HOMEPAGE JUMBOTRON */
+    .pg-jumbotron-header {
+        font-size: 1.5rem;
+    }
 }
 
-.news ul {
-  text-align: left;
+
+/** Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
 }
 
-.colorbox-1 {
-  background-color: #FFFFFF;
+/** Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
 }
 
-.colorbox-2 {
-  background-color: #E6E6FA;
+/** Very Large devices (large displays, 1200px and up) */
+@media (min-width: 1200px) {
 }
