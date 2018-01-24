@@ -171,8 +171,7 @@ p, ul, ol, dl, table {
 }
 
 .pgFrontContainer {
-  padding: 15px;
-  margin-bottom: 1em;
+    padding: 1em 2em;
 }
 
 /* #BLOCKQUOTE */
