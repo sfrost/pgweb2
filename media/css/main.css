@@ -905,7 +905,7 @@ label:before {
     top: 0;
     width: 20px;
     height: 20px;
-    background: #f8f8f8;d
+    background: #f8f8f8;
     position: absolute;
 }
 
@@ -921,6 +921,16 @@ ul.menu {
   text-align: center !important;
   display: block !important;
   margin: 4em auto !important;
+}
+
+.btn-primary {
+  background-color: #336791;
+  border-color: #336791;
+}
+
+button.btn.btn-center.btn-primary:hover {
+  background-color: #666;
+  border-color: #666;
 }
 
 /** ALL RESPONSIVE QUERIES HERE */
