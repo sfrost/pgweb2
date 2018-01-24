@@ -218,12 +218,9 @@ blockquote {
 }
 
 .feature i {
-  font-size: 8em;
+  font-size: 5em;
+  margin: 20px 0;
   color: #336791;
-}
-
-.feature img {
-  width: 8em;
 }
 
 /* #LIST */
