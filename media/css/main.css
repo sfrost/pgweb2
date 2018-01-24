@@ -1,8 +1,4 @@
 /**
-* Authors: Joshua Santos, Sarah Conway
-* Joshua Santos URI: http://nerdsville.net/
-* Sarah Conway URI: http://sarahconway.com/
-*
 * -----------------------------------------
 * REFERENCE COLORS:
 * (in order from lightest to darkest)
@@ -16,7 +12,6 @@
 *
 * -----------------------------------------
 * All padding: 0 0 0 0; and margin: 0 0 0 0; definitions are top, right, bottom, left specifications, respectively.
-*
 */
 
 /** CUSTOM FONTS */
@@ -25,13 +20,13 @@
 
 /** GLOBAL CONFIGURATION */
 body {
-    background: #f2f5f3;
+    background: #fff;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     color: #666;
     font-size: 11.5pt;
     line-height: 2em;
-    padding-top: 70px; /** this is to account for the fixed navbar blocking content */
+    padding-top: 60px; /** this is to account for the fixed navbar blocking content */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -410,12 +405,12 @@ ul.special a:before {
 ul.meta {
 	  font-size: 0.85em;
 	  color: #a1aaa5;
+    padding-left: 0;
 }
 
 ul.meta li {
 	  position: relative;
 	  display: inline-block;
-	  margin-left: 1em;
 }
 
 ul.meta li a {
@@ -546,13 +541,7 @@ table.default thead {
   margin-bottom: 25px;
 }
 
-/* #WRAPPERS */
-
-/*#main-wrapper {
-    border-top: 5px solid #336791;
-    border-bottom: solid 5px #666;
-    margin-top: 3em;
-}*/
+/* #JUMBOTRON */
 
 .pg-jumbotron {
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/media/img/misc/banner.jpg");
@@ -560,6 +549,7 @@ table.default thead {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
+    margin: 0;
 }
 
 /* #FOOTER */
