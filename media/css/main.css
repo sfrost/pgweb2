@@ -202,21 +202,18 @@ blockquote {
   	margin-right: 10px;
 }
 
-
-/* #SECTION, #ARTICLE */
-
-section, article {
-  	margin-bottom: 6em;
-}
-
-section > :last-child, section:last-child, article > :last-child, article:last-child {
-  	margin-bottom: 0;
-}
-
 /* #FEATURED SECTIONS */
 
 .feature {
 	  text-align: center;
+}
+
+.feature ul {
+    padding: 0;
+}
+
+.feature li {
+    list-style-type: none;
 }
 
 /* #LIST */
