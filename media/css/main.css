@@ -926,6 +926,7 @@ ul.menu {
 .btn-primary {
   background-color: #336791;
   border-color: #336791;
+  width: 12em;
 }
 
 button.btn.btn-center.btn-primary:hover {
