@@ -153,6 +153,10 @@ p, ul, ol, dl, table {
     background-color: #e6E6fa;
 }
 
+.pg-bg-gray {
+    background-color: #e7eae8;
+}
+
 .pg-border-color-blue {
     border-color: #336791;
 }
@@ -211,46 +215,8 @@ section > :last-child, section:last-child, article > :last-child, article:last-c
 
 /* #FEATURED SECTIONS */
 
-.margin-1-bottom {
-  	margin-bottom: 1em;
-}
-
 .feature {
 	  text-align: center;
-}
-
-
-/* #RELEASE BOX */
-
-/**
-* Used on index.html.
-*/
-
-.releaseBox {
-  	background-color: #e7eae8;
-	  height: 2em;
-}
-
-.releaseBoxAlt {
-	  background-color: #fff;
-	  height: 2em;
-}
-
-
-/* #CALENDAR BOXES */
-
-/**
-* Used on index.html.
-*/
-
-.calendarBox {
-	  background-color: #e7eae8;
-	  height: 4.1em;
-}
-
-.calendarBoxAlt {
-	  background-color: #fff;
-	  height: 4.1em;
 }
 
 /* #LIST */
