@@ -708,34 +708,12 @@ article.box.post-centered h3 {
 }
 
 
-/* #CONTENT DESKTOP */
-
-.content-left {
-		padding-right: 2em;
-}
-
-.content-right {
-		padding-left: 2em;
-}
-
-.content-centered {
-		padding: 0 0 0 0;
-}
-
-
-/* #WRAPPERS DESKTOP */
-
-/*#banner-wrapper {
-		padding: 12.5em;
-}*/
-
-/*#main-wrapper {
-		border-top-width: 35px;
-		border-bottom-width: 10px;
-}*/
-
 .navbar-brand img {
     height: 2em;
+}
+
+.navbar {
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
 /* #FOOTER DESKTOP */
