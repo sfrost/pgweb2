@@ -216,6 +216,15 @@ blockquote {
     list-style-type: none;
 }
 
+.feature i {
+  width: 0em;
+  height: 0em;
+  font-size: 8em;
+  text-align: center;
+  display: inline;
+  color: #336791;
+}
+
 /* #LIST */
 
 ul.default {
