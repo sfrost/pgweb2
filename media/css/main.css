@@ -165,6 +165,15 @@ p, ul, ol, dl, table {
     color: #008bb9;
 }
 
+#pgFrontFeature {
+    position: relative;
+    background: #F5F5F5 url(/media/img/feature/feature_elephant.png) right bottom no-repeat;
+    /* background: #F5F5F5 url(/media/img/feature/feature_gears.png) right bottom no-repeat; */
+    padding: 15px;
+    margin-bottom: 1em;
+    font-size: 1.0em;
+}
+
 /* #BLOCKQUOTE */
 
 blockquote {
