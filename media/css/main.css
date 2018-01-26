@@ -65,13 +65,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 /* #NO-MARGIN */
 
-h2.major.no-margin {
-	  margin: 0;
-	  text-align: center;
-}
-
-h3.major.no-margin {
-  	margin: 0;
+h2.major.no-margin, h3.major.no-margin {
+	  margin: 4em 0 0 0;
 	  text-align: center;
 }
 
@@ -890,7 +885,7 @@ ul.menu {
 .btn-center {
   text-align: center !important;
   display: block !important;
-  margin: 4em auto !important;
+  margin: 1em auto !important;
 }
 
 .btn-primary {
