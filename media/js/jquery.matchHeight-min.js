@@ -17,12 +17,12 @@ function isMobile() {
 
 if (!isMobile()) {
   $(function() {
-    $('.box').matchHeight();
+    $('.feature p').matchHeight();
   });
 }
 
 if (!isMobile()) {
   $(function() {
-    $('.news').matchHeight();
+    $('.feature ul').matchHeight();
   });
 }
