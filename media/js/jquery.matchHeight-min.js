@@ -17,7 +17,7 @@ function isMobile() {
 
 if (!isMobile()) {
   $(function() {
-    $('.feature.box').matchHeight();
+    $('.box').matchHeight();
   });
 }
 

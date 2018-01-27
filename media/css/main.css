@@ -74,10 +74,6 @@ h2.major.no-margin, h3.major.no-margin {
 	  text-align: center;
 }
 
-.box.features.no-margin {
-  	margin: 0;
-}
-
 h3.major {
 	  position: relative;
 	  border-top: solid 5px #e7eae8;
@@ -129,10 +125,10 @@ hr {
 	  border-top: solid 2px #E7EAE8;
 	  margin: 0 0 3em 0;
 }
-
+/**
 p, ul, ol, dl, table {
 	  margin-bottom: 3em;
-}
+}*/
 
 /** Global styles */
 
