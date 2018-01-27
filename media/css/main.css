@@ -41,6 +41,10 @@ h2 {
     font-size: 1.65em;
 }
 
+h3 {
+    font-size: 1.3em !important;
+}
+
 h2.major {
 		font-size: 1.65em;
 		text-align: center;
@@ -72,10 +76,6 @@ h2.major.no-margin, h3.major.no-margin {
 
 .box.features.no-margin {
   	margin: 0;
-}
-
-.h3, h3 {
-    font-size: 1.3em !important;
 }
 
 h3.major {
@@ -220,40 +220,6 @@ blockquote {
 
 /* #LIST */
 
-ul.default {
-  	list-style: disc;
-  	padding-left: 1em;
-}
-
-ul.default li {
-	  padding-left: 0.5em;
-}
-
-ul.divided > li {
-	  border-top: solid 2px #e7eae8;
-	  padding-top: 2.35em;
-	  margin-top: 2.35em;
-}
-
-ul.divided-right > li {
-
-}
-
-ul.divided > li:first-child {
-	  border-top: 0;
-	  padding-top: 0;
-	  margin-top: 0;
-}
-
-ul.actions li {
-	  display: inline-block;
-	  margin: 0 0 0 1em;
-}
-
-ul.actions li:first-child {
-  	margin-left: 0;
-}
-
 ul.contact {
   	cursor: default;
 }
@@ -326,56 +292,6 @@ ul.contact li:active {
 	  top: 0;
 }
 
-ul.special {
-  	cursor: default;
-}
-
-ul.special li {
-	  -moz-transition: top .15s ease-in-out;
-	  -webkit-transition: top .15s ease-in-out;
-	  -ms-transition: top .15s ease-in-out;
-	  transition: top .15s ease-in-out;
-	  position: relative;
-	  display: inline-block;
-	  margin: 0 1.5em 0 1.5em;
-	  top: 0;
-}
-
-ul.special li:hover {
-	  top: -10px;
-}
-
-ul.special li:hover a {
-	  background: #b9d2ce;
-}
-
-ul.special a {
-	  -moz-transition: background-color .2s ease-in-out;
-	  -webkit-transition: background-color .2s ease-in-out;
-	  -ms-transition: background-color .2s ease-in-out;
-	  transition: background-color .2s ease-in-out;
-	  display: block;
-	  position: relative;
-	  background: #666;
-	  width: 12em;
-	  height: 12em;
-	  border-radius: 6em;
-	  outline: 0;
-}
-
-ul.special a:before {
-	  position: absolute;
-	  width: 128px;
-	  height: 128px;
-	  font-size: 96px;
-	  line-height: 128px;
-	  left: 50%;
-    margin: -64px 0 0 -64px;
-  	top: 50%;
-	  color: #fff;
-	  text-align: center;
-}
-
 ul.meta {
 	  font-size: 0.85em;
 	  color: #a1aaa5;
@@ -401,74 +317,6 @@ ul.meta li:before {
   	cursor: default;
   	margin-right: 0.5em;
 }
-
-ul.menu li {
-  	border-left: solid 1px #e7eae8;
-	  display: inline-block;
-	  padding: 0 0 0 0.75em;
-	  margin: 0 0 0 0.75em;
-}
-
-ul.menu li:first-child {
-	  border-left: 0;
-	  margin-left: 0;
-	  padding-left: 0;
-}
-
-ol.default {
-	  list-style: decimal;
-	  padding-left: 1.25em;
-}
-
-ol.default li {
-	  padding-left: 0.25em;
-}
-
-
-/* #TABLES */
-
-table {
-		width: 100%;
-}
-
-table.default {
-		width: 100%;
-}
-
-table.default tr {
-		border-top: solid 2px #E7EAE8;
-}
-
-table.default tr:first-child {
-		border-top: 0;
-}
-
-table.default td {
-		padding: 0.5em 1em 0.5em 1em;
-}
-
-table.default th {
-		text-align: left;
-		padding: 0.5em 1em 0.5em 1em;
-		margin: 0 0 1em 0;
-		font-family: 'Roboto Condensed', sans-serif !important;
-		font-weight: 700;
-		text-transform: uppercase;
-		color: #666;
-}
-
-table.default thead {
-		background: #E7EAE8;
-		color: #fff;
-}
-
-
-/* #BOX HIGHLIGHT */
-
-.box.highlight {
-		text-align: center;
-}
-
 
 /* #ICONS */
 
@@ -549,16 +397,10 @@ table.default thead {
     margin: 0 0 1em 0;
 }
 
-#footer h2.major span {
+#footer h2.major span, #footer h3.major span {
 		background: #f2f5f3;
     font-family: 'Roboto Condensed', sans-serif !important;
 }
-
-#footer h3.major span {
-		background: #f2f5f3;
-    font-family: 'Roboto Condensed', sans-serif !important;
-}
-
 
 /* #LIST DESKTOP */
 
@@ -566,107 +408,6 @@ ul.actions {
 		text-align: center;
 		margin: 2em 0 0 0;
 }
-
-
-/* #BOX DESKTOP */
-
-.box.highlight .special {
-		margin: 0 0 4em 0;
-}
-
-.box.highlight h2 {
-		font-size: 3em;
-		margin: 0 0 0.75em 0;
-}
-
-.box.highlight header > p {
-		font-size: 1.65em;
-		margin: 0 0 1.5em 0;
-}
-
-.box.feature {
-		text-align: center;
-}
-
-.box.feature > div {
-		height: 220px;
-}
-
-.box.feature.date {
-		display: block;
-		width: 68px;
-		height: 68px;
-		text-align: center;
-		background: #e7eae8;
-		text-transform: uppercase;
-}
-
-.box.feature.event{
-		padding: 2em 1.5em;
-}
-
-.box.post header {
-		margin: 0 0 2.5em 0;
-}
-
-.box.post h3 {
-		font-size: 3em;
-		margin: 0 0 0.5em 0;
-}
-
-.box.post header > p {
-		font-size: 1.65em;
-		margin: 0 0 0.5em 0;
-}
-
-.box.post ul.meta {
-		margin: 0 0 0.5em 0;
-}
-
-.box.post-summary h3 {
-		line-height: 1em;
-		margin: 0 0 0.75em 0;
-}
-
-.box.post-summary .meta {
-		margin: 0;
-		line-height: 1em;
-}
-
-article.box.post-centered h3 {
-  text-transform: capitalize;
-}
-
-.box.post-centered a li:hover, .box.post-centered li.active {
-		color: #000;
-}
-
-.box.post-centered li:hover a {
-		color: #000;
-}
-
-.box.post-centered a:hover {
-		color: #000;
-}
-
-.box.page-content header {
-		margin: 0 0 2.5em 0;
-}
-
-.box.page-content h2 {
-		font-size: 3em;
-		margin: 0 0 0.5em 0;
-}
-
-.box.page-content header > p {
-		margin: 0 0 0.5em 0;
-		font-size: 1.65em;
-}
-
-.box.page-content ul.meta {
-		margin: 0 0 0.5em 0;
-}
-
 
 /* #SIDEBAR DESKTOP */
 
@@ -708,63 +449,6 @@ article.box.post-centered h3 {
 		margin: 0 0 1em 0;
 }
 
-/* #CONTRIBUTOR GREYBOXES */
-
-/**
-* Used on contributors.html.
-*/
-
-.contributorLeftBox {
-  	background-color: #336791;
-	  border-color: #336791;
-	  color: #fff;
-}
-
-.contributorRightBox {
-	  background-color: #fff;
- 	  color: #666670;
-  	padding-top: .5em !important;
-}
-
-.contributorRightBox p {
-    margin: 0 0 0 15px;
-  	min-height: 6em;
-}
-
-.contributorRightBoxAlt {
-  	background-color: #e7eae8;
-	  color: #666670;
-	  padding-top: .5em !important;
-}
-
-.contributorRightBoxAlt p {
-    margin: 0 0 0 15px;
-  	min-height: 6em;
-}
-
-.contributorBox {
-  	margin-bottom: 2em;
-}
-
-.contributorFaux {
-	  background-color: #336791;
-	  border-bottom: #fff;
-}
-
-/* #CONTRIBUTOR GREYBOXES MOBILE */
-
-@media screen and (max-width: 736px) {
-
-	  .contributorRightBox p {
-		    margin-left: 0;
-	  }
-
-	  .contributorRightBoxAlt p {
-		    margin-left: 0;
-	  }
-
-}
-
 /* #SIDEBAR UL STYLING */
 
 /**
@@ -794,90 +478,6 @@ article.box.post-centered h3 {
 .styledInput[name="search"] {
     width: 98%;
     height: 3.6em;
-}
-
-/* #MAILING LISTS SEARCH & SUBMIT FUNCTIONALITY */
-
-/**
-* Used on mailinglists.html.
-*/
-
-.mailListSubmit {
-  	float: right;
-}
-
-form[name="searchMailingList"] {
-	  margin-bottom: 4em;
-}
-
-select {
-    padding: 3px;
-  	width: 100%;
-    margin: 0;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    background: #f8f8f8;
-    color: #888;
-    border: none;
-    outline: none;
-    display: inline-block;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
-}
-
-/* Targeting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-
-    select {
-        padding-right: 18px;
-    }
-
-}
-
-
-/* #LABEL */
-
-label {
-    position: relative;
-}
-
-label:after {
-    content: '<>';
-    font: 11px "Consolas", monospace;
-    color: #aaa;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    right: 8px;
-    top: 2px;
-    padding: 0 0 2px;
-    border-bottom: 1px solid #ddd;
-    position: absolute;
-    pointer-events: none;
-}
-
-label:before {
-    content: '';
-    right: 6px;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    background: #f8f8f8;
-    position: absolute;
-}
-
-/* Copyright */
-
-ul.menu {
-    padding: 4em 0 0 0;
 }
 
 /* Buttons */
