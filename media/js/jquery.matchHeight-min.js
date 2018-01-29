@@ -20,9 +20,3 @@ if (!isMobile()) {
     $('.box').matchHeight();
   });
 }
-
-if (!isMobile()) {
-  $(function() {
-    $('.news').matchHeight();
-  });
-}

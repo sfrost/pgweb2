@@ -214,6 +214,10 @@ blockquote {
   color: #336791;
 }
 
+.box {
+  height: auto;
+}
+
 /* #LIST */
 
 ul.contact {
