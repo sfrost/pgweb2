@@ -215,7 +215,7 @@ blockquote {
 }
 
 .box {
-  height: auto;
+  height: 16em;
 }
 
 /* #LIST */
