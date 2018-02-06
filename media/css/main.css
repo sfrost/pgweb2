@@ -221,7 +221,12 @@ blockquote {
 }
 
 .text {
+  margin: 2em 0;
   height: 16em;
+}
+
+.text p {
+  text-align: left;
 }
 
 /* #LIST */
