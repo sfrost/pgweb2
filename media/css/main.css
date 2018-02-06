@@ -38,11 +38,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-size: 1.65em;
+    font-size: 1.6em;
 }
 
 h3 {
-    font-size: 1.3em !important;
+    font-size: 1.4em;
 }
 
 h2.major {
@@ -198,6 +198,7 @@ blockquote {
 .feature {
   text-align: center;
   padding: 2em;
+  font-size: 0.9em;
 }
 
 .feature ul {
@@ -209,7 +210,7 @@ blockquote {
 }
 
 .feature i {
-  font-size: 5em;
+  font-size: 2.5em;
   margin: 20px 0;
   color: #336791;
 }
