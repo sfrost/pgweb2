@@ -387,7 +387,8 @@ ul.meta li:before {
 #footer {
   background-color: #f2f5f3;
   text-align: center;
-  padding: 8em 0 8em 0;
+  padding: 4em 0 3em 0;
+  margin-top: 3em;
 }
 
 #footer a {
