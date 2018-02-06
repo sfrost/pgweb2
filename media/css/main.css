@@ -215,6 +215,11 @@ blockquote {
   color: #336791;
 }
 
+.feature img {
+  width: 2.5em;
+  margin: 20px 0;
+}
+
 .text {
   height: 16em;
 }
