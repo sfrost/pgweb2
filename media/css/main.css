@@ -125,6 +125,12 @@ hr {
 	  border-top: solid 2px #E7EAE8;
 	  margin: 0 0 3em 0;
 }
+
+.image {
+  width: 100%;
+  margin: 1em 0 2em 0;
+}
+
 /**
 p, ul, ol, dl, table {
 	  margin-bottom: 3em;
