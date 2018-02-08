@@ -329,6 +329,23 @@ ul.meta li:before {
   	margin-right: 0.5em;
 }
 
+ul.divided > li {
+	  border-top: solid 2px #e7eae8;
+	  padding-top: 2.35em;
+	  margin-top: 2.35em;
+}
+
+ul.divided-right > li {
+
+}
+
+ul.divided > li:first-child {
+	  border-top: 0;
+	  padding-top: 0;
+	  margin-top: 0;
+}
+
+
 /* #ICONS */
 
 .icon {
@@ -424,7 +441,7 @@ ul.actions {
 /* #SIDEBAR DESKTOP */
 
 .sidebar {
-		padding-top: 0.5em;
+		padding-top: 6em;
 }
 
 .homepage .sidebar {
