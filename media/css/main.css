@@ -433,12 +433,16 @@ ul.divided > li:first-child {
   background-color: #336791;
 }
 
+.cta-text h2 {
+  color: #fff;
+}
+
 .cta-1 {
 
 }
 
 .cta-2 {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/media/img/misc/bugs.jpg");
+  background-image: url("/media/img/misc/bugs.jpg");
 }
 
 /* #FOOTER */
