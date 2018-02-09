@@ -426,6 +426,11 @@ ul.divided > li:first-child {
   margin: 0;
 }
 
+.cta-text {
+  padding: 10em;
+  text-align: center;
+}
+
 .cta-1 {
 
 }
