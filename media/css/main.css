@@ -507,20 +507,19 @@ ul.actions {
 
 /* Buttons */
 
-.btn-center {
-  text-align: center;
-  display: block;
-  margin: 1em auto;
-}
-
-.btn-primary {
+.btn {
   background-color: #336791;
   border-color: #336791;
   width: 12em;
-  display: inline;
+  margin: 1em auto;
 }
 
-button.btn.btn-center.btn-primary:hover {
+.btn-center {
+  text-align: center;
+  display: block;
+}
+
+button.btn:hover {
   background-color: #666;
   border-color: #666;
 }
