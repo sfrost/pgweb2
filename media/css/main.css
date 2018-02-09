@@ -445,6 +445,10 @@ ul.divided > li:first-child {
   background-image: url("/media/img/misc/bugs.jpg");
 }
 
+.cta-2 {
+  background-image: url("/media/img/misc/training.jpeg");
+}
+
 /* #MARGIN */
 
 .margin {
