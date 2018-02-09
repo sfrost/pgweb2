@@ -95,7 +95,8 @@ a {
 	  text-decoration: none;
 }
 
-a:hover {
+a:hover, a:active {
+    color: #336791;
 	  text-decoration: none;
 }
 
@@ -523,7 +524,7 @@ ul.actions {
   color: #fff;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:active {
   background-color: #666;
   border-color: #666;
   cursor: pointer;
