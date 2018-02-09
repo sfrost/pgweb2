@@ -445,6 +445,12 @@ ul.divided > li:first-child {
   background-image: url("/media/img/misc/bugs.jpg");
 }
 
+/* #MARGIN */
+
+.margin {
+    margin: 0 auto 4em auto;
+}
+
 /* #FOOTER */
 
 #footer {
