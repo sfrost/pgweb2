@@ -218,7 +218,7 @@ blockquote {
 
 .feature li {
   list-style-type: none;
-  padding-left: 0.5em;
+  padding-left: 0.3em;
 }
 
 .feature i {
@@ -235,7 +235,6 @@ blockquote {
 .text {
   margin: 2em 0;
   height: 19em;
-  padding-left: 0.3em;
 }
 
 /* #LIST */
