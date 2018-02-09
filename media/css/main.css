@@ -508,8 +508,6 @@ ul.actions {
 /* Buttons */
 
 .btn {
-  background-color: #336791;
-  border-color: #336791;
   width: 12em;
   margin: 1em auto;
 }
@@ -519,7 +517,13 @@ ul.actions {
   display: block;
 }
 
-button.btn:hover {
+.btn-primary {
+  background-color: #336791;
+  border-color: #336791;
+  color: #fff;
+}
+
+button.btn.btn-center.btn-primary:hover {
   background-color: #666;
   border-color: #666;
 }
