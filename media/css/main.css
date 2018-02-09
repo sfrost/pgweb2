@@ -508,15 +508,16 @@ ul.actions {
 /* Buttons */
 
 .btn-center {
-  text-align: center !important;
-  display: block !important;
-  margin: 1em auto !important;
+  text-align: center;
+  display: block;
+  margin: 1em auto;
 }
 
 .btn-primary {
   background-color: #336791;
   border-color: #336791;
   width: 12em;
+  display: inline;
 }
 
 button.btn.btn-center.btn-primary:hover {
