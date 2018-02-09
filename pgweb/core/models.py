@@ -156,10 +156,15 @@ class ImportedRSSItem(models.Model):
 	def __unicode__(self):
 		return self.title
 
+	def author(self):
+		return self.title.split(':')[0]
+
 	@property
 	def date(self):
 		return self.posttime.strftime("%Y-%m-%d")
 
+	def title_without_author(self):
+		return ":".join(self.title.split(':')[1:])
 
 # Extra attributes for users (if they have them)
 class UserProfile(models.Model):

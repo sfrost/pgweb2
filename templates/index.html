@@ -34,12 +34,12 @@
     	  </p>
         <p>
           There is a wealth of information to be found describing how to install, use, and configure PostgreSQL through the official documentation, found
-          <a href="{{link_root}}/docs">here</a>.
+          <a href="{{link_root}}/docs/">here</a>.
           Additionally, the PostgreSQL community provides many helpful places to become familiar with the technology, discover how it works, and find
-          career opportunities. Reach out to the community <a href="{{link_root}}/community">here</a>.
+          career opportunities. Reach out to the community <a href="{{link_root}}/community/">here</a>.
         </p>
       </div>
-      <a href="{{link_root}}/about" title="Read More"><button type="button" class="btn btn-center btn-primary">Read More</button></a>
+      <a href="{{link_root}}/about/" title="Read More"><button type="button" class="btn btn-center btn-primary">Read More</button></a>
   	</div>
   	<!-- END Feature -->
 
@@ -53,14 +53,12 @@
           The PostgreSQL Global Development Group has released an update to all supported versions of our database system, including 10.2, 9.6.7, 9.5.11, 9.4.16, and 9.3.21.
         </p>
         <ul>
-          <li>9.4.4 · 2018-10-26 · Notes</li>
-          <li class="pg-bg-gray">9.3.9 · 2018-09-26 · Notes</li>
-          <li>9.2.13 · 2018-09-26 · Notes</li>
-          <li class="pg-bg-gray">9.1.18 · 2018-11-26 · Notes</li>
-          <li>9.0.22 · 2018-09-26 · Notes</li>
+          {% for v in versions %}
+            <li class="{% cycle '' 'pg-bg-gray' %}">{{ v.numtree }}.{{ v.latestminor }}</b> &middot; {{ v.reldate|date:"Y-m-d" }} &middot; <a href="/docs/{{ v.numtree }}/static/{{ v.relnotes }}">Notes</a></li>
+          {% endfor %}
         </ul>
       </div>
-      <a href="{{link_root}}/download" title="Download"><button type="button" class="btn btn-center btn-primary">Download</button></a>
+      <a href="{{link_root}}/download/" title="Download"><button type="button" class="btn btn-center btn-primary">Download</button></a>
   	</div>
   	<!-- END Feature -->
 
@@ -75,16 +73,14 @@
       <h2>Upcoming Events</h2>
       <div class="text">
         <ul>
-          <li>2015-09-26 · Brighton Meetup Kickoff (Hove, East Sussex, United Kingdom)</li>
-          <li class="pg-bg-gray">2015-09-26 – 2015-09-27 · PostgresOpen (Dallas, TX, United States)</li>
-          <li>2015-09-26 – 2015-09-27 · PgCUBA (La Habana, La Habana, Cuba)</li>
-          <li class="pg-bg-gray">2015-09-26 – 2015-09-27 · PostgresOpen (Dallas, TX, United States)</li>
-          <li>2015-09-26 – 2015-09-27 · PgCUBA (La Habana, La Habana, Cuba)</li>
-          <li class="pg-bg-gray">2015-09-26 – 2015-09-27 · PostgresOpen (Dallas, TX, United States)</li>
-          <li>2015-09-26 – 2015-09-27 · Brighton Meetup Kickoff (Hove, East Sussex, United Kingdom)</li>
+          {% for event in events %}
+            <li class="{% cycle '' 'pg-bg-gray' %}">
+              {{ event.displaydate|safe }} &middot; <a href="/about/event/{{ event.id }}/">{{ event.title }}</a> ({{ event.locationstring }})
+            </li>
+          {% endfor %}
         </ul>
       </div>
-      <a href="{{link_root}}/#" title="Check Schedule"><button type="button" class="btn btn-center btn-primary">Check Schedule</button></a>
+      <a href="/about/events/" title="Check Schedule"><button type="button" class="btn btn-center btn-primary">Check Schedule</button></a>
     </div>
     <!-- END Feature -->
 
@@ -102,7 +98,7 @@
           ecetera.
         </p>
       </div>
-      <a href="{{link_root}}/#" title="Subscribe"><button type="button" class="btn btn-center btn-primary">Subscribe</button></a>
+      <a href="https://lists.postgresql.org" title="Subscribe"><button type="button" class="btn btn-center btn-primary">Subscribe</button></a>
     </div>
     <!-- END Feature -->
   </div>
@@ -117,7 +113,7 @@
       <p>
         And I should be switched out for different content.
       </p>
-      <a href="{{link_root}}/account/submitbug" title="Submit a Bug"><button type="button" class="btn btn-light btn-rounded">Submit a Bug</button></a>
+      <a href="{{link_root}}/account/submitbug/" title="Submit a Bug"><button type="button" class="btn btn-light btn-rounded">Submit a Bug</button></a>
     </div>
   </div>
 </div>
@@ -149,51 +145,17 @@
 
 				<!-- Archives -->
 				<ul class="divided">
-					<li>
-						<h3><a href="#">New ODBC Driver for PostgreSQL</a></h3>
-						<ul class="meta">
-							<li class="icon fa-clock-o">6 hours ago</li>
-							<li class="icon fa-comments"><a href="#">34</a></li>
-						</ul>
-					</li>
-					<li>
-						<h3><a href="#">pgBadger 7.1 is Out</a></h3>
-						<ul class="meta">
-							<li class="icon fa-clock-o">9 hours ago</li>
-							<li class="icon fa-comments"><a href="#">27</a></li>
-						</ul>
-					</li>
-					<li>
-						<h3><a href="#">Open-Source Streaming-SQL Database PipelineDB Now Available</a></h3>
-						<ul class="meta">
-							<li class="icon fa-clock-o">Yesterday</li>
-							<li class="icon fa-comments"><a href="#">184</a></li>
-						</ul>
-					</li>
-					<li>
-						<h3><a href="#">PostgreSQL 9.5 Alpha 1 Released</a></h3>
-						<ul class="meta">
-							<li class="icon fa-clock-o">2 days ago</li>
-							<li class="icon fa-comments"><a href="#">286</a></li>
-						</ul>
-					</li>
-					<li>
-						<h3><a href="#">Database .NET v16 Released</a></h3>
-						<ul class="meta">
-							<li class="icon fa-clock-o">3 days ago</li>
-							<li class="icon fa-comments"><a href="#">8,086</a></li>
-						</ul>
-					</li>
-          <li>
-            <h3><a href="#">Database .NET v16 Released</a></h3>
-            <ul class="meta">
-              <li class="icon fa-clock-o">3 days ago</li>
-              <li class="icon fa-comments"><a href="#">8,086</a></li>
-            </ul>
-          </li>
+          {% for n in news %}
+            <li>
+  						<h3><a href="/about/news/{{ n.id }}/">{{ n.title }}</a></h3>
+  						<ul class="meta">
+  							<li class="icon fa-clock-o">{{ n.displaydate }}</li>
+  							<!-- <li class="icon fa-comments"><a href="#">27</a></li> -->
+  						</ul>
+  					</li>
+          {% endfor %}
 				</ul>
 				<!-- END Archives -->
-
 			</div>
 		</div>
   </div>
@@ -202,50 +164,29 @@
  <div class="container margin">
    <div class="row">
      <div class="col-md-12">
-       <h2 class="major no-margin"><span>Latest Blog Posts</span></h2>
+       <h2 class="major no-margin"><span>PLANET POSTGRESQL</span></h2>
        <div class="planetPostgresqlGlobe"><i class="fa fa-globe"></i></div>
      </div>
    </div>
    <!-- First Row Planet PostgreSQL -->
    <div class="row">
      <!-- First Column First Row Planet PostgreSQL -->
-     <div class="col-md-4">
-       <div class="text-center">
-         <h3><a href="#">Connecting to SQL Server from Linux using FDWs</a></h3>
-         <ul class="meta">
-           <li class="icon fa-comments"><a href="#">Leo Hsu, Regina Obe</a></li>
-           <li class="icon fa-clock-o">2015-09-27</li>
-         </ul>
-       </div>
-     </div>
-     <!-- END First Column First Row Planet PostgreSQL -->
-     <!-- Second Column First Row Planet PostgreSQL-->
-     <div class="col-md-4">
-       <div class="text-center">
-         <h3><a href="#">South Bay, East Bay PUGs scheduled</a></h3>
-         <ul class="meta">
-           <li class="icon fa-comments"><a href="#">Josh Berkus</a></li>
-           <li class="icon fa-clock-o">2015-09-26</li>
-         </ul>
-       </div>
-     </div>
-     <!-- END Second Column First Row Planet PostgreSQL -->
-     <!-- Third Column First Row Planet PostgreSQL -->
-     <div class="col-md-4">
-       <div class="text-center">
-         <h3><a href="#">PG Phriday: Database Infrastructure</a></h3>
-         <ul class="meta">
-           <li class="icon fa-comments"><a href="#">Shaun M. Thomas</a></li>
-           <li class="icon fa-clock-o">2015-09-25</li>
-         </ul>
-       </div>
-     </div>
-     <!-- END Last Column First Row Planet PostgreSQL -->
+      {%for post in planet %}
+        <div class="col-md-4">
+          <div class="text-center">
+            <h3><a href="{{ post.url }}">{{ post.title_without_author }}</a></h3>
+            <ul class="meta">
+              <li class="icon fa-comments"><a href="#">{{ post.author }}</a></li>
+              <li class="icon fa-clock-o">{{ post.date }}</li>
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
    </div>
    <!-- END First Row Planet PostgreSQL -->
    <div class="row">
      <div class="col-sm-12">
-       <a href="{{link_root}}/about" title="About"><button type="button" class="btn btn-center btn-primary">Browse Archives</button></a>
+       <a href="https://planet.postgresql.org" title="Browse Archives"><button type="button" class="btn btn-center btn-primary">Browse Archives</button></a>
      </div>
    </div>
  </div>
@@ -257,7 +198,7 @@
        <p>
          Let us know. We're here to help.
        </p>
-       <a href="{{link_root}}/account/submitbug" title="Submit a Bug"><button type="button" class="btn btn-light btn-rounded">Submit a Bug</button></a>
+       <a href="/account/submitbug/" title="Submit a Bug"><button type="button" class="btn btn-light btn-rounded">Submit a Bug</button></a>
      </div>
      <div class="col-lg-6 cta cta-2"></div>
    </div>

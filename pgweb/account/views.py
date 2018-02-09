@@ -560,4 +560,3 @@ def communityauth_getkeys(request, siteid, since=None):
 	j = json.dumps([{'u': k.user.username, 's': k.sshkey} for k in keys])
 
 	return HttpResponse(_encrypt_site_response(site, j))
-
