@@ -427,8 +427,10 @@ ul.divided > li:first-child {
 }
 
 .cta-text {
-  padding: 10em;
+  padding: 12em;
   text-align: center;
+  color: #fff;
+  background-color: #336791;
 }
 
 .cta-1 {
