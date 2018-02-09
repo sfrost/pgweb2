@@ -523,9 +523,10 @@ ul.actions {
   color: #fff;
 }
 
-button.btn.btn-center.btn-primary:hover {
+.btn-primary:hover {
   background-color: #666;
   border-color: #666;
+  cursor: pointer;
 }
 
 /** ALL RESPONSIVE QUERIES HERE */
