@@ -203,12 +203,9 @@ blockquote {
 /* #FEATURED SECTIONS */
 
 .feature {
+  text-align: center;
   padding: 2em;
   font-size: 0.9em;
-}
-
-.feature i, .feature h2 {
-  text-align: center;
 }
 
 .feature ul {
@@ -218,6 +215,7 @@ blockquote {
 .feature li {
   list-style-type: none;
   padding-left: 0.3em;
+  text-align: left;
 }
 
 .feature i {
@@ -234,6 +232,7 @@ blockquote {
 .text {
   margin: 2em 0;
   height: 19em;
+  text-align: left;
 }
 
 /* #LIST */
