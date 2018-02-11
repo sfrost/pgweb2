@@ -528,6 +528,14 @@ ul.actions {
     padding: 2em 0;
 }
 
+#pgContentWrap h2.major {
+  text-align: left;
+}
+
+#pgContentWrap h2.major span {
+  padding: 0 0.5em 0 0;
+}
+
 /* #STYLEDSELECT */
 
 /**
