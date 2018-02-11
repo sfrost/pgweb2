@@ -513,6 +513,10 @@ ul.actions {
 
 /* #SIDEBAR UL STYLING */
 
+#pgSideNav {
+    padding: 0 1em;
+}
+
 #pgSideNav ul {
     list-style-type: circle;
     padding-left: 1.3em;
