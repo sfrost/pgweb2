@@ -199,6 +199,14 @@ blockquote {
   	margin-right: 10px;
 }
 
+/* # CAROUSEL */
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev{
+    display:block;
+}
+
 /* #JCAROUSEL WRAPPER */
 
 .jcarousel-wrapper {
