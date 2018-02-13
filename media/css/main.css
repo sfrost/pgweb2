@@ -555,10 +555,6 @@ ul.actions {
   padding: 1em 2em;
 }
 
-#pgContentWrap .container, #pgContentWrap .container-fluid {
-    padding: 2em 0;
-}
-
 #pgContentWrap h2.major {
   text-align: left;
 }
