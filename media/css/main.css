@@ -234,6 +234,17 @@ blockquote {
   text-align: left;
 }
 
+.feature-grid {
+    background-color: #336791;
+    text-align: center;
+    padding: 3em 0;
+    border: solid 1px #fff;
+}
+
+.feature-grid h3 {
+    color: #fff;
+}
+
 /* #LIST */
 
 ul.contact {
