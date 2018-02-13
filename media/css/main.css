@@ -201,10 +201,13 @@ blockquote {
 
 /* # CAROUSEL */
 
+.carousel {
+  height: 12em;
+}
+
 .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev {
-    color: #336791;
     display: block;
 }
 
