@@ -90,7 +90,7 @@ h3.major span {
 }
 
 a {
-	  color: #006376;
+	  color: #336791;
 	  text-decoration: none;
 }
 
@@ -566,6 +566,11 @@ ul.actions {
 
 #pgContentWrap h2.major span {
   padding: 0 0.5em 0 0;
+}
+
+#pgContentWrap .fa {
+  color: #336791;
+  margin: 0 5px;
 }
 
 /* #STYLEDSELECT */
