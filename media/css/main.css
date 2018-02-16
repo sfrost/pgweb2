@@ -555,6 +555,10 @@ ul.actions {
   padding: 1em 2em;
 }
 
+#pgContentWrap h3 {
+  margin: 1em 0;
+}
+
 #pgContentWrap h2.major {
   text-align: left;
   margin-top: 2em;
