@@ -1,60 +1,68 @@
 {%extends "base/page.html"%}
 {%block title%}Community{%endblock%}
 {%block contents%}
-<div id="pgCommunityWrap">
-<div id="pgCommunity">
-<h1>Community</h1>
 
-<p>PostgreSQL is well supported by its active community. There are more than a dozen <a href="/community/lists">mailing lists</a> available, categorized into topics like administration, announcements, jobs, performance, and SQL. We also have several PostgreSQL User Groups in the world, and there is also an active <a href="/community/irc">IRC</a> community.</p>
+<h1>Community <i class="fa fa-users"></i></h1>
 
-<p>In addition to the resources available on this site, there are also links to <a href="/community/international">international sites</a> that contain PostgreSQL information in various languages. PostgreSQL community <a href="/community/resources">resources</a> are also highlighted in this section of the website.</p>
-</div>
-</div>
-
-<li><a href="https://planet.postgresql.org/">Planet PostgreSQL</a>, a site dedicated to aggregating PostgreSQL related blogs.</li>
-<li><a href="https://wiki.postgresql.org">PostgreSQL Wiki</a>, our wiki, hosting user created content and development related information</li>
-</ul>
-<h3>External Resources</h3>
+<p>
+  PostgreSQL is well supported by its active community. There are more than a dozen <a href="/community/lists">mailing lists</a> available, categorized into topics like administration, announcements, jobs, performance, and SQL. We also have several PostgreSQL User Groups in the world, and there is also an active <a href="/community/irc">IRC</a> community.
+</p>
+<p>
+  In addition to the resources available on this site, there are also links to <a href="/community/international">international sites</a> that contain PostgreSQL information in various languages. PostgreSQL community <a href="/community/resources">resources</a> are also highlighted in this section of the website.
+</p>
 <ul>
-<li><a href="http://www.pg-forum.de/">pg-forum.de</a>, a German PostgreSQL forum.</li>
-<li><a href="http://www.pgsql.ru/">PGSearch</a>, a fast search engine (powered by PostgreSQL &amp; TSearch2) indexing a number of PostgreSQL and PostgreSQL related websites.</li>
+  <li><a href="https://planet.postgresql.org/">Planet PostgreSQL</a>, a site dedicated to aggregating PostgreSQL related blogs.</li>
+  <li><a href="https://wiki.postgresql.org">PostgreSQL Wiki</a>, our wiki, hosting user created content and development related information</li>
 </ul>
-<p>Please send appropriate links to <a href="mailto:webmaster@postgresql.org">webmaster@postgresql.org</a> for possible inclusion on this page.</p>
+
+<h2 class="major"><span>External Resources</span></h2>
+<p>
+  Some text should <strong>really</strong> be included here as it's simply awkward to have bullets out of place.
+</p>
+<ul>
+  <li><a href="http://www.pg-forum.de/">pg-forum.de</a>, a German PostgreSQL forum.</li>
+  <li><a href="http://www.pgsql.ru/">PGSearch</a>, a fast search engine (powered by PostgreSQL &amp; TSearch2) indexing a number of PostgreSQL and PostgreSQL related websites.</li>
+</ul>
+<p>
+  Please send appropriate links to <a href="mailto:webmaster@postgresql.org">webmaster@postgresql.org</a> for possible inclusion on this page.
+</p>
 
 {%if survey%}
+<h2 class="major"><span>User Survey</span></h2>
+
 <div id="pgSurveyWrap">
-<div id="pgSurvey">
-  <dl>
-    <dt>User Survey</dt>
-    <dd>{{survey.question}}</dd>
-    <dd>
-      <form method="post" action="/community/survey/vote/{{survey.id}}/"><!-- CSRF exempt -->
-      <p>
-      {%for q in survey.questions%}
-      <input type="radio" name="answer" value="{{q.value}}" id="surv_opt_{{q.value}}" /><label for="surv_opt_{{q.value}}">{{q.text}}</label><br />
-      {%endfor%}
-      </p>
-      <p><input id="surveySubmit" type="submit" name="submit" value="Vote" /></p>
-      </form>
-    </dd>
-    <dd><a href="/community/survey/{{survey.id}}-{{survey|slugify}}/">Results</a></dd>
-  </dl>
-</div>
+  <div id="pgSurvey">
+    <dl>
+      <dd>{{survey.question}}</dd>
+      <dd>
+        <form method="post" action="/community/survey/vote/{{survey.id}}/"><!-- CSRF exempt -->
+        <p>
+        {%for q in survey.questions%}
+        <input type="radio" name="answer" value="{{q.value}}" id="surv_opt_{{q.value}}" /><label for="surv_opt_{{q.value}}">{{q.text}}</label><br />
+        {%endfor%}
+        </p>
+        <p><input id="surveySubmit" type="submit" name="submit" value="Vote" /></p>
+        </form>
+      </dd>
+      <dd><a href="/community/survey/{{survey.id}}-{{survey|slugify}}/">Results</a></dd>
+    </dl>
+  </div>
 </div>
 {%endif%}
 
+<h2 class="major"><span>Planet PostgreSQL</span></h2>
+
 <div id="pgPlanetWrap">
-<div id="pgPlanet">
- <dl>
-  <dt>Planet PostgreSQL</dt>
-  <dd><ul>
-   {%for post in planet%}
-    <li><a href="{{post.url}}">{{post.title}}</a></li>
-   {%endfor%}
-  </ul></dd>
-  <dd><a href="https://planet.postgresql.org">More</a></dd>
- </dl>
-</div>
+  <div id="pgPlanet">
+   <dl>
+    <dd><ul>
+     {%for post in planet%}
+      <li><a href="{{post.url}}">{{post.title}}</a></li>
+     {%endfor%}
+    </ul></dd>
+    <dd><a href="https://planet.postgresql.org">More</a></dd>
+   </dl>
+  </div>
 </div>
 
 {%endblock%}

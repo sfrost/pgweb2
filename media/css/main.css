@@ -48,14 +48,13 @@ h3 {
 h2.major {
 		font-size: 1.65em;
 		text-align: center;
-		margin: 0 0 3em 0;
     position: relative;
     border-top: solid 5px #e7eae8;
 }
 
 h2.major span {
 		top: -0.775em;
-		padding: 0 1.5em 1.5em 1.5em;
+		padding: 0 0.5em;
     background: #fff;
     position: relative;
     display: inline-block;
@@ -91,7 +90,7 @@ h3.major span {
 }
 
 a {
-	  color: #006376;
+	  color: #336791;
 	  text-decoration: none;
 }
 
@@ -200,6 +199,18 @@ blockquote {
   	margin-right: 10px;
 }
 
+/* # CAROUSEL */
+
+.carousel {
+  height: 12em;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: block;
+}
+
 /* #FEATURED SECTIONS */
 
 .feature {
@@ -233,6 +244,17 @@ blockquote {
   margin: 2em 0;
   height: 19em;
   text-align: left;
+}
+
+.feature-grid {
+    background-color: #336791;
+    text-align: center;
+    padding: 3em 0;
+    border: solid 1px #fff;
+}
+
+.feature-grid h3 {
+    color: #fff;
 }
 
 /* #LIST */
@@ -504,8 +526,8 @@ ul.actions {
 }
 
 
-.navbar-brand img {
-    height: 2em;
+#logo {
+    height: 2.5rem;
 }
 
 .navbar {
@@ -514,14 +536,41 @@ ul.actions {
 
 /* #SIDEBAR UL STYLING */
 
-/**
-* !Bugfix --
-* Need to fix the element select to where it's for sidebar ul and not about.html only.
-*/
+#pgSideNav {
+    padding: 1em;
+}
 
-.about.ul {
+#pgSideNav ul {
     list-style-type: circle;
     padding-left: 1.3em;
+}
+
+#pgSideNav h2.major {
+    margin-top: 1.5em;
+}
+
+/* #PGCONTENTWRAP */
+
+#pgContentWrap {
+  padding: 1em 2em;
+}
+
+#pgContentWrap h3 {
+  margin: 1em 0;
+}
+
+#pgContentWrap h2.major {
+  text-align: left;
+  margin-top: 2em;
+}
+
+#pgContentWrap h2.major span {
+  padding: 0 0.5em 0 0;
+}
+
+#pgContentWrap .fa {
+  color: #336791;
+  margin: 0 5px;
 }
 
 /* #STYLEDSELECT */

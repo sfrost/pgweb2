@@ -1,154 +1,100 @@
 {%extends "base/page.html"%}
 {%block title%}About{%endblock%}
 {%block contents%}
-<h1>About</h1>
 
-<p>PostgreSQL is a powerful, open source object-relational database system. It has
-more than 15 years of active development and a proven architecture that has
-earned it a strong reputation for reliability, data integrity, and
-correctness. It runs on all major operating systems, including Linux, UNIX (AIX,
-BSD, HP-UX, macOS, Solaris), and Windows. It is
-fully ACID compliant, has full support for foreign keys, joins, views, triggers,
-and stored procedures (in multiple languages). It includes most SQL:2008
-data types, including INTEGER, NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL,
-and TIMESTAMP. It also supports storage of binary large objects, including pictures,
-sounds, or video. It has native programming interfaces for C/C++, Java, .Net, Perl,
-Python, Ruby, Tcl, ODBC, among others, and <a href="/docs/manuals/" target="_top">exceptional documentation</a>.
-</p><p>An enterprise class database, PostgreSQL boasts sophisticated features
-such as Multi-Version Concurrency Control (MVCC), point in time recovery,
-tablespaces, asynchronous replication, nested transactions (savepoints),
-online/hot backups, a sophisticated query planner/optimizer, and write ahead logging
-for fault tolerance. It supports international character sets, multibyte
-character encodings, Unicode, and it is locale-aware for sorting,
-case-sensitivity, and formatting. It is highly scalable both in the sheer quantity
-of data it can manage and in the number of concurrent users it can
-accommodate. There are active PostgreSQL systems in production environments that
-manage in excess of 4 terabytes of data. Some general PostgreSQL limits are
-included in the table below. </p><div class="informaltable"><a name="table1"></a><table border="0"><colgroup><col /><col /></colgroup><thead><tr><th><span class="bold"><b>Limit</b></span></th><th><span class="bold"><b>Value</b></span></th></tr></thead><tbody><tr><td>Maximum Database Size</td><td>Unlimited</td></tr><tr><td>Maximum Table Size</td><td>32 TB</td></tr><tr><td>Maximum Row Size</td><td>1.6 TB</td></tr><tr><td>Maximum Field Size</td><td>1 GB</td></tr><tr><td>Maximum Rows per Table</td><td>Unlimited</td></tr><tr><td>Maximum Columns per Table</td><td>250 - 1600 depending on column types</td></tr><tr><td>Maximum Indexes per Table</td><td>Unlimited</td></tr></tbody></table></div>
-<p>PostgreSQL has won praise from its users and industry recognition, including the Linux New Media Award for Best Database System and five time winner of the The Linux Journal Editors' Choice Award for best DBMS.
+<h1>About PostgreSQL <img id="logo" src="/media/img/about/press/elephant.png" alt="PostgreSQL Elephant Logo" /></h1>
 
-</p>
-<h2>Featureful and Standards Compliant</h2><p>PostgreSQL prides itself in standards compliance. Its SQL implementation
-strongly conforms to the ANSI-SQL:2008 standard. It has full support for
-subqueries (including subselects in the FROM clause), read-committed and
-serializable transaction isolation levels. And while PostgreSQL has a fully
-relational system catalog which itself supports multiple schemas per database,
-its catalog is also accessible through the Information Schema as defined in the
-SQL standard.
-</p><p>Data integrity features include (compound) primary keys, foreign keys with
-restricting and cascading updates/deletes, check constraints, unique
-constraints, and not null constraints.</p>
-<p>It also has a host of extensions and advanced features. Among the
-conveniences are auto-increment columns through sequences, and
-<tt class="literal">LIMIT/OFFSET</tt> allowing the return of partial result
-sets. PostgreSQL supports compound, unique, partial, and functional indexes
-which can use any of its B-tree, R-tree, hash, or GiST storage methods.</p><p><a href="http://www.sai.msu.su/~megera/postgres/gist/doc/intro.shtml" target="_top">GiST</a>
-(<span class="emphasis"><em>Generalized Search Tree</em></span>) indexing is an advanced system
-which brings together a wide array of different sorting and searching algorithms
-including B-tree, B+-tree, R-tree, partial sum trees, ranked B+-trees and many
-others. It also provides an interface which allows both the creation of custom
-data types as well as extensible query methods with which to search them. Thus,
-GiST offers the flexibility to specify <span class="emphasis"><em>what</em></span> you store,
-<span class="emphasis"><em>how</em></span> you store it, and <span class="emphasis"><em>the ability to define new
-ways</em></span> to search through it --- ways that far exceed those offered by
-standard B-tree, R-tree and other generalized search algorithms.</p><p>GiST serves as a foundation for many public projects that use PostgreSQL
-such as <a href="http://openfts.sourceforge.net/" target="_top">OpenFTS</a> and <a href="http://postgis.refractions.net/" target="_top">PostGIS</a>. OpenFTS (Open Source Full
-Text Search engine) provides online indexing of data and relevance ranking for
-database searching. PostGIS is a project which adds support for geographic
-objects in PostgreSQL, allowing it to be used as a spatial database for
-geographic information systems (GIS), much like ESRI's SDE or Oracle's Spatial
-extension.
-
-</p><p>Other advanced features include table inheritance, a rules systems, and
-database events. Table inheritance puts an object oriented slant on table
-creation, allowing database designers to <span class="emphasis"><em>derive</em></span> new tables
-from other tables, treating them as base classes. Even better, PostgreSQL
-supports both single and multiple inheritance in this manner.</p><p>The rules system, also called the <span class="emphasis"><em>query rewrite
-system</em></span>, allows the database designer to create rules which identify
-specific operations for a given table or view, and dynamically transform them
-into alternate operations when they are processed.</p><p>The events system is an interprocess communication system in which
-messages and events can be transmitted between clients using the
-<tt class="literal">LISTEN</tt> and <tt class="literal">NOTIFY</tt> commands, allowing both
-simple peer to peer communication and advanced coordination on database
-events. Since notifications can be issued from triggers and stored procedures,
-PostgreSQL clients can monitor database events such as table updates, inserts,
-or deletes as they happen.
-</p>
-<h2>Highly Customizable</h2>
-<p>PostgreSQL runs stored procedures in more than a dozen programming languages, including Java, Perl, Python, Ruby, Tcl, C/C++,
-and its own PL/pgSQL, which is similar to Oracle's PL/SQL. Included with its
-standard function library are hundreds of built-in functions that range from
-basic math and string operations to cryptography and Oracle
-compatibility. Triggers and stored procedures can be written in C and loaded
-into the database as a library, allowing great flexibility in extending its
-capabilities. Similarly, PostgreSQL includes a framework that allows developers
-to define and create their own custom data types along with supporting functions
-and operators that define their behavior. As a result, a host of advanced data
-types have been created that range from geometric and spatial primitives to
-network addresses to even ISBN/ISSN (International Standard Book
-Number/International Standard Serial Number) data types, all of which can be
-optionally added to the system.
-</p><p>Just as there are many procedure languages supported by PostgreSQL, there
-are also many library interfaces as well, allowing various languages both
-compiled and interpreted to interface with PostgreSQL. There are interfaces for
-Java (JDBC), ODBC, Perl, Python, Ruby, C, C++, PHP, Lisp, Scheme, and Qt just to
-name a few.
-</p><p>Best of all, PostgreSQL's source code is available under a liberal
-open source license: the <a href="http://www.opensource.org/licenses/postgresql">PostgreSQL License</a>.
-This license gives you the freedom to use,
-modify and distribute PostgreSQL in any form you like, open or closed
-source. Any modifications, enhancements, or changes you make are yours to do
-with as you please. As such, PostgreSQL is not only a powerful database system
-capable of running the enterprise, it is a development platform upon which to
-develop in-house, web, or commercial software products that require a capable
-RDBMS.
+<h2 class="major"><span>What is PostgreSQL, anyway?</span></h2>
+<p>
+  PostgreSQL is a powerful, open source object-relational database system. It has more than 15 years
+  of active development and a proven architecture that has earned it a strong reputation for
+  reliability, data integrity, and correctness. It runs on all major operating systems, including
+  Linux, UNIX (AIX, BSD, HP-UX, SGI IRIX, Mac OS X, Solaris, Tru64), and Windows. It is fully ACID
+  compliant, has full support for foreign keys, joins, views, triggers, and stored procedures (in
+  multiple languages). It includes most SQL:2008 data types, including INTEGER, NUMERIC, BOOLEAN,
+  CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP. It also supports storage of binary large objects,
+  including pictures, sounds, or video. It has native programming interfaces for C/C++, Java, .Net,
+  Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.
 </p>
 
-
-<h1>Advantages</h1>
-<p>PostgreSQL offers many advantages for your company or business over other database systems.</p>
-
-<a name="immunity"></a>
-<h2>Immunity to over-deployment</h2>
-<p>Over-deployment is what some proprietary database vendors regard as their #1 license compliance problem.&nbsp; With PostgreSQL, no-one can sue you for breaking licensing agreements, as there is <b>no associated licensing cost for the software.</b></p>
-<p>This has several additional advantages:</p>
-<ul>
-<li>More profitable business models with wide-scale deployment.</li>
-<li>No possibility of being audited for license compliance at any stage.</li>
-<li>Flexibility to do concept research and trial deployments without needing to include additional licensing costs.</li>
-</ul>
-
-<a name="support"></a>
-<h2>Better support than the proprietary vendors</h2>
-<p>In addition to our strong support offerings, we have a vibrant community of PostgreSQL professionals and enthusiasts that your staff can draw upon and contribute to.</p>
-
-<a name="staffsavings"></a>
-<h2>Significant saving on staffing costs</h2>
-<p>Our software has been designed and created to have much lower maintenance and tuning requirements than the leading proprietary databases, yet still retain all of the features, stability, and performance.</p>
-<p>In addition to this, our training programs are generally regarded as being far more cost effective, manageable, and practical in the real world than that of the leading proprietary database vendors.</p>
-
-<a name="reliability"></a>
-<h2>Legendary reliability and stability</h2>
-<p>Unlike many proprietary databases, it is extremely common for companies to report that PostgreSQL has never, ever crashed for them in several years of high activity operation.&nbsp; Not even once.&nbsp; It just works.</p>
-
-<a name="extensible"></a>
-<h2>Extensible</h2>
-<p>The source code is available to all at no charge.&nbsp; If your staff have a need to customise or extend PostgreSQL in any way then they are able to do so with a minimum of effort, and with no attached costs.&nbsp; This is complemented by the community of PostgreSQL professionals and enthusiasts around the globe that also actively extend PostgreSQL on a daily basis.</p>
-
-<a name="crossplat"></a>
-<h2>Cross platform</h2>
-<p>PostgreSQL is available for almost every brand of Unix (34 platforms with the latest stable release), and Windows compatibility is available via the Cygwin framework.  Native Windows compatibility is also available with version 8.0 and above.</p>
-
-<a name="highvolume"></a>
-<h2>Designed for high volume environments</h2>
-<p>We use a multiple row data storage strategy called MVCC to make PostgreSQL extremely responsive in high volume environments.&nbsp; The leading proprietary database vendor uses this technology as well, for the same reasons.</p>
-
-<a name="gui"></a>
-<h2>GUI database design and administration tools</h2>
-<p>There are many high-quality GUI Tools available for PostgreSQL from both open source developers and commercial providers. A list is available on our wiki as  a <a href="https://wiki.postgresql.org/wiki/Community_Guide_to_PostgreSQL_GUI_Tools">community guide</a> to PostgreSQL GUI Tools.
-
-<a name="features"></a>
-<h2>Technical Features</h2>
-<p>Please see the <a href="/about/featurematrix/">Feature Matrix</a> for a summary of PostgreSQL's features.
+<h2 class="major"><span>Why use PostgreSQL?</span></h2>
+<p>
+  An enterprise class database, PostgreSQL boasts sophisticated features such as Multi-Version
+  Concurrency Control (MVCC), point in time recovery, tablespaces, asynchronous replication, nested
+  transactions (savepoints), online/hot backups, a sophisticated query planner/optimizer, and write ahead
+  logging for fault tolerance. It supports international character sets, multibyte character encodings,
+  Unicode, and it is locale-aware for sorting, case-sensitivity, and formatting. It is highly scalable both
+  in the sheer quantity of data it can manage and in the number of concurrent users it can accommodate.
+  There are active PostgreSQL systems in production environments that manage in excess of 4 terabytes of
+  data.
 </p>
+
+<h2 class="major"><span>Our users <i class="fa fa-heart"></i> us</span></h2>
+<div class="container-fluid">
+  <div id="carouselContent" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active text-center p-4">
+            <p>Open source and free PostgreSQL has the speed, compatibility, SQL, and features as sophisticated as the number one commercial database.</p>
+            <small>Ferry Irawan, NewJavaSoft, Indonesia</small>
+          </div>
+          <div class="carousel-item text-center p-4">
+            <p>[Our customers] expect both high performance and high availability from our software, central part of which is the SQL database engine. And we have found that the PostgreSQL is really up to the task.</p>
+            <small>Maksym Sobolyev, SippySoft Inc.</small>
+          </div>
+          <div class="carousel-item text-center p-4">
+            <p>Here in CAIXA bank we use Postgresql in mission-critical financial environments because - beyond being strategic for our business and Brazil - it has the quality to support our operations.</p>
+            <small>Clarice Coppetti, IT Vice President, CAIXA Bank, Brazil</small>
+          </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+</div>
+
+<h2 class="major"><span>Stats for the Analytically Minded</span></h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 feature-grid">
+      <h3>9,353 Contributors</h3>
+    </div>
+    <div class="col-sm-3 feature-grid">
+      <h3>5,000 Conferences</h3>
+    </div>
+    <div class="col-sm-3 feature-grid">
+      <h3>10,000 Awards</h3>
+    </div>
+    <div class="col-sm-3 feature-grid">
+      <h3>30 Years</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3 feature-grid">
+      <h3>39,196 Commits</h3>
+    </div>
+    <div class="col-sm-3 feature-grid">
+      <h3>300 User Groups</h3>
+    </div>
+    <div class="col-sm-3 feature-grid">
+      <h3>1,123,628 Lines of Code</h3>
+    </div>
+    <div class="col-sm-3 feature-grid">
+      <h3>1,000,000 Cats</h3>
+    </div>
+  </div>
+</div>
+
+<h2 class="major"><span>Any questions?</span></h2>
+<p>
+  Check out our <strong><a href="#">wiki</a></strong> for extensive documentation on the PostgreSQL database.
+  We also have hundreds of <strong><a href="#">mailing lists</a></strong> available for subscribing to for
+  lurking purposes (or if you're the curious type). And finally, if you're interested in the
+  history of our fabulous database, you can read all about it <strong><a href="#">here</a></strong>.
+</p>
+
 {%endblock%}
