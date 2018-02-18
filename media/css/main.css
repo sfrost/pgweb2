@@ -644,12 +644,12 @@ ul.actions {
     padding-top: 55px;
   }
 
-  .pg-jumbotron .btn {
-    margin: 5px auto;
-    width: 100%;
+  .jumbotron.jumbotron-fluid.pg-jumbotron {
+    padding: 4em;
   }
 
-  button.btn.btn-primary {
+  .pg-jumbotron .btn, button.btn.btn-primary {
+    margin: 5px auto;
     width: 100%;
   }
 
@@ -665,7 +665,9 @@ ul.actions {
     padding: 6em;
   }
 
-  ul.divided {
+  ul.divided, ul.menu, ul.contact {
     padding: 0;
+    text-align: center;
   }
+
 }
