@@ -631,16 +631,41 @@ ul.actions {
     }
 }
 
+@media (max-width: 1200px) {
+}
 
-/** Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) {
+
+}
+
 @media (min-width: 768px) {
-}
 
-/** Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+  body {
+    padding-top: 55px;
+  }
 
-}
+  .pg-jumbotron .btn {
+    margin: 5px auto;
+    width: 100%;
+  }
 
-/** Very Large devices (large displays, 1200px and up) */
-@media (min-width: 1200px) {
+  button.btn.btn-primary {
+    width: 100%;
+  }
+
+  .text {
+    height: initial;
+  }
+
+  .cta-text {
+    padding: 4em;
+  }
+
+  .cta {
+    padding: 6em;
+  }
+
+  ul.divided {
+    padding: 0;
+  }
 }
