@@ -568,7 +568,7 @@ ul.actions {
   padding: 0 0.5em 0 0;
 }
 
-#pgContentWrap .fa {
+#pgContentWrap .fa, #pgContentWrap .far, #pgContentWrap .fas {
   color: #336791;
   margin: 0 5px;
 }
