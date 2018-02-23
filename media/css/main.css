@@ -303,7 +303,7 @@ ul.contact li:hover {
   	top: -5px;
 }
 
-ul.contact li:hover a.fa-facebook {
+ul.contact li:hover a.fa-facebook-f {
   	background-color: #3C5A98;
 }
 
@@ -315,15 +315,11 @@ ul.contact li:hover a.fa-github {
 	  background-color: #000;
 }
 
-ul.contact li:hover a.fa-linkedin {
-	  background-color: #006599;
-}
-
 ul.contact li:hover a.fa-instagram {
 	  background-color: #2E5E86;
 }
 
-ul.contact li:hover a.fa-google-plus {
+ul.contact li:hover a.fa-google-plus-g {
 	  background-color: #DA2713;
 }
 
@@ -568,7 +564,7 @@ ul.actions {
   padding: 0 0.5em 0 0;
 }
 
-#pgContentWrap .fa, #pgContentWrap .far, #pgContentWrap .fas {
+#pgContentWrap .fa, #pgContentWrap .far, #pgContentWrap .fas, #pgContentWrap .fab {
   color: #336791;
   margin: 0 5px;
 }
