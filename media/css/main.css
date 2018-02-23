@@ -61,14 +61,14 @@ h3 {
     flex-direction: row;
 }
 
-.centered-lines h2 {
+h2.centered-lines {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
 }
 
-.centered-lines h2:after, .centered-lines h2:before {
+h2.centered-lines:after, h2.centered-lines:before {
     background-color: #e7eae8;
     content: '\a0';
     flex-grow: 1;
