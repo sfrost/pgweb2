@@ -74,7 +74,7 @@ h2.centered-lines:after, h2.centered-lines:before {
     flex-grow: 1;
     height: 5px;
     position: relative;
-    margin: .5em 0 .25em 0.5em;
+    margin: 0.5em 0.5em 0.25em 0.5em;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
