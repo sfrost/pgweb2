@@ -45,11 +45,22 @@ h3 {
     font-size: 1.4em;
 }
 
-h2.major {
-		font-size: 1.65em;
-		text-align: center;
+h2:after {
+    background-color: #e7eae8;
+    content: '\a0';
+    flex-grow: 1;
+    height: 5px;
     position: relative;
-    border-top: solid 5px #e7eae8;
+    margin: .5em 0 .25em 0.5em;
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 0.67em 0;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto Condensed', sans-serif !important;
 }
 
 h2.major span {
