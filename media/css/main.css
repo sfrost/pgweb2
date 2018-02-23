@@ -37,10 +37,6 @@ h1, h2, h3, h4, h5, h6 {
     /*margin: 0 0 0.5em 0;*/
 }
 
-h2 {
-    font-size: 1.6em;
-}
-
 h3 {
     font-size: 1.4em;
 }
@@ -52,24 +48,14 @@ h2:after {
     height: 5px;
     position: relative;
     margin: .5em 0 .25em 0.5em;
-    vertical-align: middle;
 }
 
 h2 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    font-size: 1.6em;
     display: flex;
     flex-direction: row;
     font-family: 'Roboto Condensed', sans-serif !important;
-}
-
-h2.major span {
-		top: -0.775em;
-		padding: 0 0.5em;
-    background: #fff;
-    position: relative;
-    display: inline-block;
-    font-family: 'Roboto Condensed', sans-serif !important;
+    margin: 1em 0;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
