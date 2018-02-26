@@ -2,7 +2,7 @@
 {%block title%}Security Information{%endblock%}
 {%block contents%}
 
-<h1>Security Information</h1>
+<h1>Security Information <i class="fas fa-lock"></i></h1>
 
 <p>
 If you wish to report a new security vulnerability in PostgreSQL, please
@@ -52,316 +52,319 @@ list a vulnerability class, but we urge all users to read the description
 to determine if the bug affects specific installations or not.
 </p>
 
-<div class="tblBasic">
- <table border="0" cellpadding="0" cellspacing="0" class="tblBasicGrey">
-  <tr>
-   <th class="colFirst">Reference</th>
-   <th class="colMid">Affected<br/>versions</th>
-   <th class="colMid">Fixed in</th>
-   <th class="colMid"><a href="#comp">Component</a></th>
-   <th class="colMid"><a href="#cls">Class</a></th>
-   <th class="colLast">Description</th>
-  </tr>
 
-  <tr valign="top">
-    <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-15099">CVE-2017-15099</a></td>
-    <td class="colMid">9.5-10</td>
-    <td class="colMid">10.1, 9.6.6, 9.5.10</td>
-    <td class="colMid">core server</td>
-    <td class="colMid">C</td>
-    <td class="colLast">INSERT ... ON CONFLICT DO UPDATE fails to enforce SELECT privileges</td>
-  </tr>
+<table class="table table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th>Reference</th>
+      <th>Affected<br/>versions</th>
+      <th>Fixed in</th>
+      <th><a href="#comp">Component</a></th>
+      <th><a href="#cls">Class</a></th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
 
-  <tr valign="top">
-    <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-15098">CVE-2017-15098</a></td>
-    <td class="colMid">9.3-10</td>
-    <td class="colMid">10.1, 9.6.6, 9.5.10, 9.4.15, 9.3.20</td>
-    <td class="colMid">core server</td>
-    <td class="colMid">C</td>
-    <td class="colLast">Memory disclosure in JSON functions</td>
-  </tr>
+      <tr valign="top">
+        <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-15099">CVE-2017-15099</a></td>
+        <td class="colMid">9.5-10</td>
+        <td class="colMid">10.1, 9.6.6, 9.5.10</td>
+        <td class="colMid">core server</td>
+        <td class="colMid">C</td>
+        <td class="colLast">INSERT ... ON CONFLICT DO UPDATE fails to enforce SELECT privileges</td>
+      </tr>
 
-  <tr valign="top">
-    <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-12172">CVE-2017-12172</a></td>
-    <td class="colMid">9.2-10</td>
-    <td class="colMid">10.1, 9.6.6, 9.5.10, 9.4.15, 9.3.20, 9.2.24</td>
-    <td class="colMid">contrib module</td>
-    <td class="colMid">A</td>
-    <td class="colLast">Start scripts permit database administrator to modify root-owned files</td>
-  </tr>
+      <tr valign="top">
+        <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-15098">CVE-2017-15098</a></td>
+        <td class="colMid">9.3-10</td>
+        <td class="colMid">10.1, 9.6.6, 9.5.10, 9.4.15, 9.3.20</td>
+        <td class="colMid">core server</td>
+        <td class="colMid">C</td>
+        <td class="colLast">Memory disclosure in JSON functions</td>
+      </tr>
 
-  <tr valign="top">
-    <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7548">CVE-2017-7548</a></td>
-    <td class="colMid">9.4-9.6</td>
-    <td class="colMid">9.6.4, 9.5.8, 9.4.13</td>
-    <td class="colMid">core server</td>
-    <td class="colMid">C</td>
-    <td class="colLast">lo_put() function ignores ACLs</td>
-  </tr>
+      <tr valign="top">
+        <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-12172">CVE-2017-12172</a></td>
+        <td class="colMid">9.2-10</td>
+        <td class="colMid">10.1, 9.6.6, 9.5.10, 9.4.15, 9.3.20, 9.2.24</td>
+        <td class="colMid">contrib module</td>
+        <td class="colMid">A</td>
+        <td class="colLast">Start scripts permit database administrator to modify root-owned files</td>
+      </tr>
 
-  <tr valign="top">
-    <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7547">CVE-2017-7547</a></td>
-    <td class="colMid">9.2-9.6</td>
-    <td class="colMid">9.6.4, 9.5.8, 9.4.13, 9.3.18, 9.2.22</td>
-    <td class="colMid">core server</td>
-    <td class="colMid">C</td>
-    <td class="colLast">pg_user_mappings view discloses passwords to users lacking server privileges</td>
-  </tr>
+      <tr valign="top">
+        <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7548">CVE-2017-7548</a></td>
+        <td class="colMid">9.4-9.6</td>
+        <td class="colMid">9.6.4, 9.5.8, 9.4.13</td>
+        <td class="colMid">core server</td>
+        <td class="colMid">C</td>
+        <td class="colLast">lo_put() function ignores ACLs</td>
+      </tr>
 
-  <tr valign="top">
-    <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7546">CVE-2017-7546</a></td>
-    <td class="colMid">9.2-9.6</td>
-    <td class="colMid">9.6.4, 9.5.8, 9.4.13, 9.3.18, 9.2.22</td>
-    <td class="colMid">core server</td>
-    <td class="colMid">A</td>
-    <td class="colLast">empty password accepted in some authentication methods</td>
-  </tr>
+      <tr valign="top">
+        <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7547">CVE-2017-7547</a></td>
+        <td class="colMid">9.2-9.6</td>
+        <td class="colMid">9.6.4, 9.5.8, 9.4.13, 9.3.18, 9.2.22</td>
+        <td class="colMid">core server</td>
+        <td class="colMid">C</td>
+        <td class="colLast">pg_user_mappings view discloses passwords to users lacking server privileges</td>
+      </tr>
 
-  <tr valign="top">
-    <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7484">CVE-2017-7484</a></td>
-    <td class="colMid">9.2-9.6</td>
-    <td class="colMid">9.6.3, 9.5.7, 9.4.12, 9.3.17, 9.2.21</td>
-    <td class="colMid">core server</td>
-    <td class="colMid">C</td>
-    <td class="colLast">selectivity estimators bypass SELECT privilege checks</td>
-  </tr>
+      <tr valign="top">
+        <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7546">CVE-2017-7546</a></td>
+        <td class="colMid">9.2-9.6</td>
+        <td class="colMid">9.6.4, 9.5.8, 9.4.13, 9.3.18, 9.2.22</td>
+        <td class="colMid">core server</td>
+        <td class="colMid">A</td>
+        <td class="colLast">empty password accepted in some authentication methods</td>
+      </tr>
 
-  <tr valign="top">
-    <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7485">CVE-2017-7485</a></td>
-    <td class="colMid">9.3-9.6</td>
-    <td class="colMid">9.6.3, 9.5.7, 9.4.12, 9.3.17</td>
-    <td class="colMid">client</td>
-    <td class="colMid">A</td>
-    <td class="colLast">libpq ignores PGREQUIRESSL environment variable</td>
-  </tr>
+      <tr valign="top">
+        <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7484">CVE-2017-7484</a></td>
+        <td class="colMid">9.2-9.6</td>
+        <td class="colMid">9.6.3, 9.5.7, 9.4.12, 9.3.17, 9.2.21</td>
+        <td class="colMid">core server</td>
+        <td class="colMid">C</td>
+        <td class="colLast">selectivity estimators bypass SELECT privilege checks</td>
+      </tr>
 
-  <tr valign="top">
-    <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7486">CVE-2017-7486</a></td>
-    <td class="colMid">9.2-9.6</td>
-    <td class="colMid">9.6.3, 9.5.7, 9.4.12, 9.3.17, 9.2.21</td>
-    <td class="colMid">core server</td>
-    <td class="colMid">C</td>
-    <td class="colLast">pg_user_mappings view discloses foreign server passwords</td>
-  </tr>
+      <tr valign="top">
+        <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7485">CVE-2017-7485</a></td>
+        <td class="colMid">9.3-9.6</td>
+        <td class="colMid">9.6.3, 9.5.7, 9.4.12, 9.3.17</td>
+        <td class="colMid">client</td>
+        <td class="colMid">A</td>
+        <td class="colLast">libpq ignores PGREQUIRESSL environment variable</td>
+      </tr>
 
-  <tr valign="top">
-    <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2016-7048">CVE-2016-7048</a></td>
-    <td class="colMid">9.1-9.5</td>
-    <td class="colMid">9.5.5, 9.4.10, 9.3.15, 9.2.19, 9.1.24</td>
-    <td class="colMid">packaging</td>
-    <td class="colMid">A</td>
-    <td class="colLast">Interactive installer downloads software over plain HTTP, then executes it</td>
-  </tr>
+      <tr valign="top">
+        <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2017-7486">CVE-2017-7486</a></td>
+        <td class="colMid">9.2-9.6</td>
+        <td class="colMid">9.6.3, 9.5.7, 9.4.12, 9.3.17, 9.2.21</td>
+        <td class="colMid">core server</td>
+        <td class="colMid">C</td>
+        <td class="colLast">pg_user_mappings view discloses foreign server passwords</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2016-5423">CVE-2016-5423</a></td>
-   <td class="colMid">9.5, 9.4, 9.3, 9.2, 9.1</td>
-   <td class="colMid">9.5.4, 9.4.9, 9.3.14, 9.2.18, 9.1.23</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Certain nested CASE/WHEN expressions can crash server</td>
-  </tr>
+      <tr valign="top">
+        <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2016-7048">CVE-2016-7048</a></td>
+        <td class="colMid">9.1-9.5</td>
+        <td class="colMid">9.5.5, 9.4.10, 9.3.15, 9.2.19, 9.1.24</td>
+        <td class="colMid">packaging</td>
+        <td class="colMid">A</td>
+        <td class="colLast">Interactive installer downloads software over plain HTTP, then executes it</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2016-5424">CVE-2016-5424</a></td>
-   <td class="colMid">9.5, 9.4, 9.3, 9.2, 9.1</td>
-   <td class="colMid">9.5.4, 9.4.9, 9.3.14, 9.2.18, 9.1.23</td>
-   <td class="colMid">client</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Exceptional database and role names could enable escalation to superuser</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2016-5423">CVE-2016-5423</a></td>
+       <td class="colMid">9.5, 9.4, 9.3, 9.2, 9.1</td>
+       <td class="colMid">9.5.4, 9.4.9, 9.3.14, 9.2.18, 9.1.23</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Certain nested CASE/WHEN expressions can crash server</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2016-2193">CVE-2016-2193</a></td>
-   <td class="colMid">9.5</td>
-   <td class="colMid">9.5.2</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Plan cache might use wrong role context for RLS policy</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2016-5424">CVE-2016-5424</a></td>
+       <td class="colMid">9.5, 9.4, 9.3, 9.2, 9.1</td>
+       <td class="colMid">9.5.4, 9.4.9, 9.3.14, 9.2.18, 9.1.23</td>
+       <td class="colMid">client</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Exceptional database and role names could enable escalation to superuser</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2016-3065">CVE-2016-3065</a></td>
-   <td class="colMid">9.5</td>
-   <td class="colMid">9.5.2</td>
-   <td class="colMid">contrib</td>
-   <td class="colMid">C</td>
-   <td class="colLast">pageinspect does not check permissions for BRIN indexes</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2016-2193">CVE-2016-2193</a></td>
+       <td class="colMid">9.5</td>
+       <td class="colMid">9.5.2</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Plan cache might use wrong role context for RLS policy</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0773">CVE-2016-0773</a></td>
-   <td class="colMid">9.5, 9.4, 9.3, 9.2, 9.1</td>
-   <td class="colMid">9.5.1, 9.4.6, 9.3.11, 9.2.15, 9.1.20</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Unchecked regex can crash the server</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="https://access.redhat.com/security/cve/CVE-2016-3065">CVE-2016-3065</a></td>
+       <td class="colMid">9.5</td>
+       <td class="colMid">9.5.2</td>
+       <td class="colMid">contrib</td>
+       <td class="colMid">C</td>
+       <td class="colLast">pageinspect does not check permissions for BRIN indexes</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5289">CVE-2015-5289</a></td>
-   <td class="colMid">9.4, 9.3</td>
-   <td class="colMid">9.4.5, 9.3.10</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">B</td>
-   <td class="colLast">Unchecked JSON input can crash the server</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0773">CVE-2016-0773</a></td>
+       <td class="colMid">9.5, 9.4, 9.3, 9.2, 9.1</td>
+       <td class="colMid">9.5.1, 9.4.6, 9.3.11, 9.2.15, 9.1.20</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Unchecked regex can crash the server</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5288">CVE-2015-5288</a></td>
-   <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
-   <td class="colMid">9.4.5, 9.3.10, 9.2.14, 9.1.19, 9.0.23</td>
-   <td class="colMid">contrib module</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Memory leak in crypt() function.</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5289">CVE-2015-5289</a></td>
+       <td class="colMid">9.4, 9.3</td>
+       <td class="colMid">9.4.5, 9.3.10</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">B</td>
+       <td class="colLast">Unchecked JSON input can crash the server</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3165">CVE-2015-3165</a></td>
-   <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
-   <td class="colMid">9.4.2, 9.3.7, 9.2.11, 9.1.16, 9.0.20</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">B</td>
-   <td class="colLast">Double "free" after authentication timeout</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5288">CVE-2015-5288</a></td>
+       <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
+       <td class="colMid">9.4.5, 9.3.10, 9.2.14, 9.1.19, 9.0.23</td>
+       <td class="colMid">contrib module</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Memory leak in crypt() function.</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3166">CVE-2015-3166</a></td>
-   <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
-   <td class="colMid">9.4.2, 9.3.7, 9.2.11, 9.1.16, 9.0.20</td>
-   <td class="colMid">core server, client</td>
-   <td class="colMid">D</td>
-   <td class="colLast">Unanticipated errors from the standard library.</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3165">CVE-2015-3165</a></td>
+       <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
+       <td class="colMid">9.4.2, 9.3.7, 9.2.11, 9.1.16, 9.0.20</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">B</td>
+       <td class="colLast">Double "free" after authentication timeout</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3167">CVE-2015-3167</a></td>
-   <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
-   <td class="colMid">9.4.2, 9.3.7, 9.2.11, 9.1.16, 9.0.20</td>
-   <td class="colMid">contrib module</td>
-   <td class="colMid">C</td>
-   <td class="colLast">pgcrypto has multiple error messages for decryption with an incorrect key.</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3166">CVE-2015-3166</a></td>
+       <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
+       <td class="colMid">9.4.2, 9.3.7, 9.2.11, 9.1.16, 9.0.20</td>
+       <td class="colMid">core server, client</td>
+       <td class="colMid">D</td>
+       <td class="colLast">Unanticipated errors from the standard library.</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0241">CVE-2015-0241</a></td>
-   <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
-   <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Buffer overruns in "to_char" functions.</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3167">CVE-2015-3167</a></td>
+       <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
+       <td class="colMid">9.4.2, 9.3.7, 9.2.11, 9.1.16, 9.0.20</td>
+       <td class="colMid">contrib module</td>
+       <td class="colMid">C</td>
+       <td class="colLast">pgcrypto has multiple error messages for decryption with an incorrect key.</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0242">CVE-2015-0242</a></td>
-   <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
-   <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Buffer overrun in replacement printf family of functions.</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0241">CVE-2015-0241</a></td>
+       <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
+       <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Buffer overruns in "to_char" functions.</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0243">CVE-2015-0243</a></td>
-   <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
-   <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
-   <td class="colMid">contrib module</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Memory errors in functions in the pgcrypto extension.</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0242">CVE-2015-0242</a></td>
+       <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
+       <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Buffer overrun in replacement printf family of functions.</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0244">CVE-2015-0244</a></td>
-   <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
-   <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">C</td>
-   <td class="colLast">An error in extended protocol message reading.</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0243">CVE-2015-0243</a></td>
+       <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
+       <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
+       <td class="colMid">contrib module</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Memory errors in functions in the pgcrypto extension.</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8161">CVE-2014-8161</a></td>
-   <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
-   <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Constraint violation errors can cause display of values in columns which the user would not normally have rights to see.</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0244">CVE-2015-0244</a></td>
+       <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
+       <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">C</td>
+       <td class="colLast">An error in extended protocol message reading.</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0067">CVE-2014-0067</a></td>
-   <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
-   <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
-   <td class="colMid">other</td>
-   <td class="colMid">N/A</td>
-   <td class="colLast">Unauthenticated users may gain access to the database server during "make check". <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a>.</td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8161">CVE-2014-8161</a></td>
+       <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
+       <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Constraint violation errors can cause display of values in columns which the user would not normally have rights to see.</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0060">CVE-2014-0060</a></td>
-   <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
-   <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">C</td>
-   <td class="colLast">SET ROLE bypasses lack of ADMIN OPTION. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0067">CVE-2014-0067</a></td>
+       <td class="colMid">9.4, 9.3, 9.2, 9.1, 9.0</td>
+       <td class="colMid">9.4.1, 9.3.6, 9.2.10, 9.1.15, 9.0.19</td>
+       <td class="colMid">other</td>
+       <td class="colMid">N/A</td>
+       <td class="colLast">Unauthenticated users may gain access to the database server during "make check". <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a>.</td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0061">CVE-2014-0061</a></td>
-   <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
-   <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Privilege escalation via calls to validator functions. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0060">CVE-2014-0060</a></td>
+       <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
+       <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">C</td>
+       <td class="colLast">SET ROLE bypasses lack of ADMIN OPTION. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0062">CVE-2014-0062</a></td>
-   <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
-   <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Race condition in CREATE INDEX allows for privilege escalation. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0061">CVE-2014-0061</a></td>
+       <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
+       <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Privilege escalation via calls to validator functions. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0063">CVE-2014-0063</a></td>
-   <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
-   <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
-   <td class="colMid">core server, ECPG</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Potential buffer overruns in datetime input/output. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0062">CVE-2014-0062</a></td>
+       <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
+       <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Race condition in CREATE INDEX allows for privilege escalation. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0064">CVE-2014-0064</a></td>
-   <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
-   <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
-   <td class="colMid">core server, contrib</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Potential buffer overruns due to integer overflow in size calculations. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0063">CVE-2014-0063</a></td>
+       <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
+       <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
+       <td class="colMid">core server, ECPG</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Potential buffer overruns in datetime input/output. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
+      </tr>
 
-  <tr valign="top">
-   <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0065">CVE-2014-0065</a></td>
-   <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
-   <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
-   <td class="colMid">core server</td>
-   <td class="colMid">C</td>
-   <td class="colLast">Potential buffer overruns of fixed-size buffers. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0064">CVE-2014-0064</a></td>
+       <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
+       <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
+       <td class="colMid">core server, contrib</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Potential buffer overruns due to integer overflow in size calculations. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
+      </tr>
 
-  <tr valign="top">
-  <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0066">CVE-2014-0066</a></td>
-   <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
-   <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
-   <td class="colMid">contrib module</td>
-   <td class="colMid">D</td>
-   <td class="colLast">Potential null pointer dereference crash when crypt(3) returns NULL. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
-  </tr>
+      <tr valign="top">
+       <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0065">CVE-2014-0065</a></td>
+       <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
+       <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
+       <td class="colMid">core server</td>
+       <td class="colMid">C</td>
+       <td class="colLast">Potential buffer overruns of fixed-size buffers. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
+      </tr>
 
- </table>
-</div>
+      <tr valign="top">
+      <td class="colFirst"><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0066">CVE-2014-0066</a></td>
+       <td class="colMid">9.3, 9.2, 9.1, 9.0, 8.4</td>
+       <td class="colMid">9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20</td>
+       <td class="colMid">contrib module</td>
+       <td class="colMid">D</td>
+       <td class="colLast">Potential null pointer dereference crash when crypt(3) returns NULL. <a href="https://wiki.postgresql.org/wiki/20140220securityrelease">Details</a></td>
+      </tr>
+
+  </tbody>
+</table>
 
 <a name="cls"></a>
 <h2>Vulnerability Classes</h2>
