@@ -633,7 +633,7 @@ ul.actions {
   }
 
   .carousel {
-    height: 20em;
+    height: 24em;
   }
 
   .feature-grid {
@@ -651,6 +651,14 @@ ul.actions {
   #pgSideNav ul {
     padding: 0;
     margin: 1em 0 0 1em;
+  }
+
+  #pgSideNav ul ul {
+    margin: 0;
+  }
+
+  #pgContentWrap ul {
+    padding-left: 1em;
   }
 
 }
