@@ -433,9 +433,8 @@ ul.divided > li:first-child {
 /* #FOOTER */
 
 #footer {
-  background-color: #f2f5f3;
-  text-align: center;
-  padding: 4em 0 3em 0;
+    text-align: center;
+    padding: 3em 0 2em 0;
 }
 
 #footer a {
