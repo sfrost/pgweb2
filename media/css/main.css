@@ -335,6 +335,7 @@ ul.meta {
 ul.meta li {
 	  position: relative;
 	  display: inline-block;
+    margin: 0 1em;
 }
 
 ul.meta li a {
@@ -347,7 +348,6 @@ ul.meta li:first-child {
 }
 
 ul.meta li:before {
-  	opacity: 0.5;
   	cursor: default;
   	margin-right: 0.5em;
 }
