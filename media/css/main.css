@@ -632,4 +632,25 @@ ul.actions {
     text-align: center;
   }
 
+  .carousel {
+    height: 20em;
+  }
+
+  .feature-grid {
+    padding: 0;
+  }
+
+  #footer ul {
+    padding: 0;
+  }
+
+  #pgSideNav {
+    padding: 1em 2em;
+  }
+
+  #pgSideNav ul {
+    padding: 0;
+    margin: 1em 0 0 1em;
+  }
+
 }
