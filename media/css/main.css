@@ -406,15 +406,6 @@ ul.divided > li:first-child {
     text-decoration: underline;
 }
 
-/* #PLANETPOSTGRESQL */
-
-.planetPostgresqlGlobe {
-	text-align: center;
-	font-size: 5em;
-	color: #336791;
-  margin-bottom: 25px;
-}
-
 /* #JUMBOTRON */
 
 .pg-jumbotron {
