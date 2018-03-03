@@ -16,7 +16,7 @@
 
 /** CUSTOM FONTS */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 /** GLOBAL CONFIGURATION */
 body {
@@ -29,16 +29,15 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Condensed', sans-serif !important;
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: lowercase;
     color: #515151;
     /*margin: 0 0 0.5em 0;*/
 }
 
 h2 {
     font-size: 1.6em;
-    font-family: 'Roboto Condensed', sans-serif !important;
     margin: 1em 0;
 }
 
@@ -259,7 +258,7 @@ blockquote {
 
 /* #LIST */
 
-ul.contact {
+#footer ul {
   	cursor: default;
 }
 
@@ -267,65 +266,32 @@ a.icon {
     text-decoration: none !important;
 }
 
-ul.contact li {
-	  -moz-transition: top .15s ease-in-out;
-	  -webkit-transition: top .15s ease-in-out;
-	  -ms-transition: top .15s ease-in-out;
-	  transition: top .15s ease-in-out;
-	  position: relative;
-	  display: inline-block;
-	  margin: 0 0.25em 0 0.25em;
-  	top: 0;
+#footer ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 .2em;
+    font-size: 2em;
 }
 
-ul.contact li a {
-  	-moz-transition: background-color .2s ease-in-out;
-  	-webkit-transition: background-color .2s ease-in-out;
-	  -ms-transition: background-color .2s ease-in-out;
-	  transition: background-color .2s ease-in-out;
-	  display: block;
-	  position: relative;
-	  width: 48px;
-	  height: 48px;
-	  border-radius: 6px;
-	  outline: 0;
-	  background: #666;
-	  text-align: center;
+#footer li a {
+  	-moz-transition: color .2s ease-in-out;
+  	-webkit-transition: color .2s ease-in-out;
+	  -ms-transition: color .2s ease-in-out;
+	  transition: color .2s ease-in-out;
 }
 
-ul.contact li a:before {
-	  color: #f2f5f3;
-	  font-size: 32px;
-	  line-height: 48px;
+#footer li:hover a.fa-twitter {
+  	color: #2DAAE4;
 }
 
-ul.contact li:hover {
-  	top: -5px;
+#footer li:hover a.fa-github {
+	  color: #000;
 }
 
-ul.contact li:hover a.fa-facebook-f {
-  	background-color: #3C5A98;
+#footer li:hover a.fa-google-plus-g {
+	  color: #DA2713;
 }
 
-ul.contact li:hover a.fa-twitter {
-  	background-color: #2DAAE4;
-}
-
-ul.contact li:hover a.fa-github {
-	  background-color: #000;
-}
-
-ul.contact li:hover a.fa-instagram {
-	  background-color: #2E5E86;
-}
-
-ul.contact li:hover a.fa-google-plus-g {
-	  background-color: #DA2713;
-}
-
-ul.contact li:active {
-	  top: 0;
-}
 
 ul.meta {
 	  font-size: 0.85em;
@@ -335,6 +301,7 @@ ul.meta {
 ul.meta li {
 	  position: relative;
 	  display: inline-block;
+    margin: 0 1em;
 }
 
 ul.meta li a {
@@ -347,7 +314,6 @@ ul.meta li:first-child {
 }
 
 ul.meta li:before {
-  	opacity: 0.5;
   	cursor: default;
   	margin-right: 0.5em;
 }
@@ -406,15 +372,6 @@ ul.divided > li:first-child {
     text-decoration: underline;
 }
 
-/* #PLANETPOSTGRESQL */
-
-.planetPostgresqlGlobe {
-	text-align: center;
-	font-size: 5em;
-	color: #336791;
-  margin-bottom: 25px;
-}
-
 /* #JUMBOTRON */
 
 .pg-jumbotron {
@@ -429,8 +386,6 @@ ul.divided > li:first-child {
 
 .pg-jumbotron-header {
   font-size: 3.0rem;
-  font-weight: 600;
-  line-height: 1.2;
 }
 
 /* #CTA */
@@ -444,7 +399,7 @@ ul.divided > li:first-child {
 }
 
 .cta-text {
-  padding: 12em;
+  padding: 4em;
   text-align: center;
   color: #fff;
   background-color: #336791;
@@ -475,9 +430,8 @@ ul.divided > li:first-child {
 /* #FOOTER */
 
 #footer {
-  background-color: #f2f5f3;
-  text-align: center;
-  padding: 4em 0 3em 0;
+    text-align: center;
+    padding: 3em 0 2em 0;
 }
 
 #footer a {
@@ -627,7 +581,7 @@ ul.actions {
     padding: 6em;
   }
 
-  ul.divided, ul.menu, ul.contact {
+  ul.divided, ul.menu, #footer ul {
     padding: 0;
     text-align: center;
   }
