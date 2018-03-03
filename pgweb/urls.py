@@ -112,7 +112,6 @@ urlpatterns = patterns('',
 	(r'^docs/faqs.FAQ.html$', RedirectView.as_view(url='https://wiki.postgresql.org/wiki/FAQ', permanent=True)),
 	(r'^docs/faqs.FAQ_DEV.*', RedirectView.as_view(url='https://wiki.postgresql.org/wiki/Development_information', permanent=True)),
 	(r'^docs/faqs.TODO.*', RedirectView.as_view(url='https://wiki.postgresql.org/wiki/Todo', permanent=True)),
-	(r'^about/license/$', RedirectView.as_view(url='/about/license', permanent=True)),
 
 	###
 	# Links included in emails on the lists (do we need to check this for XSS?)
