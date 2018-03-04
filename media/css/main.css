@@ -49,9 +49,9 @@ h3 {
     background-color: #e7eae8;
     content: '\a0';
     flex-grow: 1;
-    height: 5px;
+    height: 2px;
     position: relative;
-    margin: .5em 0 .25em 0.5em;
+    margin: .5em 0;
 }
 
 #pgContentWrap h2 {
@@ -70,17 +70,17 @@ h2.centered-lines:after, h2.centered-lines:before {
     background-color: #e7eae8;
     content: '\a0';
     flex-grow: 1;
-    height: 5px;
+    height: 2px;
     position: relative;
-    margin: 0.5em 0 0.25em 0;
+    margin: 0.5em 0;
 }
 
 h2.centered-lines:after {
-    margin-left: 0.5em;
+    margin-left: 0.75em;
 }
 
 h2.centered-lines:before {
-    margin-right: 0.5em;
+    margin-right: 0.75em;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
