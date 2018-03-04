@@ -450,6 +450,7 @@ ul.actions {
 
 .navbar {
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  font-family: 'Maven Pro', sans-serif;
 }
 
 /* #SIDEBAR UL STYLING */
@@ -526,7 +527,7 @@ ul.actions {
 @media (min-width: 576px) {
     /** NAVBAR */
     .nav-item > a {
-        font-size: 0.875rem;
+        font-size: 1rem;
     }
 }
 @media (max-width: 575px) {
