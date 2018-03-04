@@ -335,6 +335,10 @@ ul.divided > li:first-child {
 	  margin-top: 0;
 }
 
+.divided h3 {
+  font-size: 1.2em;
+}
+
 
 /* #ICONS */
 
