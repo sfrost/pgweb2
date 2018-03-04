@@ -299,9 +299,8 @@ ul.meta {
 }
 
 ul.meta li {
-	  position: relative;
 	  display: inline-block;
-    margin: 0 1em;
+    margin-right: 1em;
 }
 
 ul.meta li i {
