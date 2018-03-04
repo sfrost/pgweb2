@@ -45,16 +45,16 @@ h3 {
     font-size: 1.4em;
 }
 
-#pgContentWrap h2:after {
+#pgContentWrap h2:after, #pgSideNav h2:after {
     background-color: #e7eae8;
     content: '\a0';
     flex-grow: 1;
-    height: 5px;
+    height: 2px;
     position: relative;
-    margin: .5em 0 .25em 0.5em;
+    margin: .5em 0 .5em .75em;
 }
 
-#pgContentWrap h2 {
+#pgContentWrap h2, #pgSideNav h2 {
     display: flex;
     flex-direction: row;
 }
@@ -70,17 +70,17 @@ h2.centered-lines:after, h2.centered-lines:before {
     background-color: #e7eae8;
     content: '\a0';
     flex-grow: 1;
-    height: 5px;
+    height: 2px;
     position: relative;
-    margin: 0.5em 0 0.25em 0;
+    margin: 0.5em 0;
 }
 
 h2.centered-lines:after {
-    margin-left: 0.5em;
+    margin-left: 0.75em;
 }
 
 h2.centered-lines:before {
-    margin-right: 0.5em;
+    margin-right: 0.75em;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -299,23 +299,12 @@ ul.meta {
 }
 
 ul.meta li {
-	  position: relative;
 	  display: inline-block;
-    margin: 0 1em;
+    margin-right: 1em;
 }
 
-ul.meta li a {
-	  color: inherit;
-	  outline: 0;
-}
-
-ul.meta li:first-child {
-	  margin-left: 0;
-}
-
-ul.meta li:before {
-  	cursor: default;
-  	margin-right: 0.5em;
+ul.meta li i {
+    margin-right: 4px;
 }
 
 ul.divided > li {
@@ -325,14 +314,14 @@ ul.divided > li {
     list-style: none;
 }
 
-ul.divided-right > li {
-
-}
-
 ul.divided > li:first-child {
 	  border-top: 0;
 	  padding-top: 0;
 	  margin-top: 0;
+}
+
+.divided h3 {
+  font-size: 1.2em;
 }
 
 
@@ -385,7 +374,7 @@ ul.divided > li:first-child {
 }
 
 .pg-jumbotron-header {
-  font-size: 3.0rem;
+  font-size: 2.5rem;
 }
 
 /* #CTA */
@@ -432,6 +421,7 @@ ul.divided > li:first-child {
 #footer {
     text-align: center;
     padding: 3em 0 2em 0;
+    background-color: #e7eae8;
 }
 
 #footer a {
