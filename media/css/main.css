@@ -304,18 +304,8 @@ ul.meta li {
     margin: 0 1em;
 }
 
-ul.meta li a {
-	  color: inherit;
-	  outline: 0;
-}
-
-ul.meta li:first-child {
-	  margin-left: 0;
-}
-
-ul.meta li:before {
-  	cursor: default;
-  	margin-right: 0.5em;
+ul.meta li i {
+    margin-right: 4px;
 }
 
 ul.divided > li {
@@ -323,10 +313,6 @@ ul.divided > li {
 	  padding-top: 1.35em;
 	  margin-top: 1.35em;
     list-style: none;
-}
-
-ul.divided-right > li {
-
 }
 
 ul.divided > li:first-child {
