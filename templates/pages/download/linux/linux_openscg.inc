@@ -1,4 +1,4 @@
-<h2>Cross distribution packages <i class="fab fa-linux"></i></h2>
+<h2>Cross distribution packages</h2>
 <p>
 Generic RPM and DEB packages that provide a server-only distribution
 are avaliable for some 32 and 64-bit Linux distributions.  These
