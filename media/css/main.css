@@ -260,6 +260,7 @@ blockquote {
 
 #footer ul {
   	cursor: default;
+    padding: 0;
 }
 
 a.icon {
@@ -589,10 +590,6 @@ pre.code {
   }
 
   .feature-grid {
-    padding: 0;
-  }
-
-  #footer ul {
     padding: 0;
   }
 
