@@ -323,6 +323,11 @@ ul.divided > li:first-child {
   font-size: 1.2em;
 }
 
+ul.bold {
+  font-weight: 600;
+  list-style-type: none;
+  padding-left: 0;
+}
 
 /* #ICONS */
 
