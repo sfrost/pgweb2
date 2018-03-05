@@ -43,6 +43,7 @@ h2 {
 
 h3 {
     font-size: 1.4em;
+    font-weight: initial;
 }
 
 #pgContentWrap h2:after, #pgSideNav h2:after {
