@@ -8,36 +8,40 @@
 Sponsors are listed in no particular order within each section, with just the location of the head office
 for each company shown.</p>
 
-<div class="container-fluid">
-  {% for sponsor in sponsors %}
-    {% ifchanged sponsor.sponsortype %}
-      {% if not forloop.first %}
-            </tbody>
-          </table>
-        </div>
-      {% endif %}
-      <div class="row">
-        <h2>{{ sponsor.sponsortype.typename }}</h2>
-        <table class="table table-sm">
-          <tbody>
-    {% endifchanged%}
-    <tr>
-    	<th scope="row" style="width: 20%">
-        <a href="{{ sponsor.url }}" target="_blank">
-          <img width="150" src="/media/img/about/sponsors/{{ sponsor.logoname }}" alt="{{ sponsor.name }}" />
-        </a>
-      </th>
-    	<td style="width: 50%">
-        <a href="{{ sponsor.url }}" target="_blank">{{ sponsor.name }}</a>
-      </td>
-    	<td style="width: 30%">{{ sponsor.country }}</td>
-    </tr>
-  {% endfor %}
+{% for sponsor in sponsors %}
+  {% ifchanged sponsor.sponsortype %}
+    {% if not forloop.first %}
+          </tbody>
+        </table>
+      </div>
+    {% endif %}
+    <h2>{{ sponsor.sponsortype.typename }}</h2>
+    <table class="table table-striped">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">PostgreSQL Version</th>
+          <th scope="col">64-bit macOS Platforms</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% endifchanged%}
+          <tr>
+            <th scope="row" style="width: 20%">
+              <a href="{{ sponsor.url }}" target="_blank">
+                <img width="150" src="/media/img/about/sponsors/{{ sponsor.logoname }}" alt="{{ sponsor.name }}" />
+              </a>
+            </th>
+            <td style="width: 50%">
+              <a href="{{ sponsor.url }}" target="_blank">{{ sponsor.name }}</a>
+            </td>
+            <td style="width: 30%">{{ sponsor.country }}</td>
+          </tr>
+        {% endfor %}
       </tbody>
     </table>
-  </div>
-</div>
-<h1>Sponsorship Recognition</h1>
+
+
+<h2>Sponsorship Recognition</h2>
 <p>
   Sponsorship recognition is wholly determined by the <a href="https://wiki.postgresql.org/wiki/Sponsoring" target="_blank">Sponsorship Committee</a>.
 </p>
