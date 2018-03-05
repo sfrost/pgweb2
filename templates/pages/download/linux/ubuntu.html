@@ -95,13 +95,15 @@ version number as required):
 <p>The installers are tested by EnterpriseDB on the following platforms.
     They may also work on other variations or versions:</p>
 
-<div class="tblBasic">
-  <table border="0" cellpadding="0" cellspacing="0" class="tblBasicGrey">
+<table class="table table-striped">
+  <thead class="thead-light">
     <tr>
-      <th>PostgreSQL Version</th>
-      <th>64 Bit Platforms</th>
-      <th>32 Bit Platforms</th>
+      <th scope="col">PostgreSQL Version</th>
+      <th scope="col">64 Bit Platforms</th>
+      <th scope="col">32 Bit Platforms</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>10</td>
       <td>Ubuntu 14.04 LTS</td>
@@ -132,8 +134,8 @@ version number as required):
       <td>Ubuntu 12.04 LTS</td>
       <td>Ubuntu 12.04 LTS</td>
     </tr>
-  </table>
-</div>
+  </tbody>
+</table>
 
 {%include "pages/download/linux/linux_source.inc" %}
 {%endblock%}
