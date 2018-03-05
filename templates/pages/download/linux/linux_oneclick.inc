@@ -1,4 +1,4 @@
-<h2>Interactive installer by EnterpriseDB</h2>
+<h2>Interactive installer by EnterpriseDB <i class="fab fa-linux"></i></h2>
 <p>
 <a href="http://www.enterprisedb.com/products/pgdownload.do#linux"> Download the installer</a>
  certified by EnterpriseDB for all supported PostgreSQL versions.
