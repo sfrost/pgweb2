@@ -5,25 +5,6 @@
 <h1>Contributor Profiles</h1>
 <p>These are the fine people that make PostgreSQL what it is today!</p>
 
-<!-- Jonathan needs to convert table below to this format
-
-<table class="table table-striped">
-  <thead class="thead-light">
-    <tr>
-      <th scope="col">Community</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-    	<td><a href="http://www.postgresql.org.br/">Brazilian</a></td>
-    	<td>O centro de informa&ccedil;&otilde;es para os usu&aacute;rios brasileiros</td>
-    </tr>
-  </tbody>
-</table>
-
--->
-
 {%for t in contributortypes%}
 <h2>{{t.typename}}</h2>
 {%if t.extrainfo%}<p>{{t.extrainfo|safe}}</p>{%endif%}

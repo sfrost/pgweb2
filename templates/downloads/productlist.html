@@ -9,32 +9,26 @@
 
 {%for product in products %}
 
-<div class="tblBasic">
-<table class="tblBasicGrey">
-<tr>
-  <th class="colFirst">Product</th>
-  <td class="colLast"><a href="{{product.url}}">{{product.name}}</a></td>
-</tr>
-<tr>
-  <th class="colFirst" style="vertical-align: top;">Description</th>
-  <td class="colLast">{{product.description|markdown}}</td>
-</tr>
-<tr>
-  <th class="colFirst">License</th>
-  <td class="colLast">{{product.licensetype}}</td>
-</tr>
-{%if product.price%}
-<tr>
-  <th class="colFirst">Pricing&nbsp;info</th>
-  <td class="colLast">{{product.price}}</td>
-</tr>
-{%endif%}
-<tr>
-  <th class="colFirst">Publisher</th>
-  <td class="colLast"><a href="{{product.org.url}}">{{product.org.name}}</a></td>
-</tr>
+<table class="table table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Description</th>
+      <th scope="col">License</th>
+      <th scope="col">Pricing</th>
+      <th scope="col">Publisher</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    	<td><a href="{{product.url}}">{{product.name}}</a></td>
+    	<td>{{product.description|markdown}}</td>
+      <td>{{product.licensetype}}</td>
+      <td>{{product.price}}</td>
+      <td><a href="{{product.org.url}}">{{product.org.name}}</a></td>
+    </tr>
+  </tbody>
 </table>
-</div>
 
 {%endfor%}
 
