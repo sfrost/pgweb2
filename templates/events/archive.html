@@ -3,7 +3,7 @@
 {%block title%}{{title}}{%endblock%}
 {%block contents%}
 
-<h1>{{title}}</h1>
+<h1>{{title}} <i class="fas fa-calendar-alt"></i></h1>
 {%for eventblock in eventblocks%}
 {%if eventblocks|length > 1%}<h2><a name="{{eventblock.name}}">{{eventblock.name}}</a></h2>{%endif%}
 <p>
