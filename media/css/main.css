@@ -450,7 +450,8 @@ ul.actions {
 }
 
 #logo {
-    height: 2.5rem;
+    height: 1.5rem;
+    margin-left: 5px;
 }
 
 .navbar {
