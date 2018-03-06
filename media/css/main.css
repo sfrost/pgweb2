@@ -449,6 +449,12 @@ ul.actions {
     padding-top: 4em;
 }
 
+.navbar #logo {
+    height: 2rem;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
 #logo {
     height: 2rem;
     margin-left: 5px;
