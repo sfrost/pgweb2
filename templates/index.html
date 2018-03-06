@@ -54,7 +54,7 @@
         </p>
         <ul>
           {% for v in versions %}
-            <li class="{% cycle '' 'pg-bg-gray' %}"><img src="/media/img/PostgreSQL_Badge1.svg" class="community" alt="PostgreSQL Community Event"> {{ v.numtree }}.{{ v.latestminor }}</b> &middot; {{ v.reldate|date:"Y-m-d" }} &middot; <a href="/docs/{{ v.numtree }}/static/{{ v.relnotes }}">Notes</a></li>
+            <li class="{% cycle '' 'pg-bg-gray' %}">{{ v.numtree }}.{{ v.latestminor }}</b> &middot; {{ v.reldate|date:"Y-m-d" }} &middot; <a href="/docs/{{ v.numtree }}/static/{{ v.relnotes }}">Notes</a></li>
           {% endfor %}
         </ul>
       </div>
@@ -71,6 +71,7 @@
     <div class="col-lg-6 feature">
       <i class="fas fa-calendar-alt"></i>
       <h2>Upcoming Events</h2>
+      <!-- <img src="/media/img/PostgreSQL_Badge1.svg" class="community" alt="PostgreSQL Community Event"> -->
       <div class="text">
         <ul>
           {% for event in events %}
