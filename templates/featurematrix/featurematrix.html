@@ -66,7 +66,6 @@
   //]]>
 </script>
 <style type="text/css">
-div.tblBasic { margin-top: 20px; }
 form#version_filter { text-align: center; }
 input.version { margin-right: 15px; }
 input.version:last-child { margin-right: 0; }
@@ -90,31 +89,34 @@ the text.
 {%endfor%}
 </ul>
 
-<div class="tblBasic">
-<table border="0" cellpadding="0" cellspacing="0" class="tblBasicGrey">
-{%for group in groups %}
- <tr>
-  <th class="colFirst"><a name="{{group.group.groupname|slugify}}">{{group.group.groupname}}</a></th>
-  {%for col in group.group.columns %}
-  <th class="{%if forloop.last%}colLast{%else%}colMid{%endif%}">{{col}}</th>
-  {%endfor%}
- </tr>
- {%for feature in group.features%}
-  <tr valign="top" {%if forloop.last%}class="lastrow"{%endif%}>
-  <td class="colFirst" {%if feature.featuredescription%}title="{{feature.featuredescription|truncatewords:15}}"{%endif%}>
-   {% if feature.featuredescription %}
-    <a href="{{feature.featurelink}}">{{feature.featurename}}</a>
-   {%else%}
-    {{feature.featurename}}
-   {%endif%}
-  </td>
-  {%for col in feature.columns%}
-  <td class="{%if forloop.last%}colLast{%else%}colMid{%endif%} fm_{{col.class}}">{{col.str}}</td>
-  {%endfor%}
-  </tr>
- {%endfor%}
-{%endfor%}
+
+<table class="table table-striped">
+  <thead class="thead-light">
+    {%for group in groups %}
+     <tr>
+      <th scope="col"><a name="{{group.group.groupname|slugify}}">{{group.group.groupname}}</a></th>
+      {%for col in group.group.columns %}
+      <th scope="col">{{col}}</th>
+      {%endfor%}
+     </tr>
+  </thead>
+  <tbody>
+    {%for feature in group.features%}
+     <tr valign="top">
+     <td {%if feature.featuredescription%}title="{{feature.featuredescription|truncatewords:15}}"{%endif%}>
+      {% if feature.featuredescription %}
+       <a href="{{feature.featurelink}}">{{feature.featurename}}</a>
+      {%else%}
+       {{feature.featurename}}
+      {%endif%}
+     </td>
+     {%for col in feature.columns%}
+     <td>{{col.str}}</td>
+     {%endfor%}
+     </tr>
+    {%endfor%}
+   {%endfor%}
+  </tbody>
 </table>
-</div>
 
 {%endblock%}
