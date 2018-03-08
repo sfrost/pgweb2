@@ -4,27 +4,29 @@
 <h1>Survey Results</h1>
 <p>The current results of our <b>{{survey}}</b> survey are:</p>
 
-<div class="tblBasic">
-<table border="0" cellpadding="0" cellspacing="0" class="tblBasicGrey">
+<table class="table table-striped">
+  <thead class="thead-light">
     <tr>
-        <th class="colFirst">Answer</th>
-        <th class="colMid">Responses</th>
-        <th class="colLast">Percentage</th>
+      <th>Answer</th>
+      <th>Responses</th>
+      <th>Percentage</th>
     </tr>
-{%for a in survey.completeanswers%}
-    <tr>
-        <td class="colFirst">{{a.option}}</td>
-        <td class="colMid">{{a.votes}}</td>
-        <td class="colLast">{{a.votespercent}}%</td>
-    </tr>
-{%endfor%}
-    <tr class="lastrow">
-        <td class="colFirst"><b>Total</b></td>
-        <td class="colMid">{{survey.totalvotes}}</td>
-        <td class="colLast"></td>
-    </tr>
+  </thead>
+  <tbody>
+    {%for a in survey.completeanswers%}
+        <tr>
+            <td class="colFirst">{{a.option}}</td>
+            <td class="colMid">{{a.votes}}</td>
+            <td class="colLast">{{a.votespercent}}%</td>
+        </tr>
+    {%endfor%}
+        <tr class="lastrow">
+            <td class="colFirst"><b>Total</b></td>
+            <td class="colMid">{{survey.totalvotes}}</td>
+            <td class="colLast"></td>
+        </tr>
+  </tbody>
 </table>
-</div>
 
 <p>This survey was posted {{survey.posted|date}}.</p>
 
