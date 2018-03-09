@@ -9,7 +9,7 @@ from decimal import Decimal
 from tempfile import NamedTemporaryFile
 
 platform_names = {
-	'redhat': 'RedHat Enterprise Linux {0}',
+	'redhat': 'Red Hat Enterprise Linux {0}',
 	'centos': 'CentOS {0}',
 	'sl': 'Scientific Linux {0}',
 	'fedora': 'Fedora {0}',
@@ -77,7 +77,7 @@ if __name__ == "__main__":
 						if pinfo['p'] == familypath and pinfo['f'] == shortdist:
 							if not reporpms[v].has_key(p):
 								reporpms[v][p] = {}
-							reporpms[v][p][arch] = max(ver, reporpms[v].get(p, 0))
+							reporpms[v][p][arch] = max(ver, reporpms[v][p].get(arch, 0))
 							platforms[p]['found'] = True
 							break
 					else:

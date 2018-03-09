@@ -21,6 +21,7 @@ urlpatterns = patterns('',
 
 	(r'^about/newsarchive/([^/]+/)?$', 'pgweb.news.views.archive'),
 	(r'^about/news/(\d+)(-.*)?/$', 'pgweb.news.views.item'),
+	(r'^about/news/taglist.json/$', 'pgweb.news.views.taglist_json'),
 	(r'^about/events/$', 'pgweb.events.views.main'),
 	(r'^about/eventarchive/$', 'pgweb.events.views.archive'),
 	(r'^about/eventarchive/training/$', 'pgweb.events.views.trainingarchive'),
@@ -47,7 +48,8 @@ urlpatterns = patterns('',
 	(r'^community/$', 'pgweb.core.views.community'),
 	(r'^community/contributors/$', 'pgweb.contributors.views.completelist'),
 	(r'^community/lists/$', RedirectView.as_view(url='/list/', permanent=True)),
-	(r'^community/lists/subscribe/$', 'pgweb.lists.views.subscribe'),
+	(r'^community/lists/subscribe/$', RedirectView.as_view(url='https://lists.postgresql.org/', permanent=True)),
+
 	(r'^community/lists/listinfo/$', 'pgweb.lists.views.listinfo'),
 	(r'^community/lists/activate/$', 'pgweb.lists.views.activate'),
 	(r'^community/survey/vote/(\d+)/$', 'pgweb.survey.views.vote'),
@@ -55,6 +57,10 @@ urlpatterns = patterns('',
 	(r'^community/user-groups/$', 'pgweb.pugs.views.index'),
 
 	(r'^search/$', 'pgweb.search.views.search'),
+
+	(r'^support/security/$', 'pgweb.security.views.index'),
+	(r'^support/security/([\d\.]+)/$', 'pgweb.security.views.version'),
+	(r'^support/security_archive/$', RedirectView.as_view(url='/support/security/', permanent=True)),
 
 	(r'^support/professional_(support|hosting)/$', 'pgweb.profserv.views.root'),
 	(r'^support/professional_(support|hosting)[/_](.*)/$', 'pgweb.profserv.views.region'),

@@ -48,6 +48,11 @@ class AuthBackend(ModelBackend):
 
 # Handle login requests by sending them off to the main site
 def login(request):
+	if not hasattr(settings, 'PGAUTH_REDIRECT'):
+		# No pgauth installed, so allow local installs.
+		from django.contrib.auth.views import login
+		return login(request, template_name='admin.html')
+
 	if request.GET.has_key('next'):
 		# Put together an url-encoded dict of parameters we're getting back,
 		# including a small nonce at the beginning to make sure it doesn't
@@ -137,6 +142,18 @@ for you.
 We apologize for the inconvenience.
 """ % (data['e'][0], data['u'][0]), content_type='text/plain')
 
+		if hasattr(settings, 'PGAUTH_CREATEUSER_CALLBACK'):
+			res = getattr(settings, 'PGAUTH_CREATEUSER_CALLBACK')(
+				data['u'][0],
+				data['e'][0],
+				['f'][0],
+				data['l'][0],
+			)
+			# If anything is returned, we'll return that as our result.
+			# If None is returned, it means go ahead and create the user.
+			if res:
+				return res
+
 		user = User(username=data['u'][0],
 					first_name=data['f'][0],
 					last_name=data['l'][0],
@@ -203,3 +220,28 @@ def user_search(searchterm=None, userid=None):
 	j = json.loads(s)
 
 	return j
+
+# Import a user into the local authentication system. Will initially
+# make a search for it, and if anything other than one entry is returned
+# the import will fail.
+# Import is only supported based on userid - so a search should normally
+# be done first. This will result in multiple calls to the upstream
+# server, but they are cheap...
+# The call to this function should normally be wrapped in a transaction,
+# and this function itself will make no attempt to do anything about that.
+def user_import(uid):
+	u = user_search(userid=uid)
+	if len(u) != 1:
+		raise Exception("Internal error, duplicate or no user found")
+
+	u = u[0]
+
+	if User.objects.filter(username=u['u']).exists():
+		raise Exception("User already exists")
+
+	User(username=u['u'],
+		 first_name=u['f'],
+		 last_name=u['l'],
+		 email=u['e'],
+		 password='setbypluginnotsha1',
+		 ).save()

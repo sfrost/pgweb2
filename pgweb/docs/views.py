@@ -132,8 +132,11 @@ def commentform(request, itemid, version, filename):
 	if request.method == 'POST':
 		form = DocCommentForm(request.POST)
 		if form.is_valid():
+			if version == '0.0':
+				version = 'devel'
+
 			send_template_mail(
-				form.cleaned_data['email'],
+				settings.DOCSREPORT_NOREPLY_EMAIL,
 				settings.DOCSREPORT_EMAIL,
 				'%s' % form.cleaned_data['shortdesc'],
 				'docs/docsbugmail.txt', {
@@ -142,6 +145,9 @@ def commentform(request, itemid, version, filename):
 					'details': form.cleaned_data['details'],
 				},
 				usergenerated=True,
+				cc=form.cleaned_data['email'],
+				replyto='%s, %s' % (form.cleaned_data['email'], settings.DOCSREPORT_EMAIL),
+				sendername='PG Doc comments form'
 			)
 			return render_to_response('docs/docsbug_completed.html', {
 			}, NavContext(request, 'docs'))

@@ -110,6 +110,7 @@ INSTALLED_APPS = [
     'pgweb.contributors',
     'pgweb.profserv',
     'pgweb.lists',
+    'pgweb.security',
     'pgweb.sponsors',
     'pgweb.survey',
     'pgweb.misc',
@@ -146,9 +147,10 @@ STATIC_CHECKOUT="/usr/local/pgweb-static"              # Location of a checked o
 NOTIFICATION_EMAIL="someone@example.com"               # Address to send notifications *to*
 NOTIFICATION_FROM="someone@example.com"                # Address to send notifications *from*
 NOREPLY_FROM="someone@example.com"                     # Address to send unverified messages from
-LISTSERVER_EMAIL="someone@example.com"                 # Address to majordomo
 BUGREPORT_EMAIL="someone@example.com"                  # Address to pgsql-bugs list
+BUGREPORT_NOREPLY_EMAIL="someone-noreply@example.com"  # Address to no-reply pgsql-bugs address
 DOCSREPORT_EMAIL="someone@example.com"                 # Address to pgsql-docs list
+DOCSREPORT_NOREPLY_EMAIL="someone-noreply@example.com" # Address to no-reply pgsql-docs address
 FRONTEND_SERVERS=()                                    # A tuple containing the *IP addresses* of all the
                                                        # varnish frontend servers in use.
 FTP_MASTERS=()										   # A tuple containing the *IP addresses* of all machines
@@ -156,8 +158,10 @@ FTP_MASTERS=()										   # A tuple containing the *IP addresses* of all machin
 VARNISH_PURGERS=()                                     # Extra servers that can do varnish purges through our queue
 LIST_ACTIVATORS=()								       # Servers that can activate lists
 ARCHIVES_SEARCH_SERVER="archives.postgresql.org"       # Where to post REST request for archives search
+ARCHIVES_SEARCH_PLAINTEXT=False                        # Contact ARCHIVES_SEARCH_SERVER with http instead of https
 FRONTEND_SMTP_RELAY="magus.postgresql.org"             # Where to relay user generated email
 OAUTH={}                                               # OAuth providers and keys
+PGDG_ORG_ID=-1                                         # id of the PGDG organisation entry
 
 # Load local settings overrides
 from settings_local import *
