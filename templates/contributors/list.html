@@ -13,8 +13,8 @@
   <thead class="thead-light">
     {%if t.detailed%}
     <tr>
-     <th scope="col">Contributor</th>
-     <th scope="col">Contribution</th>
+     <th scope="col" style="width: 50%">Contributor</th>
+     <th scope="col" style="width: 50%">Contribution</th>
     </tr>
     {%endif%}
   </thead>
@@ -25,7 +25,7 @@
        <td>{{c.firstname}} {{c.lastname}} {%if t.showemail and c.email%}({{c.email|hidemail}}){%endif%}
           {%if c.company %}
           <br/>
-          <a href="{{c.companyurl}}">{{c.company}}</a>{%endif%}
+          <a href="{{c.companyurl}}" target="_blank">{{c.company}}</a>{%endif%}
           <br/>
           {{c.location}}
         </td>

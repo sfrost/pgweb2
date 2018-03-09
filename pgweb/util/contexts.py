@@ -40,10 +40,11 @@ sitenav = {
 	'community': [
 		{'title': 'Community',          'link':'/community/'},
 		{'title': 'Contributors',       'link':'/community/contributors/'},
-		{'title': 'Mailing Lists',      'link':'/list/'},
+		{'title': 'Mailing Lists',      'link':'https://lists.postgresql.org/'},
 		{'title': 'IRC',                'link':'/community/irc/'},
-		{'title': 'Local User Groups & International Sites','link':'/community/international/'},
-		{'title': 'Marketing',         'link':'/community/marketing/'},
+        {'title': 'Slack',               'link':'https://postgres-slack.herokuapp.com/'},
+		{'title': 'Local User Groups',  'link':'/community/international/'},
+		{'title': 'International Sites','link':'/community/international/'},
 	],
 	'developer': [
 		{'title': 'Developers',         'link':'/developer/'},
@@ -53,7 +54,7 @@ sitenav = {
 		{'title': 'Testing',            'link':'/developer/testing/', 'submenu': [
 			{'title': 'Beta Information',  'link':'/developer/beta/'},
 		]},
-		{'title': 'Mailing Lists',      'link':'/community/lists/'},
+		{'title': 'Mailing Lists',      'link':'https://lists.postgresql.org/'},
 		{'title': 'Developer FAQ',      'link':'https://wiki.postgresql.org/wiki/Developer_FAQ'},
 	],
 	'support': [

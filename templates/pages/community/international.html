@@ -2,29 +2,6 @@
 {%block title%}International Sites{%endblock%}
 {%block contents%}
 
-<h1>Local User Groups <i class="fa fa-users"></i></h1>
-<p>The PostgreSQL community is proud to have many local chapters that advocate and educate users about PostgreSQL.  Below is a list of PostgreSQL User Groups (PUGs) sorted by country and local area.  If you would like to start a PostgreSQL User Group, please join the <a href="/community/lists/subscribe/">pgsql-advocacy mailing list</a> and describe the PUG that you want to create.</p>
-<p>If a PUG already exists in your area, follow the URLs below to find out how to attend and participate.</p>
-
-
-{% for pug_group in pug_list %}
-  <h2>{{ pug_group.country }}</h2>
-  <ul>
-  {% for pug in pug_group.pugs %}
-    <li>
-      <strong>{{ pug.locale }}</strong>:
-      {{ pug.title }}
-      {% if pug.website_url %}
-        (<a href="{{ pug.website_url }}">website</a>)
-      {% endif %}
-      {% if pug.mailing_list_url %}
-        (<a href="{{ pug.mailing_list_url }}">mailing list</a>)
-      {% endif %}
-    </li>
-  {% endfor %}
-  </ul>
-{% endfor %}
-
 <h1>International Sites</h1>
 
 <p>The following are links to international PostgreSQL community websites.</p>
