@@ -43,7 +43,7 @@ sitenav = {
 		{'title': 'Mailing Lists',      'link':'https://lists.postgresql.org/'},
 		{'title': 'IRC',                'link':'/community/irc/'},
         {'title': 'Slack',               'link':'https://postgres-slack.herokuapp.com/'},
-		{'title': 'Local User Groups',  'link':'/community/international/'},
+		{'title': 'Local User Groups',  'link':'/community/user-groups/'},
 		{'title': 'International Sites','link':'/community/international/'},
 	],
 	'developer': [
