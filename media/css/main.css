@@ -497,6 +497,10 @@ ul.actions {
   margin: 0 5px;
 }
 
+i.fas.fa-search {
+    color: #336791;
+}
+
 /* #CODE */
 pre.code {
     padding: .2rem .4rem;
