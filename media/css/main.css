@@ -558,12 +558,9 @@ button.btn.btn-default {
     height: 2.5em;
 }
 
-.form-check-label {
-    padding-left: 0;
-}
-
 input#allsites {
     margin-top: 10px;
+    margin-left: 0;
 }
 
 input.form-control {
