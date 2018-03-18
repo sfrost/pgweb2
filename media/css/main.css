@@ -556,6 +556,7 @@ button.btn.btn-default {
     width: initial;
     margin: auto 0;
     height: 2.5em;
+    cursor: pointer;
 }
 
 input#allsites {
