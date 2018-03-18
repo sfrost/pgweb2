@@ -6,18 +6,19 @@
 {%if suburl%}
  <input type="hidden" name="u" value="{{suburl}}">
 {%endif%}
- <div class="tblBasic">
-  <table border="0" cellpadding="0" cellspacing="0" class="tblBasicGrey" width="590">
-   <tr>
-    <td class="colFirst">Search for</td>
-    <th class="colLast"><input type="text" name="q" value="{{query}}" /> <input type="submit" value="Search" /></th>
-   </tr>
-   <tr class="lastrow">
-    <td class="colFirst"></td>
-    <td class="colLast"><input type="checkbox" name="a" value="1" {%if allsites%}checked="checked"{%endif%}/>Include community sites</td>
-   </tr>
-  </table>
- </div>
+<div class="input-group">
+  <input type="text" name="q" value="{{query}}" class="form-control" placeholder="Search for...">
+  <span class="input-group-btn">
+    <button class="btn btn-default" type="button">Go!</button>
+  </span>
+</div><!-- /input-group -->
+
+<div class="input-group">
+  <span class="input-group-addon">
+    <input type="checkbox" name="a" value="1" {%if allsites%}checked="checked"{%endif%} aria-label="Include Community Sites">
+  </span>
+  <p>Include community sites</p>
+</div><!-- /input-group -->
 </form>
 
 <div id="pgSearchContent">
