@@ -554,6 +554,20 @@ button.btn.btn-default {
     background-color: #fff;
     border-color: #ccc;
     width: initial;
+    margin: auto 0;
+}
+
+.form-check-label {
+    padding-left: 0;
+}
+
+input#allsites {
+    margin-top: 10px;
+}
+
+input.form-control {
+    height: 100%;
+    margin: auto 0;
 }
 
 /** ALL RESPONSIVE QUERIES HERE */
