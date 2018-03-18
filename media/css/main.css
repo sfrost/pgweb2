@@ -549,6 +549,13 @@ pre.code {
   cursor: pointer;
 }
 
+button.btn.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    width: initial;
+}
+
 /** ALL RESPONSIVE QUERIES HERE */
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
