@@ -1,10 +1,10 @@
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 from django.db import connection, transaction
 from django.template.defaultfilters import slugify
 from django.views.decorators.csrf import csrf_exempt
 
-from pgweb.util.contexts import NavContext
+from pgweb.util.contexts import render_pgweb
 from pgweb.util.misc import get_client_ip, varnish_purge
 from pgweb.util.helpers import HttpServerError
 
@@ -14,10 +14,10 @@ def results(request, surveyid, junk=None):
 	survey = get_object_or_404(Survey, pk=surveyid)
 	surveylist = Survey.objects.all().order_by('-posted')
 
-	return render_to_response('survey/results.html', {
+	return render_pgweb(request, 'community', 'survey/results.html', {
 		'survey': survey,
 		'surveylist': surveylist,
-	}, NavContext(request, 'community'))
+	})
 
 # Served over insecure HTTP, the Varnish proxy strips cookies
 @csrf_exempt
@@ -28,7 +28,7 @@ def vote(request, surveyid):
 	try:
 		ansnum = int(request.POST['answer'])
 		if ansnum < 1 or ansnum > 8:
-			return HttpServerError("Invalid answer")
+			return HttpServerError(request, "Invalid answer")
 	except:
 		# When no answer is given, redirect to results instead
 		return HttpResponseRedirect("/community/survey/%s-%s" % (surv.id, slugify(surv.question)))
@@ -44,7 +44,7 @@ def vote(request, surveyid):
 	# Check if we are locked
 	lock = SurveyLock.objects.filter(ipaddr=addr)
 	if len(lock) > 0:
-		return HttpServerError("Too many requests from your IP in the past 15 minutes")
+		return HttpServerError(request, "Too many requests from your IP in the past 15 minutes")
 
 	# Generate a new lock item, and store it
 	lock = SurveyLock(ipaddr=addr)

@@ -1,7 +1,6 @@
-from django.shortcuts import render_to_response, get_object_or_404
-from pgweb.util.contexts import NavContext
+from django.shortcuts import render, get_object_or_404
+from pgweb.util.contexts import render_pgweb
 from django.http import HttpResponseRedirect, Http404
-from django.template import Context
 from django.template.loader import get_template
 import django.utils.xmlutils
 
@@ -63,7 +62,7 @@ def simple_form(instancetype, itemid, request, formclass, formtemplate='base/for
 	else:
 		described_checkboxes = None
 
-	return render_to_response(formtemplate, {
+	return render_pgweb(request, navsection, formtemplate, {
 		'form': form,
 		'formitemtype': instance._meta.verbose_name,
 		'markdownfields': markdownfields,
@@ -73,13 +72,13 @@ def simple_form(instancetype, itemid, request, formclass, formtemplate='base/for
 		'jquery': hasattr(form, 'jquery') and form.jquery or None,
 		'savebutton': (itemid == "new") and "New" or "Save",
 		'operation': (itemid == "new") and "New" or "Edit",
-	}, NavContext(request, navsection))
+	})
 
 def template_to_string(templatename, attrs = {}):
-	return get_template(templatename).render(Context(attrs))
+	return get_template(templatename).render(attrs)
 
-def HttpServerError(msg):
-	r = render_to_response('errors/500.html', {
+def HttpServerError(request, msg):
+	r = render(request, 'errors/500.html', {
 			'message': msg,
 			})
 	r.status_code = 500
