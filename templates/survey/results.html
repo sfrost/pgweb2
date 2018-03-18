@@ -15,15 +15,15 @@
   <tbody>
     {%for a in survey.completeanswers%}
         <tr>
-            <td class="colFirst">{{a.option}}</td>
-            <td class="colMid">{{a.votes}}</td>
-            <td class="colLast">{{a.votespercent}}%</td>
+            <td>{{a.option}}</td>
+            <td>{{a.votes}}</td>
+            <td>{{a.votespercent}}%</td>
         </tr>
     {%endfor%}
-        <tr class="lastrow">
-            <td class="colFirst"><b>Total</b></td>
-            <td class="colMid">{{survey.totalvotes}}</td>
-            <td class="colLast"></td>
+        <tr>
+            <td><b>Total</b></td>
+            <td>{{survey.totalvotes}}</td>
+            <td></td>
         </tr>
   </tbody>
 </table>

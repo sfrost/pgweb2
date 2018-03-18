@@ -66,12 +66,12 @@ version may be required.
   </thead>
   <tbody>
     {%for v in versions%}
-      <tr {%if forloop.last%}class="lastrow"{%endif%}>
-       <td class="colFirst">{{v.numtree}}</td>
-       <td class="colMid">{{v.numtree}}.{{v.latestminor}}</td>
-       <td class="colMid">{{v.supported|yesno:"Yes,No"}}</td>
-       <td class="colMid">{{v.firstreldate|date:"F Y"}}</td>
-       <td class="colLast">{{v.eoldate|date:"F Y"}}</td>
+      <tr>
+       <td>{{v.numtree}}</td>
+       <td>{{v.numtree}}.{{v.latestminor}}</td>
+       <td>{{v.supported|yesno:"Yes,No"}}</td>
+       <td>{{v.firstreldate|date:"F Y"}}</td>
+       <td>{{v.eoldate|date:"F Y"}}</td>
       </tr>
     {%endfor%}
   </tbody>
