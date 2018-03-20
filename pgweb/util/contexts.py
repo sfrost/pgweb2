@@ -35,7 +35,7 @@ sitenav = {
 			{'title': 'Russian',    'link':'https://postgrespro.ru/docs/postgresql'},
 		]},
 		{'title': 'Books',              'link':'/docs/books/'},
-		{'title': 'Online Resources',   'link':'/docs/onlineresources/'},
+		{'title': 'Online Resources',   'link':'/docs/online-resources/'},
 		{'title': 'Wiki',               'link':'https://wiki.postgresql.org'},
 	],
 	'community': [
