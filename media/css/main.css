@@ -559,9 +559,11 @@ button.btn.btn-default {
     border-color: #ccc;
     width: initial;
     margin: auto 0;
-    height: 2.5em;
+    height: 100%;
     cursor: pointer;
 }
+
+/* Input */
 
 input#allsites {
     margin-top: 10px;
@@ -571,6 +573,11 @@ input#allsites {
 input.form-control {
     height: 2.5em;
     margin: auto 0;
+}
+
+input#q {
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /** ALL RESPONSIVE QUERIES HERE */
