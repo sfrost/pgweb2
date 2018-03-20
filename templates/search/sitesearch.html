@@ -2,6 +2,8 @@
 {%block title%}Search results{%endblock%}
 {%block contents%}
 
+<h1>Site Search <i class="fas fa-link"></i></h1>
+
 <form method="get" action="/search/">
   {%if suburl%}
    <input type="hidden" name="u" value="{{suburl}}">
