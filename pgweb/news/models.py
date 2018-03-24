@@ -47,7 +47,7 @@ class NewsArticle(models.Model):
 
 	@property
 	def displaydate(self):
-		return self.date.strftime("%Y-%m-%d")
+		return self.date.strftime("%B %-d, %Y")
 
 	class Meta:
 		ordering = ('-date',)
