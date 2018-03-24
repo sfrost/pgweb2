@@ -1,7 +1,6 @@
 {%extends "base/page.html"%}
 {%block title%}Community{%endblock%}
 {%block contents%}
-
   <div class="row">
     <div class="col-md-8">
       <h1>Community <i class="fa fa-users"></i></h1>
@@ -23,13 +22,6 @@
         <li><a href="https://planet.postgresql.org/" target="_blank">Planet PostgreSQL</a>, an aggregator of blogs covering many topics around PostgreSQL</li>
         <li><a href="https://wiki.postgresql.org" target="_blank">PostgreSQL Wiki</a>, our wiki, hosting user generated content as well as information for how to contribute code to PostgreSQL</li>
       </ul>
-      <h2>External Resources</h2>
-      <ul>
-        <li><a href="http://www.pg-forum.de/" target="_blank">pg-forum.de</a>, a German PostgreSQL forum.</li>
-      </ul>
-      <p>
-        Please send appropriate links to <a href="mailto:webmaster@postgresql.org">webmaster@postgresql.org</a> for possible inclusion on this page.
-      </p>
     </div>
     <div class="col-md-4">
       <h2>Planet PostgreSQL</h2>
@@ -43,5 +35,35 @@
      </dl>
     </div>
   </div>
-
+  <div class="row">
+    <div class="col-md-8">
+      <h2>External Resources</h2>
+      <ul>
+        <li><a href="http://www.pg-forum.de/" target="_blank">pg-forum.de</a>, a German PostgreSQL forum.</li>
+      </ul>
+      <p>
+        Please send appropriate links to <a href="mailto:webmaster@postgresql.org">webmaster@postgresql.org</a> for possible inclusion on this page.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h2>Survey</h2>
+      {% if survey %}
+        <h3>{{survey.question}}</h3>
+        <form method="post" action="/community/survey/vote/{{survey.id}}/"><!-- CSRF exempt -->
+          <fieldset class="form-group">
+            {%for q in survey.questions%}
+              <div class="form-check">
+                <input id="surv_opt_{{q.value}}" class="form-check-input" type="radio" name="answer" value="{{ q.value }}" />
+                <label class="form-check-label" for="surv_opt_{{q.value}}">{{q.text}}</label>
+              </div>
+            {%endfor%}
+          </fieldset>
+          <div class="form-row">
+            <input class="btn btn-primary" type="button" name="submit" value="Vote!" />
+          </div>
+        </form>
+        <a href="/community/survey/{{survey.id}}-{{survey|slugify}}/">View Results</a>
+      {% endif %}
+    </div>
+  </div>
 {%endblock%}
