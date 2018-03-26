@@ -72,7 +72,7 @@
       <div class="text">
         <ul>
           {% for event in events %}
-            <li class="{% cycle '' 'pg-bg-gray' %}">
+            <li class="{% cycle '' 'pg-bg-gray' %} {% if not event.badged%}non-badged{% endif %}">
               {% if event.badged %}
                 <img src="/media/img/PostgreSQL_Badge1.svg" class="community" alt="PostgreSQL Community Event">
               {% endif %}
