@@ -552,7 +552,7 @@ pre.code {
   color: #fff;
 }
 
-.btn-primary:hover, .btn-primary:active {
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary.active, .btn:active:focus, .btn.active:focus {
   background-color: #666;
   border-color: #666;
   cursor: pointer;
