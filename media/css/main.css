@@ -585,6 +585,10 @@ input#q {
     font-family: 'Open Sans', sans-serif;
 }
 
+input {
+    padding-left: 0.5em;
+}
+
 /** ALL RESPONSIVE QUERIES HERE */
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
