@@ -589,6 +589,14 @@ input {
     padding-left: 0.5em;
 }
 
+th.formfieldnamecontainer {
+    padding-right: 1em;
+}
+
+.pgGenericFormTable input, .pgGenericFormTable textarea {
+    margin: 0.5em 0;
+}
+
 /** ALL RESPONSIVE QUERIES HERE */
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
