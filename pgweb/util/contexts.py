@@ -9,7 +9,7 @@ sitenav = {
 		{'title': 'Feature Matrix',     'link':'/about/featurematrix/'},
 		{'title': 'Donate',             'link':'/about/donate/'},
 		{'title': 'Case Studies',       'link':'/about/casestudies/'},
-		{'title': 'History',            'link':'https://www.postgresql.org/docs/8.4/static/history.html'},
+		{'title': 'History',            'link':'/docs/current/static/history.html'},
 		{'title': 'Sponsors',           'link':'/about/sponsors/', 'submenu': [
 			{'title': 'Servers',    'link': '/about/servers/'},
 		]},
@@ -43,8 +43,9 @@ sitenav = {
 		{'title': 'Contributors',       'link':'/community/contributors/'},
 		{'title': 'Mailing Lists',      'link':'/list/'},
 		{'title': 'IRC',                'link':'/community/irc/'},
-        {'title': 'Slack',               'link':'https://postgres-slack.herokuapp.com/'},
+        {'title': 'Slack',              'link':'https://postgres-slack.herokuapp.com/'},
 		{'title': 'Local User Groups',  'link':'/community/user-groups/'},
+        {'title': 'Events',             'link':'/about/events/'},
 		{'title': 'International Sites','link':'/community/international/'},
 	],
 	'developer': [

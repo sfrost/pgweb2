@@ -4,37 +4,95 @@
 
 <h1>About <img id="logo" src="/media/img/about/press/elephant.png" alt="PostgreSQL Elephant Logo" /></h1>
 
-<h2>What is PostgreSQL, anyway?</h2>
-<p>
-  PostgreSQL is a powerful, open source object-relational database system. It has more than 15 years
-  of active development and a proven architecture that has earned it a strong reputation for
-  reliability, data integrity, and correctness. It runs on all major operating systems, including
-  Linux, UNIX (AIX, BSD, HP-UX, SGI IRIX, Mac OS X, Solaris, Tru64), and Windows. It is fully ACID
-  compliant, has full support for foreign keys, joins, views, triggers, and stored procedures (in
-  multiple languages). It includes most SQL:2008 data types, including INTEGER, NUMERIC, BOOLEAN,
-  CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP. It also supports storage of binary large objects,
-  including pictures, sounds, or video. It has native programming interfaces for C/C++, Java, .Net,
-  Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.
-</p>
+<h2>What is PostgreSQL?</h2>
+<p>PostgreSQL is a powerful, open source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.  The origins of PostgreSQL date back to 1986 as part of the <a href="/docs/current/static/history.html">POSTGRES</a> project at the University of California at Berkley and has more than 30 years of active development on the core platform.</p>
+<p>PostgreSQL has earned a strong reputation for its proven architecture, relaibility, data integrity, robust feature set, extensibility, and the dedication of the open source community behind the software to consistently deliver performant and innovative solutions.  PostgreSQL runs on <a href="/download/">all major operating systems</a>, has been <a href="https://en.wikipedia.org/wiki/ACID" target="_blank">ACID</a>-compliant since 2001, and has powerful add-ons such as the popular <a href="https://postgis.net/" target="_blank">PostGIS</a> geospatial database extender.  It is no surprise that PostgreSQL has become the open source relational database of choice for many people and organizations.</p>
+<p><a href="/docs/currrent/static/tutorial-start.html">Getting started</a> with using PostgreSQL has never been easier - pick a project you want to build, and let PostgreSQL safely and robustly store your data.</p>
 
 <h2>Why use PostgreSQL?</h2>
 <p>
-  An enterprise class database, PostgreSQL boasts sophisticated features such as Multi-Version
-  Concurrency Control (MVCC), point in time recovery, tablespaces, asynchronous replication, nested
-  transactions (savepoints), online/hot backups, a sophisticated query planner/optimizer, and write ahead
-  logging for fault tolerance. It supports international character sets, multibyte character encodings,
-  Unicode, and it is locale-aware for sorting, case-sensitivity, and formatting. It is highly scalable both
-  in the sheer quantity of data it can manage and in the number of concurrent users it can accommodate.
-  There are active PostgreSQL systems in production environments that manage in excess of 4 terabytes of
-  data.
+  PostgreSQL comes with <a href="/about/featurematrix/">many features</a> aimed to help developers build applications, administrators to protect data integrity and build fault-tolerant environments, and help you manage your data no matter how big or small the dataset.  In addition to being <a href="/about/license/">free and open source</a>, PostgreSQL is highly extensible. For example, you can define your own data types, build out custom functions, even write code from <a href="/docs/current/static/xplang.html">different programming languages</a> without recompiling your database!
 </p>
+<p>PostgreSQL tries conforms with the <a href="/docs/current/static/features.html">SQL standard</a> where such conformance does not contradict traditional features or could lead to poor architectural decisions. Many of the features required by the SQL standard are supported, though sometimes with slightly differing syntax or function. Further moves towards conformance can be expected over time. As of the version 10 release in October 2017, PostgreSQL conforms to at least 160 of the 179 mandatory features for SQL:2011 Core conformance, where as of this writing, no relational database meets full conformance with this standard.
+</p>
+<p>Below is an inexhaustive of various features found in PostgreSQL, with more being added in every <a href="/developer/roadmap/">major release</a>:
+</p>
+<ul>
+  <li>
+    <strong>Data Types</strong>
+    <ul>
+      <li>Primitives: Integer, Numeric, String, Boolean</li>
+      <li>Structured: Date/Time, Array, Range, UUID</li>
+      <li>Document: JSON/JSONB, XML, Key-value (Hstore)</li>
+      <li>Geometry: Point, Line, Circle, Polygon</li>
+      <li>Customizations: Composite, Custom Types</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Data Integrity</strong>
+    <ul>
+      <li>UNIQUE, NOT NULL</li>
+      <li>Primary Keys</li>
+      <li>Foreign Keys</li>
+      <li>Exclusion Constraints</li>
+      <li>Explicit Locks, Advisory Locks</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Concurrency, Performance</strong>
+    <ul>
+      <li>Indexing: B-tree, Multicolumn, Expressions, Partial</li>
+      <li>Advanced Indexing: GiST, SP-Gist, KNN Gist, GIN, BRIN, Bloom filters</li>
+      <li>Sophisticated query planner / optimizer, index-only scans, multicolumn statistics</li>
+      <li>Transactions, Nested Transactions (via savepoints)</li>
+      <li>Multi-Version concurrency Control (MVCC)</li>
+      <li>Parallelization of read queries</li>
+      <li>Table partitioning</li>
+      <li>All transaction isolation levels defined in the SQL standard, including Serializable</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Reliability, Disaster Recovery</strong>
+    <ul>
+      <li>Write-ahead Logging (WAL)</li>
+      <li>Replication: Asynchronous, Synchronous, Logical</li>
+      <li>Point-in-time-recovery (PITR), active standbys</li>
+      <li>Tablespaces</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Security</strong>
+    <ul>
+      <li>Authentication: GSSAPI, SSPI, LDAP, SCRAM-SHA-256, Certificate, and more</li>
+      <li>Robust access-control system</li>
+      <li>Column and row-level security</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Extensibility</strong>
+    <ul>
+      <li>Stored procedures</li>
+      <li>Procedural Languages: PL/PGSQL, Perl, Python (and many more)</li>
+      <li>Foreign data wrappers: connect to other databases or streams with a standard SQL interface</li>
+      <li>Many extensions that provide additional functionality, including PostGIS</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Internationalization, Text Search</strong>
+    <ul>
+      <li>Support for international character sets, e.g. through ICU collations</li>
+      <li>Full-text search</li>
+    </ul>
+  </li>
+</ul>
+<p>There are many more features that you can discover in the PostgreSQL <a href="/docs/">documentation</a>.  Additionally, PostgreSQL is highly extensible: many features, such as indexes, have defined APIs so that you can build out with PostgreSQL to solve your challenges.</p>
+<p>PostgreSQL has been proven to be highly scalable both in the sheer quantity of data it can manage and in the number of concurrent users it can accommodate. There are active PostgreSQL clusters in production environments that manage many terabytes of data, and specialized systems that manage petabytes.</p>
 
 <h2>Any questions?</h2>
+<p>The first place to go to for any questions on PostgreSQL is its <a href="/docs/">world-renowned documentation</a> which discusses how to use the database software in-depth.
+</p>
 <p>
-  Check out our <strong><a href="#">wiki</a></strong> for extensive documentation on the PostgreSQL database.
-  We also have hundreds of <strong><a href="#">mailing lists</a></strong> available for subscribing to for
-  lurking purposes (or if you're the curious type). And finally, if you're interested in the
-  history of our fabulous database, you can read all about it <strong><a href="#">here</a></strong>.
+  We also have many <strong><a href="/list/">mailing lists</a></strong> where you can connect and participate in the <a href="/community/">community</a>, as well as many <a href="/about/events/">events</a> and <a href="/community/user-groups/">local user groups</a> where you can connect with other users.
 </p>
 
 <h2>Our users <i class="fa fa-heart"></i> us</h2>
@@ -65,34 +123,34 @@
   </div>
 </div>
 
-<h2>Stats for the Analytically Minded</h2>
+<h2>What's a database project without statistics?</h2>
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-3 feature-grid">
-      <h3>9,353 Contributors</h3>
+      <h3>30+ Years Development</h3>
     </div>
     <div class="col-sm-3 feature-grid">
-      <h3>5,000 Conferences</h3>
+      <h3>400+ Contributors</h3>
     </div>
     <div class="col-sm-3 feature-grid">
-      <h3>10,000 Awards</h3>
+      <h3>44,000+ Commits</h3>
     </div>
     <div class="col-sm-3 feature-grid">
-      <h3>30 Years</h3>
+      <h3>50+ Local User Groups</h3>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-3 feature-grid">
-      <h3>39,196 Commits</h3>
+      <h3>1,100,00+ Lines of C</h3>
     </div>
     <div class="col-sm-3 feature-grid">
-      <h3>300 User Groups</h3>
+      <h3>500+ Events</h3>
     </div>
     <div class="col-sm-3 feature-grid">
-      <h3>1,123,628 Lines of Code</h3>
+      <h3>Millions of Happy Users</h3>
     </div>
     <div class="col-sm-3 feature-grid">
-      <h3>1,000,000 Cats</h3>
+      <h3>&#8734; Data Stored<h3>
     </div>
   </div>
 </div>
