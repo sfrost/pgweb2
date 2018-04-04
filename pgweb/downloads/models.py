@@ -15,7 +15,7 @@ class Category(models.Model):
 	class Meta:
 		ordering = ('catname',)
 
-class LicenseType(models.Model):
+class LicenceType(models.Model):
 	typename = models.CharField(max_length=100, null=False, blank=False)
 
 	def __unicode__(self):
@@ -30,7 +30,7 @@ class Product(models.Model):
 	org = models.ForeignKey(Organisation, db_column="publisher_id", null=False, verbose_name="Organisation")
 	url = models.URLField(null=False, blank=False)
 	category = models.ForeignKey(Category, null=False)
-	licensetype = models.ForeignKey(LicenseType, null=False, verbose_name="License type")
+	licencetype = models.ForeignKey(LicenceType, null=False, verbose_name="License type")
 	description = models.TextField(null=False, blank=False)
 	price = models.CharField(max_length=200, null=False, blank=True)
 	lastconfirmed = models.DateTimeField(null=False, blank=False, auto_now_add=True)
