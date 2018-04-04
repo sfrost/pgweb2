@@ -40,7 +40,7 @@ from forms import OrganisationForm, MergeOrgsForm
 # Front page view
 @cache(minutes=10)
 def home(request):
-	news = NewsArticle.objects.filter(approved=True)[:7]
+	news = NewsArticle.objects.filter(approved=True)[:5]
 	# get the first seven events and divide each up into a list of community and other events
 	event_queryset = Event.objects.select_related('country').filter(approved=True, training=False, enddate__gte=date.today()).order_by('enddate', 'startdate')
 	# display up to the first 4 community events.  Then choose the next 7 - |communty_events|
@@ -54,7 +54,7 @@ def home(request):
 		# if there is no quote available, just ignore error
 		quote = None
 	versions = Version.objects.filter(supported=True)
-	planet = ImportedRSSItem.objects.filter(feed__internalname="planet").order_by("-posttime")[:10]
+	planet = ImportedRSSItem.objects.filter(feed__internalname="planet").order_by("-posttime")[:9]
 
 	traininginfo = Event.objects.filter(approved=True, training=True).extra(where=("startdate <= (CURRENT_DATE + '6 Months'::interval) AND enddate >= CURRENT_DATE",)).aggregate(Count('id'), Count('country', distinct=True))
 	# can't figure out how to make django do this
