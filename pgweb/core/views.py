@@ -40,7 +40,7 @@ from forms import OrganisationForm, MergeOrgsForm
 # Front page view
 @cache(minutes=10)
 def home(request):
-	news = NewsArticle.objects.filter(approved=True)[:10]
+	news = NewsArticle.objects.filter(approved=True)[:7]
 	# get the first seven events and divide each up into a list of community and other events
 	event_queryset = Event.objects.select_related('country').filter(approved=True, training=False, enddate__gte=date.today()).order_by('enddate', 'startdate')
 	# display up to the first 4 community events.  Then choose the next 7 - |communty_events|
