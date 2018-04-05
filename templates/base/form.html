@@ -4,40 +4,40 @@
 {%block contents%}
 {%block pre_form_header%}{%endblock%}
 <h1>{% if formtitle %}{{ formtitle|safe }}{% else %}{{operation|default:"Edit"}} {{formitemtype}}{% endif %}</h1>
-<form method="post" action=".">{%if not nocsrf%}{% csrf_token %}{%endif%}
 {%if form_intro%}
 <p>
 {{form_intro|safe}}
 </p>
 {%endif%}
 
-<table class="pgGenericFormTable">
-{%if form.errors%}
- <tr class="errorheader">
-  <td colspan="2">Please correct the errors below, and re-submit the form.</td>
- </tr>
-{%endif%}
-{%for field in form%}
- {%if field.errors %}
- <tr class="error">
-  <td colspan="2">{{field.errors.as_ul}}</td>
- </tr>
- {%endif%}
- <tr {%if field.errors%}class="errorinfo"{%endif%}>
-  <th class="formfieldnamecontainer">{{field.label_tag}}{%if field.help_text%}{%if field.field.widget|class_name == "Textarea"%}<br/>
-   <span class="formfieldhelp">{{field.help_text|safe}}</span>{%endif%}{%endif%}
-  </th>
-  <td>{{field}}</td>
- </tr>
-{%if field.help_text %}{%if field.field.widget|class_name != "Textarea"%}
-<tr>
-  <th></th>
-  <td><span class="formfieldhelp">{{field.help_text|safe}}</span></td>
-</tr>
-{%endif%}{%endif%}
-{%endfor%}
-</table>
-<button type="submit" class="btn btn-primary">{{savebutton|default:"Save"}}</button>
+<form method="post" action=".">{%if not nocsrf%}{% csrf_token %}{%endif%}
+  <table class="pgGenericFormTable">
+  {%if form.errors%}
+   <tr class="errorheader">
+    <td colspan="2">Please correct the errors below, and re-submit the form.</td>
+   </tr>
+  {%endif%}
+  {%for field in form%}
+   {%if field.errors %}
+   <tr class="error">
+    <td colspan="2">{{field.errors.as_ul}}</td>
+   </tr>
+   {%endif%}
+   <tr {%if field.errors%}class="errorinfo"{%endif%}>
+    <th class="formfieldnamecontainer">{{field.label_tag}}{%if field.help_text%}{%if field.field.widget|class_name == "Textarea"%}<br/>
+     <span class="formfieldhelp">{{field.help_text|safe}}</span>{%endif%}{%endif%}
+    </th>
+    <td>{{field}}</td>
+   </tr>
+  {%if field.help_text %}{%if field.field.widget|class_name != "Textarea"%}
+  <tr>
+    <th></th>
+    <td><span class="formfieldhelp">{{field.help_text|safe}}</span></td>
+  </tr>
+  {%endif%}{%endif%}
+  {%endfor%}
+  </table>
+  <button type="submit" class="btn btn-primary">{{savebutton|default:"Save"}}</button>
 </form>
 {%block post_form%}{%endblock%}
 {%endblock%}
