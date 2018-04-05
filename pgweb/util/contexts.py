@@ -74,7 +74,7 @@ sitenav = {
 			{'title': 'Events',         'link':'/account/edit/events/'},
 			{'title': 'Products',       'link':'/account/edit/products/'},
 			{'title': 'Professional Services', 'link':'/account/edit/services/'},
-			{'title': 'Organisations',  'link':'/account/edit/organisations/'},
+			{'title': 'Organizations',  'link':'/account/edit/organisations/'},
 		]},
 		{'title': 'Change password',    'link':'/account/changepwd/'},
 		{'title': 'Logout',             'link':'/account/logout'},

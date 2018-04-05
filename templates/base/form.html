@@ -72,7 +72,7 @@
 {% block extrahead %}
 {{ block.super }}
 {%if toggle_fields or described_checkboxes or jquery %}
-<!-- <script type="text/javascript" src="/media/js/jquery.min.js"></script> -->
+<script type="text/javascript" src="/media/js/jquery.min.js"></script>
 {%endif%}
 {%if markdownfields%}
 <link rel="stylesheet" type="text/css" href="/media/css/showdown_preview.css" />
@@ -108,9 +108,9 @@ function toggle_{{f.name}}() {
 {%else%}
    if (!v) {
 {%endif%}
-      $('#id_{{c}}').attr('disabled', true).parents('tr').hide();
+      $('#id_{{c}}').attr('disabled', true).parents('.form-group').hide();
    } else {
-      $('#id_{{c}}').removeAttr('disabled').parents('tr').show();
+      $('#id_{{c}}').removeAttr('disabled').parents('.form-group').show();
    }
 {%endfor%}
 }

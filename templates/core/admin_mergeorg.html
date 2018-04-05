@@ -1,7 +1,7 @@
 {%extends "admin/base_site.html"%}
 
 {%block breadcrumbs%}
-<div class="breadcrumbs"><a href="/admin/">Home</a> &rsaquo; <a href="/admin/core/organisation/">Organisations</a> &rsaquo; Merge organisations</div>
+<div class="breadcrumbs"><a href="/admin/">Home</a> &rsaquo; <a href="/admin/core/organisation/">Organizations</a> &rsaquo; Merge organizations</div>
 {%endblock%}
 
 {% block bodyclass %}change-list{% endblock %}
@@ -9,12 +9,12 @@
 
 {%block content%}
 <div id="content-main">
-<h1>Merge organisations</h1>
+<h1>Merge organizations</h1>
 <form method="post" action=".">{% csrf_token %}
 <table>
 {{form.as_table}}
 </table>
-<input type="submit" value="Merge organisations">
+<input type="submit" value="Merge organizations">
 </form>
 </div>
 {%endblock%}
