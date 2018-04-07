@@ -62,7 +62,7 @@ def home(request):
 
 objtypes = {
 	'news': {
-		'title': 'News article',
+		'title': 'News Article',
 		'objects': lambda u: NewsArticle.objects.filter(org__managers=u),
 	},
 	'events': {
@@ -74,7 +74,7 @@ objtypes = {
 		'objects': lambda u: Product.objects.filter(org__managers=u),
 	},
 	'services': {
-		'title': 'Professional service',
+		'title': 'Professional Service',
 		'objects': lambda u: ProfessionalService.objects.filter(org__managers=u),
 	},
 	'organisations': {

@@ -13,7 +13,6 @@ for each company shown.</p>
     {% if not forloop.first %}
           </tbody>
         </table>
-      </div>
     {% endif %}
     <h2>{{ sponsor.sponsortype.typename }}</h2>
     <table class="table table-striped">
@@ -21,6 +20,7 @@ for each company shown.</p>
         <tr>
           <th scope="col">PostgreSQL Version</th>
           <th scope="col">64-bit macOS Platforms</th>
+          <th scope="col">Location</th>
         </tr>
       </thead>
       <tbody>
@@ -37,9 +37,9 @@ for each company shown.</p>
             <td style="width: 30%">{{ sponsor.country }}</td>
           </tr>
         {% endfor %}
-      </tbody>
-    </table>
-
+    </tbody>
+  </table>
+</div>
 
 <h2>Sponsorship Recognition</h2>
 <p>
