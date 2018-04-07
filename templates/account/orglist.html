@@ -12,16 +12,20 @@ organizations, please send an email to
 letting us know this, and including the name of your community account.
 We will then link your account to this organization.
 </p>
-<table>
- <tr>
-  <th>Organization</th>
-  <th>Manager</th>
- </tr>
-{%for o in orgs%}
- <tr>
-  <td>{{o.name}}</td>
-  <td>{%for m in o.managers.all%}{{m.first_name}} {{m.last_name}}{%if not forloop.last%}<br/>{%endif%}{%endfor%}</td>
- </tr>
-{%endfor%}
+<table class="table table-striped">
+  <thead class="thead-light">
+    <tr>
+     <th>Organization</th>
+     <th>Manager</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for o in orgs%}
+     <tr>
+      <th scope="row">{{o.name}}</th>
+      <td>{%for m in o.managers.all%}{{m.first_name}} {{m.last_name}}{%if not forloop.last%}<br/>{%endif%}{%endfor%}</td>
+     </tr>
+    {%endfor%}
+  </tbody>
 </table>
 {%endblock%}
