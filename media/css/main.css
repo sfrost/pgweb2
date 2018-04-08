@@ -310,6 +310,12 @@ a.icon {
 	  color: #DA2713;
 }
 
+ul.errorlist {
+    color: #bd4147;
+    font-weight: 600;
+    list-style-type: none;
+    padding: 0;
+}
 
 ul.meta {
 	  font-size: 0.85em;
