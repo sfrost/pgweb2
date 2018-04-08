@@ -126,8 +126,8 @@
 				<header>
 					<h3><a href="#">PostgreSQL 10.3 Released!</a></h3>
 					<ul class="meta">
-						<li><i class="far fa-clock"></i> 1st March 2018</li>
-						<li><i class="far fa-comments"></i> 0</li>
+						<li><i class="far fa-clock"></i>&nbsp;1st March 2018</li>
+						<!--<li><i class="far fa-comments"></i> 0</li>-->
 					</ul>
 				</header>
 				<p>
@@ -154,8 +154,7 @@
             <li>
   						<h3><a href="/about/news/{{ n.id }}/">{{ n.title }}</a></h3>
   						<ul class="meta">
-  							<li class="far fa-clock">&nbsp;{{ n.displaydate }} by {{ n.org.name }}</li>
-  							<!-- <li class="far fa-comments"><a href="#">27</a></li> -->
+                <li><i class="far fa-clock"></i>&nbsp;{{ n.displaydate }} by {{ n.org.name }}</li>
   						</ul>
   					</li>
           {% endfor %}
@@ -178,11 +177,11 @@
      <!-- First Column First Row Planet PostgreSQL -->
       {%for post in planet %}
         <div class="col-md-4">
-          <div class="text-center">
+          <div class="text-center fixed-height">
             <h3><a href="{{ post.url }}">{{ post.title_without_author }}</a></h3>
             <ul class="meta">
-              <li class="far fa-comments">&nbsp;{{ post.author }}</li>
-              <li class="far fa-clock">&nbsp;{{ post.date }}</li>
+              <li><i class="far fa-comments"></i>&nbsp;{{ post.author }}</li>
+              <li><i class="far fa-clock"></i>&nbsp;{{ post.date }}</li>
             </ul>
           </div>
         </div>

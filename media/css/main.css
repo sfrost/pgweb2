@@ -251,9 +251,7 @@ blockquote {
   margin: 20px 0;
 }
 
-.text {
-  margin: 2em 0;
-  height: 19em;
+.feature p {
   text-align: left;
 }
 
@@ -266,6 +264,16 @@ blockquote {
 
 .feature-grid h3 {
     color: #fff;
+}
+
+.feature button.btn.btn-center.btn-primary {
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+.text {
+  margin-bottom: 2.5em;
 }
 
 li.non-badged {
@@ -558,6 +566,10 @@ pre.code {
   cursor: pointer;
 }
 
+.form-row .btn-primary {
+  margin: 0.5em 0;
+}
+
 button.btn.btn-default {
     color: #333;
     background-color: #fff;
@@ -595,6 +607,14 @@ th.formfieldnamecontainer {
 
 .pgGenericFormTable input, .pgGenericFormTable textarea {
     margin: 0.5em 0;
+}
+
+.form-check-input[type=radio] {
+    margin: .6em auto;
+}
+
+.text-center.fixed-height h3 {
+    height: 3.5em;
 }
 
 /** ALL RESPONSIVE QUERIES HERE */
