@@ -2,7 +2,7 @@
 {%block title%}Backend Flowchart{%endblock%}
 {%block contents%}
 
-<h1>Backend Flowchart</h1>
+<h1>Backend Flowchart <i class="fas fa-code-branch"></i></h1>
 
 <center>
 <h3><i>Click on an item</i> to see more detail or look at the full
@@ -96,11 +96,13 @@ system.</p>
 href="https://wiki.postgresql.org/wiki/Backend_flowchart#optimizer_path">optimizer</a>
 uses the Query structure to determine the best table join order and join
 type of each table in the RangeTable, using Query.qual(<i>WHERE</i>
-clause) to consider optimal index usage.</p>  The <a
+clause) to consider optimal index usage.</p>
+
+<p>The <a
 href="https://wiki.postgresql.org/wiki/Backend_flowchart#optimizer_path">path</a>
 module  then generates an optimal <a
 href="https://git.postgresql.org/gitweb/?p=postgresql.git;a=blob;f=src/include/nodes/plannodes.h">Plan,</a>
-which contains the operations to be performed to execute the query.
+which contains the operations to be performed to execute the query.</p>
 
 <p>The Plan is then passed to the <a
 href="https://wiki.postgresql.org/wiki/Backend_flowchart#executor">executor</a> for execution, and the

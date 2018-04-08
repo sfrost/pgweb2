@@ -474,13 +474,13 @@ ul.actions {
     padding-top: 4em;
 }
 
-.navbar #logo {
+.navbar .logo {
     height: 2rem;
     margin-left: 0;
     margin-bottom: 0;
 }
 
-#logo {
+.logo {
     height: 2rem;
     margin-left: 5px;
     margin-bottom: 5px;
@@ -605,6 +605,11 @@ input#q {
 
 input {
     padding-left: 0.5em;
+}
+
+input.version[type=checkbox] {
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
 th.formfieldnamecontainer {
