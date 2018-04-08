@@ -687,7 +687,7 @@ th.formfieldnamecontainer {
   }
 
   #pgSideNav {
-    padding: 1em 2em;
+    padding: 1em 0;
   }
 
   #pgSideNav ul {
@@ -697,6 +697,10 @@ th.formfieldnamecontainer {
 
   #pgSideNav ul ul {
     margin: 0;
+  }
+
+  #pgContentWrap {
+    padding: 0;
   }
 
   #pgContentWrap ul {
