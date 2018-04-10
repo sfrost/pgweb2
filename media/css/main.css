@@ -101,7 +101,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	  color: inherit;
 }
 
-a {
+a, .news a {
 	  color: #336791;
     font-weight: 600;
 	  text-decoration: none;
