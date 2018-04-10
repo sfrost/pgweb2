@@ -241,7 +241,7 @@ blockquote {
   padding: 2em;
 }
 
-.feature ul {
+.feature ul, ul.feature {
   padding: 0;
 }
 
