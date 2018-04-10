@@ -101,7 +101,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	  color: inherit;
 }
 
-a {
+a, .news a {
 	  color: #336791;
     font-weight: 600;
 	  text-decoration: none;
@@ -562,7 +562,7 @@ pre.code {
 /* Buttons */
 
 .btn {
-  width: 12em;
+  width: 14em;
   margin: 1em auto;
 }
 
@@ -618,7 +618,7 @@ input {
     padding-left: 0.5em;
 }
 
-input.version[type=checkbox] {
+input[type=checkbox] {
     vertical-align: middle;
     margin-left: 5px;
 }
