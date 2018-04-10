@@ -618,7 +618,7 @@ input {
     padding-left: 0.5em;
 }
 
-input.version[type=checkbox] {
+input[type=checkbox] {
     vertical-align: middle;
     margin-left: 5px;
 }
