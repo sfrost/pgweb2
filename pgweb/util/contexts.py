@@ -8,7 +8,6 @@ sitenav = {
 		{'title': 'About',              'link':'/about/'},
 		{'title': 'Feature Matrix',     'link':'/about/featurematrix/'},
 		{'title': 'Donate',             'link':'/about/donate/'},
-		{'title': 'Case Studies',       'link':'/about/casestudies/'},
 		{'title': 'History',            'link':'/docs/current/static/history.html'},
 		{'title': 'Sponsors',           'link':'/about/sponsors/', 'submenu': [
 			{'title': 'Servers',    'link': '/about/servers/'},
