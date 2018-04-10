@@ -678,7 +678,6 @@ th.formfieldnamecontainer {
 
   .pg-jumbotron .btn, button.btn.btn-primary {
     margin: 5px auto;
-    width: 100%;
   }
 
   .text {
@@ -696,6 +695,10 @@ th.formfieldnamecontainer {
   ul.divided, ul.menu, #footer ul {
     padding: 0;
     text-align: center;
+  }
+
+  ul.feature {
+    padding: 0 0 1em 0 !important;
   }
 
   .carousel {
