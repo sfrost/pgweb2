@@ -5,7 +5,9 @@
 <p>The following {{whatname}} are registered in {{regionname}}.</p>
 
 {% for s in services %}
-  <h2>{{ s.org.name }}</h2>
+  <h2 class="news">
+    <a href="{{s.url}}" target="_blank">{{ s.org.name }}</a>
+  </h2>
   <table class="table table-striped">
     <tbody>
       {% if s.url %}

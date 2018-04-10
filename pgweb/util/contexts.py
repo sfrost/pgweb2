@@ -23,7 +23,7 @@ sitenav = {
 				{'title': 'Binary',		'link':'/download/'},
 				{'title': 'Source',		'link':'/ftp/source/'}
 		]},
-		{'title': 'Software Catalogue', 'link':'/download/product-categories/'},
+		{'title': 'Software Catalog',   'link':'/download/product-categories/'},
 		{'title': 'File Browser',       'link':'/ftp/'},
 	],
 	'docs': [
