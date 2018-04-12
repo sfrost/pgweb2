@@ -636,7 +636,7 @@ th.formfieldnamecontainer {
 }
 
 .form-check-input[type=radio] {
-    margin: .6em auto;
+    margin-top: .4rem;
 }
 
 .text-center.fixed-height h3 {
