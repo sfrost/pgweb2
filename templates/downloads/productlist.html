@@ -1,39 +1,40 @@
 {%extends "base/page.html"%}
 {%load markup%}
-{%block title%}Software Catalogue - {{category.catname}}{%endblock%}
+{%block title%}Software Catalog - {{category.catname}}{%endblock%}
 {%block contents%}
 
-<h1>Software Catalogue - {{category.catname}}</h1>
+<h1>Software Catalog - {{category.catname}}</h1>
 
-<p>{{productcount}} product(s) were found in this category. {{category.blurb|safe}}</p>
+<p>{{productcount}} product(s) were found in this category.</p>
+<p>{{category.blurb|safe}}</p>
 
-{%for product in products %}
+{% for product in products %}
+  <h2 class="news"><a href="{{product.url}}" target="_blank">{{product.name}}</a></h2>
+  <table class="table table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col" style="width: 60%">Description</th>
+        <th scope="col" style="width: 10%">License</th>
+        <th scope="col" style="width: 10%">Pricing</th>
+        <th scope="col" style="width: 20%">Publisher</th>
+        <th scope="col">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      	<td>{{product.description|markdown}}</td>
+        <td>{{product.licencetype}}</td>
+        <td>{{product.price}}</td>
+        <td><a href="{{product.org.url}}" target="_blank">{{product.org.name}}</a></td>
+        <td class="align-middle"><a href="{{product.url}}" target="_blank">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <hr />
+{% endfor %}
 
-<table class="table table-striped">
-  <thead class="thead-light">
-    <tr>
-      <th scope="col">Product</th>
-      <th scope="col">Description</th>
-      <th scope="col">License</th>
-      <th scope="col">Pricing</th>
-      <th scope="col">Publisher</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-    	<td><a href="{{product.url}}">{{product.name}}</a></td>
-    	<td>{{product.description|markdown}}</td>
-      <td>{{product.licencetype}}</td>
-      <td>{{product.price}}</td>
-      <td><a href="{{product.org.url}}">{{product.org.name}}</a></td>
-    </tr>
-  </tbody>
-</table>
-
-{%endfor%}
-
-<p><i><b>Note:</b> The PostgreSQL Global Development Group do not endorse or
+<p><em><strong>Note:</strong> The PostgreSQL Global Development Group do not endorse or
 recommend any products listed, and cannot vouch for the quality or reliability
-of any of them.</i></p>
+of any of them.</em></p>
 
 {%endblock%}

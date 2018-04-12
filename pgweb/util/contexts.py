@@ -8,7 +8,6 @@ sitenav = {
 		{'title': 'About',              'link':'/about/'},
 		{'title': 'Feature Matrix',     'link':'/about/featurematrix/'},
 		{'title': 'Donate',             'link':'/about/donate/'},
-		{'title': 'Case Studies',       'link':'/about/casestudies/'},
 		{'title': 'History',            'link':'/docs/current/static/history.html'},
 		{'title': 'Sponsors',           'link':'/about/sponsors/', 'submenu': [
 			{'title': 'Servers',    'link': '/about/servers/'},
@@ -23,7 +22,7 @@ sitenav = {
 				{'title': 'Binary',		'link':'/download/'},
 				{'title': 'Source',		'link':'/ftp/source/'}
 		]},
-		{'title': 'Software Catalogue', 'link':'/download/product-categories/'},
+		{'title': 'Software Catalog',   'link':'/download/product-categories/'},
 		{'title': 'File Browser',       'link':'/ftp/'},
 	],
 	'docs': [
