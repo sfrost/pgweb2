@@ -17,24 +17,24 @@ type of record in the menu on the left.
 <h2>Permissions model</h2>
 <p>
 News, Events, Products and Professional Services are attached to an
-Organization. One or more persons can be given permissions to manage
-the data for an organization. If you do not have permissions for an
-organization and think you should have, you need to contact the current
-managers for that organization. You can find a list of organizations
+Organisation. One or more persons can be given permissions to manage
+the data for an organisation. If you do not have permissions for an
+organisation and think you should have, you need to contact the current
+managers for that organisation. You can find a list of organisations
 and managers <a href="orglist/">here</a>.
 </p>
 
 <h2>Migrated data</h2>
 <p>
 For most of the data migrated from the old website has unfortunately not
-been connected to the proper organizations and accounts. If you have any
+been connected to the proper organisations and accounts. If you have any
 data submitted that is not properly connected to you (most likely this
-will be your account not being connected to the proper organization(s)),
+will be your account not being connected to the proper organisation(s)),
 please contact <a href="webmaster@postgresql.org">webmaster@postgresql.org</a>
 and let us know which objects to connect together.
 </p>
 
-{%if newsarticles or events or organizations or products or profservs %}
+{%if newsarticles or events or organisations or products or profservs %}
 <h2>Submissions awaiting moderation</h2>
 <p>
 You have submitted the following objects that are still waiting moderator
@@ -60,7 +60,7 @@ approval before they are published:
 {%endif%}
 
 {%if organisations%}
-<h3>Organizations</h3>
+<h3>Organisations</h3>
 <ul>
 {%for org in organisations%}
 <li><a href="/account/organisations/{{org.id}}">{{org}}</a></li>
