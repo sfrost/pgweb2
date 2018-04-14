@@ -99,18 +99,12 @@
 <div class="container-fluid">
   <div id="carouselContent" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active text-center p-4">
-            <p>Open source and free PostgreSQL has the speed, compatibility, SQL, and features as sophisticated as the number one commercial database.</p>
-            <small>Ferry Irawan, NewJavaSoft, Indonesia</small>
+        {% for quote in quotes %}
+          <div class="carousel-item text-center p-4 {% if forloop.first %}active{% endif %}">
+            <p>{{ quote.quote }}</p>
+            <small>{{ quote.who }}, <a href="{{ quote.link }}" target="_blank">{{ quote.org }}</a></small>
           </div>
-          <div class="carousel-item text-center p-4">
-            <p>[Our customers] expect both high performance and high availability from our software, central part of which is the SQL database engine. And we have found that the PostgreSQL is really up to the task.</p>
-            <small>Maksym Sobolyev, SippySoft Inc.</small>
-          </div>
-          <div class="carousel-item text-center p-4">
-            <p>Here in CAIXA bank we use Postgresql in mission-critical financial environments because - beyond being strategic for our business and Brazil - it has the quality to support our operations.</p>
-            <small>Clarice Coppetti, IT Vice President, CAIXA Bank, Brazil</small>
-          </div>
+        {% endfor %}
       </div>
       <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>

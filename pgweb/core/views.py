@@ -49,11 +49,6 @@ def home(request):
 		enddate__gte=date.today(),
 		badged=True,
 	).order_by('enddate', 'startdate')[:5]
-	try:
-		quote = Quote.objects.filter(approved=True).order_by('?')[0]
-	except:
-		# if there is no quote available, just ignore error
-		quote = None
 	versions = Version.objects.filter(supported=True)
 	planet = ImportedRSSItem.objects.filter(feed__internalname="planet").order_by("-posttime")[:9]
 
@@ -70,9 +65,17 @@ def home(request):
 		'events': events,
 		'traininginfo': traininginfo,
 		'trainingcompanies': trainingcompanies,
-		'quote': quote,
 		'versions': versions,
 		'planet': planet,
+	})
+
+# About page view (contains information about PostgreSQL + random quotes)
+@cache(minutes=10)
+def about(request):
+	# get 3 random quotes
+	quotes = Quote.objects.filter(approved=True).order_by('?').all()[:3]
+	return render_pgweb(request, 'about', 'core/about.html', {
+		'quotes': quotes,
 	})
 
 # Community main page (contains surveys and potentially more)
