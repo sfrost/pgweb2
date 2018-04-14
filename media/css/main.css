@@ -639,6 +639,15 @@ th.formfieldnamecontainer {
     margin-top: .4rem;
 }
 
+.form-check.search {
+    padding-left: 0;
+}
+
+.form-check.search label.form-check-label {
+    margin-left: 1rem;
+    vertical-align: middle;
+}
+
 .text-center.fixed-height h3 {
     height: 3.5em;
 }
