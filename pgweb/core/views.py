@@ -41,14 +41,14 @@ from forms import OrganisationForm, MergeOrgsForm
 @cache(minutes=10)
 def home(request):
 	news = NewsArticle.objects.filter(approved=True)[:5]
-	# get the first seven community events and divide each up into a list of
+	# get the first five community events and divide each up into a list of
 	# community and other events
 	events = Event.objects.select_related('country').filter(
 		approved=True,
 		training=False,
 		enddate__gte=date.today(),
-        badged=True,
-    ).order_by('enddate', 'startdate')[:7]
+		badged=True,
+	).order_by('enddate', 'startdate')[:5]
 	try:
 		quote = Quote.objects.filter(approved=True).order_by('?')[0]
 	except:
