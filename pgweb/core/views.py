@@ -72,8 +72,8 @@ def home(request):
 # About page view (contains information about PostgreSQL + random quotes)
 @cache(minutes=10)
 def about(request):
-	# get 3 random quotes
-	quotes = Quote.objects.filter(approved=True).order_by('?').all()[:3]
+	# get 5 random quotes
+	quotes = Quote.objects.filter(approved=True).order_by('?').all()[:5]
 	return render_pgweb(request, 'about', 'core/about.html', {
 		'quotes': quotes,
 	})

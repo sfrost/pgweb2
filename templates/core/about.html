@@ -98,22 +98,22 @@
 <h2>Our users <i class="fa fa-heart"></i> us</h2>
 <div class="container-fluid">
   <div id="carouselContent" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner" role="listbox">
-        {% for quote in quotes %}
-          <div class="carousel-item text-center p-4 {% if forloop.first %}active{% endif %}">
-            <p>{{ quote.quote }}</p>
-            <small>{{ quote.who }}, <a href="{{ quote.link }}" target="_blank">{{ quote.org }}</a></small>
-          </div>
-        {% endfor %}
-      </div>
-      <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-      </a>
+    <div class="carousel-inner" role="listbox">
+      {% for quote in quotes %}
+        <div class="carousel-item text-center p-4 {% if forloop.first %}active{% endif %}">
+          <p>{{ quote.quote }}</p>
+          <small>{{ quote.who }}, <a href="{{ quote.link }}" target="_blank">{{ quote.org }}</a></small>
+        </div>
+      {% endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
   </div>
 </div>
 
@@ -149,3 +149,13 @@
   </div>
 </div>
 {%endblock%}
+
+{% block extrabody %}
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 5000
+    });
+  });
+</script>
+{% endblock %}
