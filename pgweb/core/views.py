@@ -43,9 +43,10 @@ def home(request):
 	news = NewsArticle.objects.filter(approved=True)[:5]
 	# get the first seven events and divide each up into a list of community and other events
 	event_queryset = Event.objects.select_related('country').filter(approved=True, training=False, enddate__gte=date.today()).order_by('enddate', 'startdate')
-	# display up to the first 4 community events.  Then choose the next 7 - |communty_events|
-	events = [event for event in event_queryset.filter(badged=True).all()[:4]]
-	events += [event for event in event_queryset.filter(badged=False).all()[:(7-len(events))]]
+	# display up to the first 7 community events.  Then choose the next 7 - |communty_events|
+	events = [event for event in event_queryset.filter(badged=True).all()[:7]]
+	if 7 - len(events) > 0:
+		events += [event for event in event_queryset.filter(badged=False).all()[:(7-len(events))]]
 	# combine the two lists into a single event list in sorted order
 	events = sorted(events, key=lambda event: (event.enddate, event.startdate, 1 if event.badged else 2))
 	try:

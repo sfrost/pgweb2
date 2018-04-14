@@ -23,15 +23,15 @@
   <!-- Start First Feature Row -->
 
   <div class="row">
-  	<!-- Feature -->
-  	<div class="col-lg-6 feature">
-  		<img src="/media/img/about/press/elephant.png" alt="PostgreSQL Elephant Logo">
-  		<h2>New to PostgreSQL?</h2>
+    <!-- Feature -->
+    <div class="col-lg-6 feature">
+      <img src="/media/img/about/press/elephant.png" alt="PostgreSQL Elephant Logo">
+      <h2>New to PostgreSQL?</h2>
       <div class="text">
-    	  <p>
-    		  PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development
-    		  that has earned it a strong reputation for reliability, feature robustness, and performance.
-    	  </p>
+        <p>
+          PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development
+          that has earned it a strong reputation for reliability, feature robustness, and performance.
+        </p>
         <p>
           There is a wealth of information to be found describing how to <a href="{{link_root}}/download/">install</a> and <a href="{{link_root}}/docs/">use</a> PostgreSQL through the <a href="{{link_root}}/docs/">official documentation</a>.
           The PostgreSQL community provides many helpful places to become familiar with the technology, discover how it works, and find
@@ -39,16 +39,16 @@
         </p>
       </div>
       <a href="{{link_root}}/about/" title="Read More"><button type="button" class="btn btn-center btn-primary">Read More</button></a>
-  	</div>
-  	<!-- END Feature -->
+    </div>
+    <!-- END Feature -->
 
-  	<!-- Feature -->
-  	<div class="col-lg-6 feature">
+    <!-- Feature -->
+    <div class="col-lg-6 feature">
       <i class="fas fa-download"></i>
       <h2>Latest Releases</h2>
       <div class="text">
         <p>
-          <strong>March 1, 2018 - PostgreSQL 10.3 Released!</strong>
+          <strong>2018-03-01 - PostgreSQL 10.3 Released!</strong>
           The PostgreSQL Global Development Group has released an update to all supported versions of our database system, including 10.3, 9.6.8, 9.5.12, 9.4.17, and 9.3.22.
         </p>
         <ul>
@@ -58,8 +58,8 @@
         </ul>
       </div>
       <a href="{{link_root}}/download/" title="Download"><button type="button" class="btn btn-center btn-primary">Download</button></a>
-  	</div>
-  	<!-- END Feature -->
+    </div>
+    <!-- END Feature -->
 
   </div>
   <!-- END First Feature Row -->
@@ -120,23 +120,23 @@
 <!-- News -->
 <div class="container">
   <div class="row">
-		<div class="col-lg-7">
-			<h2 class="centered-lines">Latest News</h2>
-			<!-- Featured Post -->
-				<header>
-					<h3><a href="#">PostgreSQL 10.3 Released!</a></h3>
-					<ul class="meta">
-						<li><i class="far fa-clock"></i>&nbsp;1st March 2018</li>
-						<!--<li><i class="far fa-comments"></i> 0</li>-->
-					</ul>
-				</header>
-				<p>
+    <div class="col-lg-7">
+      <h2 class="centered-lines">Latest News</h2>
+      <!-- Featured Post -->
+        <header>
+          <h3><a href="#">PostgreSQL 10.3 Released!</a></h3>
+          <ul class="meta">
+            <li><i class="far fa-clock"></i>&nbsp;2018-03-01</li>
+            <!--<li><i class="far fa-comments"></i> 0</li>-->
+          </ul>
+        </header>
+        <p>
           The PostgreSQL Global Development Group has released an update to all supported versions of our database system, including 10.3, 9.6.8, 9.5.12, 9.4.17, and 9.3.22.
         </p>
         <p>
-          This release centers around added documentation that describes CVE-2018-1058 and how to take steps to mitigate the impact on PostgreSQL databases. There are also
+          This release centers around added documentation that describes <a href="https://wiki.postgresql.org/wiki/A_Guide_to_CVE-2018-1058:_Protect_Your_Search_Path" target="_blank">CVE-2018-1058</a> and how to take steps to mitigate the impact on PostgreSQL databases. There are also
           several bug fixes included in the release. All users using the affected versions of PostgreSQL should update as soon as possible.
-				</p>
+        </p>
         <ul class="bold">
           <li><a href="/about/news/1834/">Release Announcement</a></li>
           <li><a href="https://www.postgresql.org/docs/current/static/release-10-3.html">Release Notes</a></li>
@@ -144,24 +144,24 @@
           <li><a href="https://www.postgresql.org/download/">Download</a></li>
         </ul>
         <a href="{{link_root}}/" title="Archives"><button type="button" class="btn btn-primary">Browse Archives</button></a>
-		</div>
-		<div class="col-lg-5">
-			<div class="sidebar">
+    </div>
+    <div class="col-lg-5">
+      <div class="sidebar">
 
-				<!-- Archives -->
-				<ul class="divided">
+        <!-- Archives -->
+        <ul class="divided">
           {% for n in news %}
             <li>
-  						<h3><a href="/about/news/{{ n.id }}/">{{ n.title }}</a></h3>
-  						<ul class="meta">
+              <h3><a href="/about/news/{{ n.id }}/">{{ n.title }}</a></h3>
+              <ul class="meta">
                 <li><i class="far fa-clock"></i>&nbsp;{{ n.displaydate }} by {{ n.org.name }}</li>
-  						</ul>
-  					</li>
+              </ul>
+            </li>
           {% endfor %}
-				</ul>
-				<!-- END Archives -->
-			</div>
-		</div>
+        </ul>
+        <!-- END Archives -->
+      </div>
+    </div>
   </div>
 </div>
 <!-- Blog -->
