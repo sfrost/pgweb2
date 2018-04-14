@@ -60,5 +60,5 @@ class MergeOrgsForm(forms.Form):
 
 	def clean(self):
 		if self.cleaned_data['merge_into'] == self.cleaned_data['merge_from']:
-			raise ValidationError("The two organizations selected must be different!")
+			raise ValidationError("The two organisations selected must be different!")
 		return self.cleaned_data

@@ -78,9 +78,9 @@ objtypes = {
 		'objects': lambda u: ProfessionalService.objects.filter(org__managers=u),
 	},
 	'organisations': {
-		'title': 'Organization',
+		'title': 'Organisation',
 		'objects': lambda u: Organisation.objects.filter(managers=u),
-		'submit_header': 'Before submitting a new Organization, please verify on the list of <a href="/account/orglist">current organization</a> if the organization already exists. If it does, please contact the manager of the organization to gain permissions.',
+		'submit_header': 'Before submitting a new Organisation, please verify on the list of <a href="/account/orglist">current organisation</a> if the organisation already exists. If it does, please contact the manager of the organisation to gain permissions.',
 	},
 }
 
