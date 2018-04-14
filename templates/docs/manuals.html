@@ -15,18 +15,14 @@
 		{%for v in versions%}
 		<tr{%if forloop.last%}{%endif%}>
 		    <td>
-	        <ul>
-	          <li><a href="/docs/{{v.numtree}}/static/index.html">{{v.treestring}}</a></li>
-				  </ul>
+	        <a href="/docs/{{v.numtree}}/static/index.html">{{v.treestring}}</a>
 		    </td>
 		    <td>
 			{%if v.a4pdf or v.uspdf%}
-			<ul>
-			  {%if v.a4pdf%}<li>Comprehensive Manual: <a href="/files/documentation/pdf/{{v.numtree}}/postgresql-{{v.numtree}}-A4.pdf">A4 PDF</a> <span class="txtMediumGrey">({{v.a4pdf|filesizeformat}})</span></li>{%endif%}
-			  {%if v.uspdf%}<li>Comprehensive Manual: <a href="/files/documentation/pdf/{{v.numtree}}/postgresql-{{v.numtree}}-US.pdf">US PDF</a> <span class="txtMediumGrey">({{v.uspdf|filesizeformat}})</span></li>{%endif%}
-			</ul>
-			{%endif%}
-		    </td>
+			  {%if v.a4pdf%}Comprehensive Manual: <a href="/files/documentation/pdf/{{v.numtree}}/postgresql-{{v.numtree}}-A4.pdf">A4 PDF</a> <span class="txtMediumGrey">({{v.a4pdf|filesizeformat}})</span>{%endif%}
+			  {%if v.uspdf%}Comprehensive Manual: <a href="/files/documentation/pdf/{{v.numtree}}/postgresql-{{v.numtree}}-US.pdf">US PDF</a> <span class="txtMediumGrey">({{v.uspdf|filesizeformat}})</span>{%endif%}
+        {%if not v.a4pdf and not v4.uspdf%}PDF version not available{%endif%}
+      {%endif%}
 		</tr>
 		{%endfor%}
   </tbody>
