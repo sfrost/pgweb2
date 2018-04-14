@@ -7,10 +7,16 @@
 {%for eventblock in eventblocks%}
 {%if eventblocks|length > 1%}<h2><a name="{{eventblock.anchor|slugify}}">{{eventblock.name}}</a></h2>{%endif%}
 <p>
-<i><b>Note:</b> The PostgreSQL Global Development Group does not endorse any
+<em><strong>Note:</strong> The PostgreSQL Global Development Group does not endorse any
 events run by third parties. No guarantee of the quality of events is offered
-whatsoever.  For information on <a href="/community/recognition/#conferences">Community Conference Recognition</a>, please review the guidelines <a href="/community/recognition/#conferences">here</a>.</i>
+whatsoever.</em>
 </p>
+{% if eventblock.name == 'Community Events' %}
+<p>
+  <img src="/media/img/PostgreSQL_Badge1.svg" class="community" alt="PostgreSQL Community Event">
+  indicates that an event is recognised under the <a href="/community/recognition/#conferences">community event guidelines</a> and is directly helping the PostgreSQL community.
+</p>
+{% endif %}
 {%for event in eventblock.events %}
 <div>
   {% if event.badged %}
