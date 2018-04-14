@@ -219,14 +219,14 @@ blockquote {
 /* # CAROUSEL */
 
 .carousel {
-  height: 12em;
+  height: 8em;
 }
 
-.carousel-item.active,
+/* .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev {
     display: block;
-}
+} */
 
 /* #FEATURED SECTIONS */
 
