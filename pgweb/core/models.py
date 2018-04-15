@@ -160,15 +160,9 @@ class ImportedRSSItem(models.Model):
 	def __unicode__(self):
 		return self.title
 
-	def author(self):
-		return self.title.split(':')[0]
-
 	@property
 	def date(self):
 		return self.posttime.strftime("%Y-%m-%d")
-
-	def title_without_author(self):
-		return ":".join(self.title.split(':')[1:])
 
 # From man sshd, except for ssh-dss
 _valid_keytypes = ['ecdsa-sha2-nistp256', 'ecdsa-sha2-nistp384', 'ecdsa-sha2-nistp521', 'ssh-ed25519', 'ssh-rsa']

@@ -41,8 +41,7 @@ from forms import OrganisationForm, MergeOrgsForm
 @cache(minutes=10)
 def home(request):
 	news = NewsArticle.objects.filter(approved=True)[:5]
-	# get the first five community events and divide each up into a list of
-	# community and other events
+	# get the first five community events
 	events = Event.objects.select_related('country').filter(
 		approved=True,
 		training=False,
