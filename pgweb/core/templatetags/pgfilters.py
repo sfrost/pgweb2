@@ -25,9 +25,9 @@ def ismultiplecheckboxes(obj):
 
 @register.filter(is_safe=True)
 def isrequired_error(obj):
-    if obj.errors and obj.errors[0] == u"This field is required.":
-        return True
-    return False
+	if obj.errors and obj.errors[0] == u"This field is required.":
+		return True
+	return False
 
 @register.filter(is_safe=True)
 def label_class(value, arg):
