@@ -96,32 +96,41 @@
 </p>
 
 <h2>Our users <i class="fa fa-heart"></i> us</h2>
-<div class="container-fluid">
-  <div id="carouselContent" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active text-center p-4">
-            <p>Open source and free PostgreSQL has the speed, compatibility, SQL, and features as sophisticated as the number one commercial database.</p>
-            <small>Ferry Irawan, NewJavaSoft, Indonesia</small>
-          </div>
-          <div class="carousel-item text-center p-4">
-            <p>[Our customers] expect both high performance and high availability from our software, central part of which is the SQL database engine. And we have found that the PostgreSQL is really up to the task.</p>
-            <small>Maksym Sobolyev, SippySoft Inc.</small>
-          </div>
-          <div class="carousel-item text-center p-4">
-            <p>Here in CAIXA bank we use Postgresql in mission-critical financial environments because - beyond being strategic for our business and Brazil - it has the quality to support our operations.</p>
-            <small>Clarice Coppetti, IT Vice President, CAIXA Bank, Brazil</small>
-          </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-      </a>
-  </div>
-</div>
+
+<div class="row">
+	<div class="col-md-8 col-center m-auto">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Carousel indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>   
+			<!-- Wrapper for carousel items -->
+			<div class="carousel-inner">
+				<div class="item carousel-item active">
+					<p class="testimonial">Open source and free PostgreSQL has the speed, compatibility, SQL, and features as sophisticated as the number one commercial database.</p>
+					<p class="overview"><b>Ferry Irawan</b>, NewJavaSoft, Indonesia</p>
+				</div>
+				<div class="item carousel-item">
+					<p class="testimonial">[Our customers] expect both high performance and high availability from our software, central part of which is the SQL database engine. And we have found that the PostgreSQL is really up to the task.</p>
+					<p class="overview"><b>Antonio Moreno</b>, Web Developer</p>
+				</div>
+				<div class="item carousel-item">
+					<p class="testimonial">Here in CAIXA bank we use Postgresql in mission-critical financial environments because - beyond being strategic for our business and Brazil - it has the quality to support our operations.</p>
+					<p class="overview"><b>Clarice Coppetti</b>, IT Vice President, CAIXA Bank, Brazil</p>
+				</div>
+			</div>
+			<!-- Carousel controls -->
+			<a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+				<i class="fa fa-angle-left"></i>
+			</a>
+			<a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+				<i class="fa fa-angle-right"></i>
+			</a>
+		</div>
+	</div>
+</div>                       		                            
 
 <h2>What's a database project without statistics?</h2>
 <div class="container-fluid">
