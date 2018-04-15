@@ -54,11 +54,9 @@ class Event(models.Model):
 	@property
 	def displaydate(self):
 		if self.startdate == self.enddate:
-			return self.startdate.strftime("%b %-d, %Y")
+			return self.startdate
 		else:
-			return "%s &ndash; %s" % (
-				self.startdate.strftime("%b %-d, %Y"),
-				self.enddate.strftime("%b %-d, %Y"))
+			return "%s &ndash; %s" % (self.startdate, self.enddate)
 
 	@property
 	def locationstring(self):

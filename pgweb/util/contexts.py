@@ -15,14 +15,14 @@ sitenav = {
 		{'title': 'Latest news',        'link':'/about/newsarchive/'},
 		{'title': 'Upcoming events',    'link':'/about/events/'},
 		{'title': 'Press',              'link':'/about/press/'},
-		{'title': 'Licence',            'link':'/about/license/'},
+		{'title': 'Licence',            'link':'/about/licence/'},
 	],
 	'download': [
 		{'title': 'Downloads',          'link':'/download/', 'submenu': [
 				{'title': 'Binary',		'link':'/download/'},
 				{'title': 'Source',		'link':'/ftp/source/'}
 		]},
-		{'title': 'Software Catalogue',   'link':'/download/product-categories/'},
+		{'title': 'Software Catalogue', 'link':'/download/product-categories/'},
 		{'title': 'File Browser',       'link':'/ftp/'},
 	],
 	'docs': [
@@ -55,7 +55,7 @@ sitenav = {
 		{'title': 'Testing',            'link':'/developer/testing/', 'submenu': [
 			{'title': 'Beta Information',  'link':'/developer/beta/'},
 		]},
-		{'title': 'Mailing Lists',      'link':'https://lists.postgresql.org/'},
+		{'title': 'Mailing Lists',      'link':'/list/'},
 		{'title': 'Developer FAQ',      'link':'https://wiki.postgresql.org/wiki/Developer_FAQ'},
 	],
 	'support': [

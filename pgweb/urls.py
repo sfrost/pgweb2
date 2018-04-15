@@ -34,6 +34,7 @@ urlpatterns = [
 	url(r'^$', pgweb.core.views.home),
 	url(r'^dyncss/(?P<css>base|docs).css$', pgweb.core.views.dynamic_css),
 
+	url(r'^about/$', pgweb.core.views.about),
 	url(r'^about/newsarchive/([^/]+/)?$', pgweb.news.views.archive),
 	url(r'^about/news/(\d+)(-.*)?/$', pgweb.news.views.item),
 	url(r'^about/news/taglist.json/$', pgweb.news.views.taglist_json),
@@ -82,8 +83,6 @@ urlpatterns = [
 	url(r'^support/submitbug/$', RedirectView.as_view(url='/account/submitbug/', permanent=True)),
 	url(r'^support/versioning/$', pgweb.core.views.versions),
 
-	# handle "Licence" => "License"
-	url(r'^about/licence/$', RedirectView.as_view(url='/about/license/', permanent=True)),
 	url(r'^about/sponsors/$', pgweb.sponsors.views.sponsors),
 	url(r'^about/servers/$', pgweb.sponsors.views.servers),
 
@@ -134,6 +133,7 @@ urlpatterns = [
 	url(r'^docs/faqs.FAQ.html$', RedirectView.as_view(url='https://wiki.postgresql.org/wiki/FAQ', permanent=True)),
 	url(r'^docs/faqs.FAQ_DEV.*', RedirectView.as_view(url='https://wiki.postgresql.org/wiki/Development_information', permanent=True)),
 	url(r'^docs/faqs.TODO.*', RedirectView.as_view(url='https://wiki.postgresql.org/wiki/Todo', permanent=True)),
+	url(r'^about/license/$', RedirectView.as_view(url='/about/licence', permanent=True)),
 
 	###
 	# Links included in emails on the lists (do we need to check this for XSS?)

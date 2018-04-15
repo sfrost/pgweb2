@@ -108,18 +108,12 @@
 			</ol>   
 			<!-- Wrapper for carousel items -->
 			<div class="carousel-inner">
-				<div class="item carousel-item active">
-					<p class="testimonial">Open source and free PostgreSQL has the speed, compatibility, SQL, and features as sophisticated as the number one commercial database.</p>
-					<p class="overview"><b>Ferry Irawan</b>, NewJavaSoft, Indonesia</p>
-				</div>
-				<div class="item carousel-item">
-					<p class="testimonial">[Our customers] expect both high performance and high availability from our software, central part of which is the SQL database engine. And we have found that the PostgreSQL is really up to the task.</p>
-					<p class="overview"><b>Antonio Moreno</b>, Web Developer</p>
-				</div>
-				<div class="item carousel-item">
-					<p class="testimonial">Here in CAIXA bank we use Postgresql in mission-critical financial environments because - beyond being strategic for our business and Brazil - it has the quality to support our operations.</p>
-					<p class="overview"><b>Clarice Coppetti</b>, IT Vice President, CAIXA Bank, Brazil</p>
-				</div>
+        {% for quote in quotes %}
+          <div class="item carousel-item {% if forloop.first %}active{% endif %}">
+            <p class="testimonial">{{ quote.quote }}</p>
+            <p class="overview">{{ quote.who }}, <a href="{{ quote.link }}" target="_blank">{{ quote.org }}</a></p>
+          </div>
+        {% endfor %}
 			</div>
 			<!-- Carousel controls -->
 			<a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
@@ -163,5 +157,14 @@
     </div>
   </div>
 </div>
-
 {%endblock%}
+
+{% block extrabody %}
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 5000
+    });
+  });
+</script>
+{% endblock %}
