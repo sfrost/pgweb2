@@ -63,7 +63,6 @@ sitenav = {
 		{'title': 'Versioning policy',  'link':'/support/versioning/'},
 		{'title': 'Security',           'link':'/support/security/'},
 		{'title': 'Professional Services','link':'/support/professional_support/'},
-		{'title': 'Hosting Solutions',  'link':'/support/professional_hosting/'},
 		{'title': 'Report a Bug',       'link':'/account/submitbug/'},
 	],
 	'account': [

@@ -7,8 +7,8 @@
   {%block meta%}{%endblock%} {# used for custom meta tags such as description which we don't want for every page #}
   <meta name="theme-color" content="#336791"/>
   <meta name="copyright" content="The PostgreSQL Global Development Group" />
-  <link href="/media/css/fontawesome.css?{{gitrev}}" rel="stylesheet">
-  <link rel="stylesheet" href="/media/css/bootstrap.min.css?{{gitrev}}">
+  <link href="/media/css/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="/media/css/bootstrap.min.css">
   <link rel="shortcut icon" href="/favicon.ico" />
   {%if newstags %}
     {%comment%}Default RSS links are only shown on pages that have newstags set{%endcomment%}
@@ -70,8 +70,8 @@
         <div class="row">
           <div class="col-md-12">
             <ul>
-              <li><a href="https://twitter.com/postgresql"><img src="/media/img/atpostgresql.png" alt="@postgresql"></a></li>
-              <li><a href="https://git.postgresql.org/gitweb/"><img src="/media/img/git.png" alt="Git"></a></li>
+              <li><a href="http://twitter.com/postgresql"><img src="/media/img/twitter.png" alt="Twitter Logo"></a></li>
+              <li><a href="https://git.postgresql.org/gitweb/"><img src="/media/img/git.png" alt="Git Logo"></a></li>
             </ul>
           </div>
         </div>
@@ -84,9 +84,9 @@
         <p>Copyright &copy; 1996-{% now "Y" %} The PostgreSQL Global Development Group</p>
       </div>
     </footer>
-    <script src="/media/js/jquery-3.2.1.slim.min.js?{{gitrev}}"></script>
-    <script src="/media/js/popper.min.js?{{gitrev}}"></script>
-    <script src="/media/js/bootstrap.min.js?{{gitrev}}"></script>
+    <script src="/media/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/media/js/popper.min.js"></script>
+    <script src="/media/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-1345454-1']);
