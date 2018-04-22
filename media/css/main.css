@@ -25,7 +25,6 @@ body {
     color: #515151;
     font-size: 11.5pt;
     line-height: 1.8rem;
-    padding-top: 60px; /** this is to account for the fixed navbar blocking content */
 }
 
 p {
@@ -571,6 +570,7 @@ ul.actions {
 
 .navbar {
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s;
 }
 
 /* #SIDEBAR UL STYLING */
@@ -726,6 +726,94 @@ th.formfieldnamecontainer {
 
 /** ALL RESPONSIVE QUERIES HERE */
 /* Small devices (landscape phones, 576px and up)*/
+
+
+@media (min-width: 768px) {
+    .navbar.compressed {
+      padding: 0 10px;
+    }
+
+    .pg-shout-box {
+      padding-top: 3.7rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    input#q {
+      display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+      padding: 5px 10px;
+    }
+
+    .navbar-toggler-icon {
+      width: 1rem;
+      height: 1.5rem;
+    }
+
+    .pg-shout-box {
+      padding-top: 2.8rem;
+    }
+
+    .jumbotron.jumbotron-fluid.pg-jumbotron {
+      padding: 4em;
+    }
+
+    .pg-jumbotron .btn, button.btn.btn-primary {
+      margin: 5px auto;
+    }
+
+    .text {
+      height: initial;
+    }
+
+    .cta-text {
+      padding: 4em;
+    }
+
+    .cta {
+      padding: 6em;
+    }
+
+    ul.divided, ul.menu, #footer ul {
+      padding: 0;
+      text-align: center;
+    }
+
+    ul.feature {
+      padding: 0 0 1em 0 !important;
+    }
+
+    .feature-grid {
+      padding: 0;
+    }
+
+    #pgSideNav {
+      padding: 1em 0;
+    }
+
+    #pgSideNav ul {
+      padding: 0;
+      margin: 1em 0 0 1em;
+    }
+
+    #pgSideNav ul ul {
+      margin: 0;
+    }
+
+    #pgContentWrap {
+      padding: 0;
+    }
+
+    #pgContentWrap ul {
+      padding-left: 1em;
+    }
+
+}
+
 @media (min-width: 576px) {
     /** NAVBAR */
     .nav-item > a {
@@ -738,73 +826,4 @@ th.formfieldnamecontainer {
     .pg-jumbotron-header {
         font-size: 1.5rem;
     }
-}
-
-@media (max-width: 1200px) {
-}
-
-@media (max-width: 992px) {
-
-}
-
-@media (max-width: 768px) {
-
-  body {
-    padding-top: 55px;
-  }
-
-  .jumbotron.jumbotron-fluid.pg-jumbotron {
-    padding: 4em;
-  }
-
-  .pg-jumbotron .btn, button.btn.btn-primary {
-    margin: 5px auto;
-  }
-
-  .text {
-    height: initial;
-  }
-
-  .cta-text {
-    padding: 4em;
-  }
-
-  .cta {
-    padding: 6em;
-  }
-
-  ul.divided, ul.menu, #footer ul {
-    padding: 0;
-    text-align: center;
-  }
-
-  ul.feature {
-    padding: 0 0 1em 0 !important;
-  }
-
-  .feature-grid {
-    padding: 0;
-  }
-
-  #pgSideNav {
-    padding: 1em 0;
-  }
-
-  #pgSideNav ul {
-    padding: 0;
-    margin: 1em 0 0 1em;
-  }
-
-  #pgSideNav ul ul {
-    margin: 0;
-  }
-
-  #pgContentWrap {
-    padding: 0;
-  }
-
-  #pgContentWrap ul {
-    padding-left: 1em;
-  }
-
 }
